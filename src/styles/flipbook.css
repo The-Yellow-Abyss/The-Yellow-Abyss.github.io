@@ -9,14 +9,6 @@
     cursor: url('../assets/personalized-cursor.png') , auto;
 }
 
-/* Carica il font .ttf */
-@font-face {
-    font-family: 'MyPixelFont';
-    src: url('../fonts/slkscr.ttf') format("opentype");;
-    font-weight: normal;
-    font-style: normal;
-}
-
 body {
     font-family: 'MyPixelFont', sans-serif; /* Font di fallback se non carica */
 }

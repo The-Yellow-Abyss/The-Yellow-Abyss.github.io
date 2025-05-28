@@ -23,17 +23,17 @@ const Navbar = () => {
           <div className="links-container">
             <div className="links-group left-group">
               <ul>
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/bestiary">Bestiary</Link></li>
-                <li><Link to="/lore">Lore</Link></li>
+                <li><Link to="/">HOME</Link></li>
+                <li><Link to="/bestiary">BESTIARY</Link></li>
+                <li><Link to="/lore">LORE</Link></li>
               </ul>
             </div>
 
             <div className="links-group right-group">
               <ul>
-                <li><Link to="/codex">Codex</Link></li>
-                <li><Link to="/items">Items</Link></li>
-                <li><Link to="/gamemechanics">Game</Link></li>
+                <li><Link to="/codex">CODEX</Link></li>
+                <li><Link to="/items">ITEMS</Link></li>
+                <li><Link to="/gamemechanics">GAME</Link></li>
               </ul>
             </div>
           </div>
