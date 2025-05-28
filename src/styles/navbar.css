@@ -1,0 +1,194 @@
+/* Header e Nav */
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+/* Contenitore nav */
+nav {
+    display: flex;
+    justify-content: space-between;  /* Posiziona gli elementi tra la sinistra e la destra */
+    align-items: top;  /* Allinea gli elementi verticalmente */
+    position: relative;
+    width: 100%;
+    height: 120px;  /* Altezza fissa della navbar */
+    min-height: 70px;
+}
+
+/* Immagine di sfondo della navbar */
+.nav-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;  /* Mette l'immagine dietro agli altri contenuti */
+}
+
+.nav-bar img {
+    image-rendering: pixelated;
+
+}
+
+/* Stile per il contenitore principale dei link */
+.hyperlinks-container {
+    display: flex;  /* Usa Flexbox per l'allineamento orizzontale */
+    justify-content: space-between;  /* Posiziona gli elementi tra la sinistra e la destra */
+    align-items: center;  /* Allinea gli elementi verticalmente */
+    width: 100%;  /* Occupa tutta la larghezza */
+    top: 10px;
+    height: 60px;  /* Imposta un'altezza per il contenitore */
+    padding: 0 20px;  /* Distanza interna sui lati */
+    position: relative;
+}
+
+/* Contenitore per il logo, allineato a sinistra */
+.logo-container {
+    display: flex;
+    justify-content: flex-start;  /* Allinea il logo a sinistra */
+}
+
+.logo-container img:hover {
+    transition: transform 0.8s ease, color 0.8s ease;
+}
+
+.logo-container img:hover {
+    transform: scale(1.05);
+}
+
+.logo {
+    max-height: 40px;  /* Imposta l'altezza massima del logo */
+}
+
+nav .logo-container img, nav .help-container img {
+    cursor: url('../assets/personalized-cursor-2-blood.png') , pointer;
+}
+
+/* Contenitore principale per i link, che contiene due gruppi di link */
+.links-container {
+    display: flex;  /* Usa Flexbox per allineare i gruppi orizzontalmente */
+    justify-content: center;  /* Centra i gruppi orizzontalmente */
+    gap: 40px;  /* Distanza tra i due gruppi */
+    flex: 2;  /* Occupa lo spazio rimanente */
+}
+
+/* Stile per ciascun gruppo di link */
+.links-group {
+    display: flex;
+    justify-content: center;  /* Allinea i link orizzontalmente al centro del gruppo */
+}
+
+.links-group ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;  /* Spaziatura tra i link */
+}
+
+.links-group li {
+    display: inline-block;
+
+    transition: transform 0.3s ease, color 0.3s ease;  /* Transizione fluida per ingrandimento e cambio colore */
+}
+
+.links-group li:hover {
+    color: #f7ef85;  /* Colore al passaggio del mouse */
+    transform: scale(1.1);  /* Ingrandisce il link al 120% */
+}
+
+
+.links-group a {
+    text-decoration: none;
+    color: #fff;  /* Colore del testo dei link (bianco per contrastare con l'immagine di sfondo) */
+    font-size: 20px;
+    padding-bottom: 10px;
+    padding-top: 20px;
+    font-weight: bold;
+    transition: transform 0.3s ease, color 0.3s ease;  /* Transizione fluida per ingrandimento e cambio colore */
+}
+
+.links-group a:hover {
+    color: #f7ef85;  /* Colore al passaggio del mouse */
+    transform: scale(1.2);  /* Ingrandisce il link al 120% */
+}
+
+/* Aggiungi margine a destra e sinistra ai gruppi */
+.left-group, .right-group {
+    margin-left: -18px;
+    margin-right: 120px;
+}
+
+
+/* Contenitore per l'icona Help, allineato a destra */
+.help-container {
+    display: flex;
+    justify-content: flex-end;  /* Allinea l'icona Help a destra */
+    padding-right: 20px;  /* Distanza dal bordo destro */
+}
+
+.help-icon {
+    width: 40px;  /* Imposta una larghezza fissa per l'icona */
+    height: 40px;  /* Imposta un'altezza fissa per l'icona */
+}
+
+
+/* Icona hamburger (visibile solo su dispositivi mobili) */
+.hamburger-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.hamburger-icon .line {
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    margin: 4px 0;
+}
+
+/* Stili per dispositivi con schermi piccoli */
+@media (max-width: 1070px) {
+    /* Nascondi i link di navigazione per dispositivi mobili */
+    .links-container {
+        display: none; /* Nasconde i link di navigazione */
+    }
+
+    /* Mostra l'icona hamburger */
+    .hamburger-icon {
+        display: flex; 
+    }
+
+    /* Quando l'icona hamburger è cliccata, mostra i link di navigazione */
+    .links-container.active {
+        display: block;
+        position: absolute;
+        top: 60px;  /* Posiziona il menù a discesa sotto la navbar */
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.8);  /* Sfondo trasparente per il menù a discesa */
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    .links-group ul {
+        flex-direction: column;  /* Mostra i link in colonna invece che in riga */
+        gap: 20px;  /* Distanza tra i link */
+    }
+
+    /* Rimuovi margini per i gruppi di link */
+    .left-group, .right-group {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    /* Modifica il colore del testo quando è attivo */
+    .links-group a {
+        font-size: 24px;
+    }
+}

@@ -1,0 +1,46 @@
+/* src/LoginPage.css */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #ececec;
+  text-shadow: 6px 4px 5px rgba(0, 0, 0, 0.7); /* Ombra grigia scura con sfocatura */
+  background-image: url('../assets/hell.gif'); /* Inserisci il percorso dell'immagine */
+  background-size: cover; /* Fa sì che l'immagine copra l'intero schermo */
+  background-position: center center; /* Posiziona l'immagine al centro */
+  background-repeat: no-repeat; /* Impedisce la ripetizione dell'immagine */
+}
+
+
+.login-container h1 {
+  font-size: 5rem;
+  margin-bottom: 2rem;
+}
+
+.login-container p {
+  color: #fff;
+  text-shadow: 6px 4px 5px rgba(0, 0, 0, 0.7); 
+}
+
+.login-container button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border-color: #732026;
+  color: #FFED85;
+  background-color:#16000A;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out; 
+}
+
+.login-container button:hover {
+    transform: scale(1.1);
+}
+
+pre {
+  font-family: 'Courier New', Courier, monospace;
+  white-space: pre-wrap; /* Se desideri che il testo vada a capo se troppo lungo */
+  color: #ececec; /* Colore del testo */
+}

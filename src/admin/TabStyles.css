@@ -1,0 +1,171 @@
+/* src/tabs/TabStyles.css */
+
+.tab-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.card {
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+.form-group input[type="text"],
+.form-group textarea,
+.form-group select {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.preview img {
+  margin-top: 0.5rem;
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.btn-save {
+  background-color: #2c7a7b;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.25rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+.btn-save:hover {
+  background-color: #285e61;
+}
+
+.save-status {
+  margin-top: 0.5rem;
+  font-weight: bold;
+  color: #2f855a;
+}
+
+
+.toast-notification {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #2d2d2d;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  font-weight: 500;
+  font-size: 0.95rem;
+  z-index: 9999;
+  opacity: 0.95;
+  animation: fadeInOut 5s ease-in-out;
+}
+
+.toast-notification.success {
+  background-color: #28a745;
+}
+
+.toast-notification.error {
+  background-color: #dc3545;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(20px); }
+  10% { opacity: 1; transform: translateY(0); }
+  90% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(20px); }
+}
+
+
+.sub-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.sub-tab-button {
+  padding: 8px 14px;
+  background-color: #eee;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.sub-tab-button.active {
+  background-color: #2c3e50;
+  color: white;
+  font-weight: bold;
+}
+
+.sub-tab-button:hover:not(.active) {
+  background-color: #ddd;
+}
+
+.add-button {
+  background-color: #2d4b69;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background-color 0.3s ease;
+  align-self: flex-start;
+}
+
+.add-button:hover {
+  background-color: #265f99;
+}
+
+
+.new-entry-form {
+  background: #f9f9f9;
+  padding: 1em;
+  margin-bottom: 1.5em;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.new-entry-form h3 {
+  margin-top: 0;
+}
+
+.btn-add {
+  background-color: #368cad;
+  color: white;
+  padding: 0.5em 1em;
+  border: none;
+  margin-top: 0.5em;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-add:disabled {
+  background-color: #898b8d;
+  cursor: not-allowed;
+}

@@ -1,0 +1,139 @@
+[
+  {
+    "name": "Goblin",
+    "category": "Enemy",
+    "image": "base64string",
+    "description": "Una creatura meschina che vive nelle caverne.",
+    "statistics": {
+      "HP": 30,
+      "ATK": 5
+    },
+    "skills": [
+      "Colpo rapido"
+    ]
+  },
+  {
+    "name": "Scheletro Armato",
+    "category": "Enemy",
+    "image": "base64string",
+    "description": "Uno scheletro risvegliato con armatura arrugginita.",
+    "statistics": {
+      "HP": 40,
+      "ATK": 7
+    },
+    "skills": [
+      "Affondo scheletrico"
+    ]
+  },
+  {
+    "name": "Lupo Selvatico",
+    "category": "Enemy",
+    "image": "base64string",
+    "description": "Aggressivo e veloce, attacca in branco.",
+    "statistics": {
+      "HP": 35,
+      "ATK": 6
+    },
+    "skills": [
+      "Morso veloce"
+    ]
+  },
+  {
+    "name": "Fata dei Boschi",
+    "category": "Creature",
+    "image": "base64string",
+    "description": "Una creatura eterea che protegge le foreste.",
+    "statistics": {
+      "HP": 25,
+      "ATK": 0,
+      "TEST": 60
+    },
+    "skills": []
+  },
+  {
+    "name": "Tartaruga di Roccia",
+    "category": "Creature",
+    "image": "base64string",
+    "description": "Lenta ma incredibilmente resistente.",
+    "statistics": {
+      "HP": 100,
+      "ATK": 3
+    },
+    "skills": []
+  },
+  {
+    "name": "Spirito dell'Acqua",
+    "category": "Creature",
+    "image": "base64string",
+    "description": "Vaga nei laghi e protegge le sorgenti sacre.",
+    "statistics": {
+      "HP": 50,
+      "ATK": 5
+    },
+    "skills": [
+      "Rigenerazione"
+    ]
+  },
+  {
+    "name": "Plague Doctor Boss",
+    "category": "Boss",
+    "image": "data:image/png;base64,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",
+    "description": "Le palle",
+    "statistics": {
+      "HP": 500,
+      "ATK": 50
+    },
+    "skills": [
+      "Soffio di fuoco"
+    ]
+  },
+  {
+    "name": "Yellow King",
+    "category": "Boss",
+    "image": "base64string",
+    "description": "Un potente Re di merda",
+    "statistics": {
+      "HP": 400,
+      "ATK": 40,
+      "Mana": 200
+    },
+    "skills": [
+      "Pugno delle tenebre",
+      "Maleficio"
+    ]
+  },
+  {
+    "name": "Monk Boss",
+    "category": "Boss",
+    "image": "base64string",
+    "description": "Un Monco mongoloide",
+    "statistics": {
+      "HP": 600,
+      "ATK": 30,
+      "DEF": 80
+    },
+    "skills": [
+      "Frantuma armatura"
+    ]
+  },
+  {
+    "name": "test",
+    "category": "Enemy",
+    "description": "test",
+    "image": "",
+    "statistics": {},
+    "skills": []
+  },
+  {
+    "name": "Pinco palle",
+    "category": "Boss",
+    "description": "Dio caneeeee",
+    "image": "",
+    "statistics": {
+      "Pallmerda": 1000000000000000000
+    },
+    "skills": [
+      "Troia"
+    ]
+  }
+]

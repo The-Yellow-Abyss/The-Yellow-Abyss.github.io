@@ -1,0 +1,263 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    image-rendering: pixelated;
+    font-family: 'MyPixelFont', sans-serif;
+    cursor: url('../assets/personalized-cursor.png') , auto;
+}
+
+img {
+    image-rendering: pixelated;
+}
+
+
+/* Carica il font .ttf */
+@font-face {
+    font-family: 'MyPixelFont';
+    src: url('../fonts/slkscr.ttf') format("opentype");;
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'MyPixelFont', sans-serif; /* Font di fallback se non carica */
+}
+
+
+body {
+    display: flex;
+    width: 100%;
+    height: 100%; /* Usa l'altezza della viewport */
+    margin: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+}
+
+body {
+    background-image: url('../assets/catacomb-3.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Fissa l'immagine di sfondo */
+    margin: 0;
+}
+
+
+a,li {
+    cursor: url('../assets/personalized-cursor-2-blood.png') , pointer;
+}
+
+
+/* Stile per l'immagine nella nav */
+.sidebar-img {
+    width: 100%;  
+    min-height: 100vh; 
+    object-fit: cover;  
+    display: block;  
+    background-size: cover;  
+}
+
+.main , .right-sidebar {
+    display: flex;
+    flex-shrink: 0;
+    width: 6%;
+    height: 100%;
+  
+}
+
+.left-sidebar {
+    background-image: url('../assets/right-sideBar-catacomb.png'); /* Se è importata in JS, leggi sotto */
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 100% 100vh; /* Forza altezza fissa, larghezza si adatta */
+    width: 6%;
+    height: 100vh;
+    position: relative;
+    flex-shrink: 0;
+    background-color: #ff9e00;
+}
+
+
+.main {
+    margin-top: 80px; /* Aggiungi un margine per compensare l'altezza della nav fissa */
+}
+
+.main {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: flex-start;
+    box-sizing: border-box; /* Aggiunto per evitare overflow dovuti al padding */
+    margin-bottom: -6px;
+}
+
+.main .left-sidebar, .right-sidebar {
+    display: flex;
+    flex-shrink: 0;
+    height: 100%;
+    /*background-color: rgb(187, 40, 224);*/
+}
+
+
+.main-content {
+    display: flex;
+    margin: 0.5rem;
+    height: 100%;
+    width: 94%;
+    flex-grow: 1; /* Fa in modo che questa sezione occupi lo spazio rimanente */
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    box-sizing: border-box; /* Aggiunto per evitare overflow dovuti al padding */
+    background: none;
+    background-color: none;
+
+
+}
+
+.main-content .content-title {
+    display: flex;
+    align-items: flex-start;
+    box-sizing: border-box;
+    width: 100%;
+    height: 10%;
+    min-height: 10vh;
+    color: #ffff;
+
+
+}
+
+.main-content .content-bottom {
+    display: flex;
+    align-items: flex-start;
+    box-sizing: border-box;
+    width: 100%;
+    height: 10%;
+    min-height: 20vh;
+    color: #ffff;
+ 
+}
+
+.main-content .content-box {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    color: #ffff;
+
+}
+
+.main-content .codex-content-box {
+    display: flex;
+    align-items: center;        /* Allinea verticalmente */
+    justify-content: center;    /* Allinea orizzontalmente */
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    color: #fff; /* corretto anche il valore colore */
+}
+
+
+
+
+/* Stile per il footer */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 70px;
+    min-height: 70px;
+    box-sizing: border-box;
+    bottom: 0;
+}
+
+/* Stile per l'immagine all'interno del footer */
+footer .footer-bar {
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+/* Stile per i contenuti (link) sopra l'immagine */
+footer .footer-container {
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
+/* Stile per i link nel footer */
+footer .footer-links ul {
+    display: flex;
+    justify-content: center; /* Mantiene i link centrati */
+    gap: 50%; /* Distanza tra i link */
+    padding: 0;
+    margin: 0;
+}
+
+footer .footer-links li {
+    list-style: none;
+}
+
+footer .footer-links li {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease, color 0.4s ease; /* Transizione morbida */
+}
+
+footer .footer-links li:hover {
+    transform: scale(1.3); /* Ingrandisce leggermente il link */
+    color: #FFD700; /* Cambia colore al passaggio del mouse (opzionale) */
+}
+
+
+
+
+
+
+/* Stile per la breadcrumb */
+.content-title.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+/* Link di base nella breadcrumb */
+.breadcrumb-link {
+    color: #ffde59; /* Colore giallo per i link */
+    text-decoration: none;
+    font-weight: normal;
+    transition: color 0.3s ease;
+}
+
+/* Link hover della breadcrumb */
+.breadcrumb-link:hover {
+    color: #ff9e00; /* Colore giallo scuro al passaggio del mouse */
+    text-decoration: underline;
+}
+
+/* Link corrente nella breadcrumb */
+.breadcrumb-current {
+    color: #ffffff; /* Colore bianco per il link corrente */
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Simbolo di separazione '>' */
+.breadcrumb > span {
+    color: #ffde59;
+    font-weight: bold;
+}
+

@@ -1,0 +1,447 @@
+/* General */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    image-rendering: pixelated;
+    font-family: 'MyPixelFont', sans-serif;
+    cursor: url('../assets/personalized-cursor.png') , auto;
+}
+
+/* Carica il font .ttf */
+@font-face {
+    font-family: 'MyPixelFont';
+    src: url('../fonts/slkscr.ttf') format("opentype");;
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'MyPixelFont', sans-serif; /* Font di fallback se non carica */
+}
+
+
+a {
+    color: inherit; 
+    text-decoration: none; 
+}
+
+.book a:visited {
+    color: #3a632e; 
+}
+
+.book a:hover {
+    color: #5f482b; 
+}
+
+.book a:active {
+    color: #a1730e;
+}
+
+p,h1 {
+    cursor: url('../assets/personalized-text-cursor.png'), text;
+}
+
+/* Modifica lo stile per la selezione del testo */
+::selection {
+    background-color: rgba(172, 26, 3, 0.616); /* Cambia il colore di sfondo della selezione */
+    color: rgb(255, 255, 255); /* Cambia il colore del testo selezionato */
+}
+
+.book-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img {
+    cursor: url('../assets/personalized-cursor-2-blood.png') , pointer;
+}
+
+
+/* Contenitore dei bottoni */
+#prev-btn,
+#next-btn {
+    position: fixed; /* rimangono visibili durante lo scroll */
+    top: 50%;         /* centrati verticalmente */
+    transform: translateY(-50%);
+    z-index: 9999;
+}
+
+/* Pulsante precedente a sinistra */
+#prev-btn {
+    left: 5em; /* distanza dal bordo sinistro */
+}
+
+/* Pulsante successivo a destra */
+#next-btn {
+    right: 5em; /* distanza dal bordo destro */
+}
+
+
+/* Immagini dei bottoni */
+#prev-btn img,
+#next-btn img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    image-rendering: pixelated;
+    pointer-events: auto; /* assicura che siano cliccabili */
+}
+
+/* Transizione e hover */
+#prev-btn img, 
+#next-btn img {
+    transition: transform 0.3s ease;
+}
+
+#prev-btn img:hover, 
+#next-btn img:hover {
+    transform: scale(1.2);
+}
+
+
+
+button {
+    border: none;
+    background-color: transparent;
+    margin: 60px;
+    cursor: pointer;
+    transition: transform 0.5s;
+    cursor: url('../assets/personalized-cursor-2-blood.png') , pointer;
+
+}
+
+button:focus {
+    outline: none;
+}
+
+button:hover i {
+    color: rgb(102, 102, 102);
+}
+
+i {
+    color: gray;
+    font-size: 4em;
+}
+
+/* Book */
+.book {
+    width: min(90vw, 400px);
+    aspect-ratio: 3 / 4;
+    position: relative;
+    transition: transform 0.5s;
+    max-height: 90vh;
+    font-size: 1rem; /* base per em/rem nei figli */
+}
+
+
+.paper {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    perspective: 1500px;
+}
+
+.front #backtracking-button {
+    position: absolute;
+    top: 1%;
+    right: 1%;
+}
+
+.back #backtracking-button {
+    position: absolute;
+    top: 1%;
+    left: 1%;
+}
+
+#backtracking-button img {
+    width:35px;
+}
+
+#backtracking-button:hover {
+    transform: scale(1.2);
+}
+
+.front {
+    backface-visibility: hidden;
+}
+
+.front, 
+.back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    transform-origin: left;
+    transition: transform 0.5s;
+}
+
+.front {
+    z-index: 1;
+}
+
+.back {
+    z-index: 0;
+}
+
+.front-content,
+.back-content {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: justify;
+    padding: clamp(1rem, 5vw, 2rem); /* padding flessibile */
+    box-sizing: border-box;
+    overflow-y: auto;
+    gap: clamp(0.5rem, 2vw, 1.5rem); /* spazio tra gli elementi */
+    font-size: clamp(0.8rem, 2vw, 1.2rem); /* testo adattivo */
+    line-height: 1.4;
+}
+
+body::-webkit-scrollbar { 
+  width: 12px;
+}
+
+body::-webkit-scrollbar-track { 
+  background: #d30606;
+}
+
+body::-webkit-scrollbar-thumb { 
+  background: url('../assets/scroolbar-thumb.png') no-repeat center center;
+  background-size: cover; /* o 'contain' se preferisci */
+  border-radius: 6px;
+}
+
+.front-content img,
+.back-content img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 0.25rem;
+}
+
+.book h1,
+.book h2 {
+    font-size: clamp(0rem, 2vw, 1.5rem); /* Titoli flessibili */
+    margin: 0 0 0.5em;
+    text-align: center;
+}
+
+
+.back-content {
+    transform: rotateY(180deg)
+}
+
+/* Paper Flipped */
+.flipped .front,
+.flipped .back {
+    transform: rotateY(-180deg)
+}
+
+/* Paper Z-index */
+#p1 .front {
+    background-image: url(../assets/codex_book_front.png);
+    background-size: contain;  /* Mantiene il rapporto di aspetto */
+    background-repeat: no-repeat;  /* Evita che l'immagine si ripeta */
+    background-position: center;  /* Centra l'immagine */
+    object-fit: contain;
+    image-rendering: pixelated; 
+}
+#p1 .back {
+    background-image: url(../assets/back_codex.PNG);
+    background-size: contain;  /* Mantiene il rapporto di aspetto */
+    background-repeat: no-repeat;  /* Evita che l'immagine si ripeta */
+    background-position: center;  /* Centra l'immagine */
+    object-fit: contain;
+    image-rendering: pixelated; 
+}
+
+#p2 .front, 
+#p3 .front,
+#p4 .front,
+#p5 .front,
+#p6 .front,
+#p7 .front,
+#p8 .front,
+#p9 .front {
+    background-image: url(../assets/front_codex_open.png);
+    background-size: contain;  /* Mantiene il rapporto di aspetto */
+    background-repeat: no-repeat;  /* Evita che l'immagine si ripeta */
+    background-position: center;  /* Centra l'immagine */
+    object-fit: contain;
+    image-rendering: pixelated; 
+}
+
+#p10 .front {
+    background-image: url(../assets/front_codex_open.png);
+    background-size: contain;  /* Mantiene il rapporto di aspetto */
+    background-repeat: no-repeat;  /* Evita che l'immagine si ripeta */
+    background-position: center;  /* Centra l'immagine */
+    object-fit: contain;
+    image-rendering: pixelated; 
+}
+
+#p2 .back {
+    background-image: url(../assets/back_codex_open_3.png);
+    background-size: contain;  /* Mantiene il rapporto di aspetto */
+    background-repeat: no-repeat;  /* Evita che l'immagine si ripeta */
+    background-position: center;  /* Centra l'immagine */
+    object-fit: contain;
+    image-rendering: pixelated; 
+}
+
+
+
+#p3 .back,
+#p4 .back,
+#p5 .back,
+#p6 .back,
+#p7 .back,
+#p8 .back,
+#p9 .back,
+#p10 .back {
+    background-image: url(../assets/back_codex_open_2.png);
+    background-size: contain;  /* Mantiene il rapporto di aspetto */
+    background-repeat: no-repeat;  /* Evita che l'immagine si ripeta */
+    background-position: center;  /* Centra l'immagine */
+    object-fit: contain;
+    image-rendering: pixelated; 
+}
+
+
+#p11 .front {
+    background-image: url(../assets/back_codex.PNG);
+    background-size: contain;  /* Mantiene il rapporto di aspetto */
+    background-repeat: no-repeat;  /* Evita che l'immagine si ripeta */
+    background-position: center;  /* Centra l'immagine */
+    object-fit: contain;
+    image-rendering: pixelated; 
+}
+#p11 .back {
+    background-image: url(../assets/back_codex.PNG);
+    background-size: contain;  /* Mantiene il rapporto di aspetto */
+    background-repeat: no-repeat;  /* Evita che l'immagine si ripeta */
+    background-position: center;  /* Centra l'immagine */
+    object-fit: contain;
+    image-rendering: pixelated; 
+}
+
+
+#p1 {
+    z-index: 11;
+}
+
+#p2 {
+    z-index: 10;
+}
+
+#p3 {
+    z-index: 9;
+}
+
+#p4 {
+    z-index: 8;
+}
+
+#p5 {
+    z-index: 7;
+}
+#p6 {
+    z-index: 6;
+}
+#p7 {
+    z-index: 5;
+}
+#p8 {
+    z-index: 4;
+}
+#p9 {
+    z-index: 3;
+}
+#p10 {
+    z-index: 2;
+}
+#p11 {
+    z-index: 1;
+}
+
+
+/* Customization */
+
+.book-title {
+    font-size: 3em;
+    margin-bottom: 40px;
+}
+
+.cover-img {
+    width: 200px;
+    height: 270px;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+#b1 {
+    padding: clamp(1rem, 4vw, 2rem);  /* Padding adattivo */
+    text-align: center;
+    font-size: clamp(0.9rem, 1.5vw, 1.2rem);  /* Testo adattivo */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: clamp(0.5rem, 2vw, 1.5rem);  /* Spazio tra elementi */
+}
+
+#b1 h2 {
+    font-size: clamp(1.2rem, 4vw, 2rem);  /* Titolo flessibile */
+    margin-top: clamp(0.5rem, 2vw, 1rem);
+    margin-bottom: clamp(0.5rem, 2vw, 1.5rem);
+}
+
+#b1 p {
+    font-size: clamp(0.8rem, 2vw, 1rem);  /* Paragrafo flessibile */
+    margin-bottom: clamp(0.5rem, 2vw, 1.5rem);
+    line-height: 1.5;
+    max-width: 100%;
+}
+
+
+#image-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);  /* Centra l'immagine esattamente nel mezzo */
+    text-align: center;
+    z-index: 1000; /* Assicurati che l'immagine sia sopra il libro */
+}
+
+#image {
+    image-rendering: pixelated; 
+    width: 150vh;  /* Modifica come preferisci */
+}
+
+#hide-button {
+    margin-top: 0px;
+    padding: 10px 20px;
+    background-color: #c5af31;
+    border-radius:16px;
+    border: 2px solid #000000;  /* Aggiunge un bordo di 5px con il colore blu */
+    color: #000;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+#hide-button:hover {
+    background-color: #f3d219;
+}
