@@ -19,7 +19,8 @@ const MechanicsPage = () => {
 
         <div className="main-content">
           <div className="content-title breadcrumb">
-            <Link to="/" className="breadcrumb-current">Home</Link>
+            <Link to="/" className="breadcrumb-link">Home</Link> &gt;{' '}
+            <Link to="/gamemechanics" className="breadcrumb-current">Game Mechanics</Link>
           </div>
           <div className="content-title">content-title</div>
           <div className="content-box">content-box</div>

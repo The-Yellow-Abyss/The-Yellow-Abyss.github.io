@@ -8,6 +8,7 @@ import HelpPage from './pages/HelpPage';
 import CodexPage from './pages/CodexPage';
 import AdminPage from './admin/AdminPage';
 import LoginPage from './admin/LoginPage';
+import MechanicsPage from './pages/MechanicsPage';
 // import Navbar from './components/Navbar';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route path="/lore" element={<LorePage />} />
         <Route path="/help" element={<HelpPage />} />
         <Route path="/codex" element={<CodexPage />} />
+        <Route path="/gamemechanics" element={<MechanicsPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/admin" element={<AdminPage />} />
       </Routes>

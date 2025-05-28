@@ -20,7 +20,7 @@ const HelpPage = () => {
         <div className="main-content">
           <div className="content-title breadcrumb">
             <Link to="/" className="breadcrumb-link">Home</Link> &gt;{' '}
-            <Link to="/bestiary" className="breadcrumb-current">Bestiary</Link>
+            <Link to="/help" className="breadcrumb-current">Help</Link>
           </div>
           <div className="content-title">content-title</div>
           <div className="content-box">content-box</div>

@@ -52,36 +52,22 @@ a,li {
 
 
 /* Stile per l'immagine nella nav */
-.sidebar-img {
-    width: 100%;  
-    min-height: 100vh; 
-    object-fit: cover;  
-    display: block;  
-    background-size: cover;  
-}
-
-.main , .right-sidebar {
-    display: flex;
-    flex-shrink: 0;
-    width: 6%;
-    height: 100%;
-  
-}
-
+/* Sidebar sinistra */
 .left-sidebar {
-    background-image: url('../assets/right-sideBar-catacomb.png'); /* Se è importata in JS, leggi sotto */
-    background-position: top center;
-    background-repeat: no-repeat;
-    background-size: 100% 100vh; /* Forza altezza fissa, larghezza si adatta */
-    width: 6%;
-    height: 100vh;
-    position: relative;
-    flex-shrink: 0;
-    background-color: #ff9e00;
+  width: 6%;
+  flex-shrink: 0;
+  display: flex;
 }
 
+/* Immagine nella sidebar */
+.sidebar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 
-.main {
+.main .main-content{
     margin-top: 80px; /* Aggiungi un margine per compensare l'altezza della nav fissa */
 }
 
@@ -89,16 +75,8 @@ a,li {
     display: flex;
     width: 100%;
     height: 100%;
-    align-items: flex-start;
+    align-items: stretch; 
     box-sizing: border-box; /* Aggiunto per evitare overflow dovuti al padding */
-    margin-bottom: -6px;
-}
-
-.main .left-sidebar, .right-sidebar {
-    display: flex;
-    flex-shrink: 0;
-    height: 100%;
-    /*background-color: rgb(187, 40, 224);*/
 }
 
 

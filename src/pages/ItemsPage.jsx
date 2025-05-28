@@ -19,7 +19,8 @@ const HelpPage = () => {
 
         <div className="main-content">
           <div className="content-title breadcrumb">
-            <Link to="/" className="breadcrumb-current">Home</Link>
+            <Link to="/" className="breadcrumb-link">Home</Link> &gt;{' '}
+            <Link to="/items" className="breadcrumb-current">Items</Link>
           </div>
           <div className="content-title">content-title</div>
           <div className="content-box">content-box</div>

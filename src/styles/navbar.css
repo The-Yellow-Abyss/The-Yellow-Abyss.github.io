@@ -5,17 +5,20 @@ header {
     top: 0;
     left: 0;
     z-index: 10;
+    overflow: visible; /* importante */
 }
+
 
 /* Contenitore nav */
 nav {
     display: flex;
-    justify-content: space-between;  /* Posiziona gli elementi tra la sinistra e la destra */
-    align-items: top;  /* Allinea gli elementi verticalmente */
+    justify-content: space-between;
+    align-items: flex-start; /* meglio usare flex-start invece di 'top' */
     position: relative;
     width: 100%;
-    height: 120px;  /* Altezza fissa della navbar */
-    min-height: 70px;
+    /* height: 120px;  <-- RIMUOVI QUESTA RIGA */
+    min-height: 12px;
+    overflow: visible; /* assicurati che il contenuto non venga tagliato */
 }
 
 /* Immagine di sfondo della navbar */
@@ -24,10 +27,11 @@ nav {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: auto;  /* Lascia che l’altezza dipenda dalle proporzioni dell’immagine */
     object-fit: cover;
-    z-index: -1;  /* Mette l'immagine dietro agli altri contenuti */
+    z-index: -1;
 }
+
 
 .nav-bar img {
     image-rendering: pixelated;
@@ -190,5 +194,14 @@ nav .logo-container img, nav .help-container img {
     /* Modifica il colore del testo quando è attivo */
     .links-group a {
         font-size: 24px;
+    }
+}
+
+
+
+@media (max-width: 1800px) { 
+    .nav-bar {
+        height: 120px; /* Imposta una dimensione fissa */
+        object-fit: cover;
     }
 }
