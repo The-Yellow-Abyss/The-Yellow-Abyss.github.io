@@ -1,0 +1,35 @@
+.items-content {
+  height: 100vh; /* altezza intera viewport */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.treasure-title {
+  font-size: 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.treasure-grid-scroll-container {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 16px;
+}
+
+.treasure-grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 80px);
+  gap: 16px;
+  justify-content: center;
+}
+
+.treasure-tile {
+  width: 80px;
+  height: 80px;
+  background-image: url('../codex/object-frame-codex-list.PNG');
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+}

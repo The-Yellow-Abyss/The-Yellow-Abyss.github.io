@@ -9,7 +9,7 @@ import sidebarRightImage from '../assets/left-sideBar-catacomb.png';
 
 // Importa le immagini per le card
 import enemiesImage from '../admin/assets/plague_doctor_right_side.png';
-import bossesImage from '../admin/assets/Yellow-King-BOSS.gif';
+import bossesImage from '../admin/assets/Monk-BOSS.png';
 import creaturesImage from '../admin/assets/Rat-King-BOSS.png';
 
 const MAX_VISIBILITY = 3;

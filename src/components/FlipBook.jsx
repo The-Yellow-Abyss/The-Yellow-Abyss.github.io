@@ -1,6 +1,13 @@
 import React, { useState } from "react";
 import "../styles/FlipBook.css";
 
+import { FrontInventory, BackInventory } from "./InventoryContent";
+import { FrontItems, BackItems } from "./ItemsContent";
+import { FrontWeapons, BackWeapons } from "./WeaponsContent";
+import { FrontBestiary, BackBestiary } from "./BestiaryContent";
+import { FrontBosses, BackBosses } from "./BossesContent";
+
+
 import backArrow from "../assets/back-arrow.png";
 import nextArrow from "../assets/next-arrow.png";
 
@@ -48,26 +55,26 @@ const FlipBook = () => {
   },
   {
     front: <div><h2>Introduzione</h2><p>Benvenuto nel Codex!</p></div>,
-    back: <div><h2>Inventario</h2><p>Elenco degli oggetti dell'inventario.</p></div>,
+    back: <BackInventory />,
   },
   {
-    front: <div><h2>Oggetti</h2><p>Pozione curativa, Anello magico...</p></div>,
-    back: <div><h2>Armi</h2><p>Elenco delle armi.</p></div>,
+    front: <FrontInventory />,
+    back: <BackWeapons />,
   },
   {
-    front: <div><h2>Arma</h2><p>Descrizione dettagliata dell'arma.</p></div>,
-    back: <div><h2>Tesori</h2><p>Elenco dei tesori scoperti.</p></div>,
+    front: <FrontWeapons />,
+    back: <BackItems />,
   },
   {
-    front: <div><h2>Tesoro</h2><p>Descrizione del tesoro scoperto.</p></div>,
-    back: <div><h2>Bestiario</h2><p>Elenco nemici incontrati nel viaggio.</p></div>,
+    front: <FrontItems />,
+    back: <BackBestiary />,
   },
   {
-    front: <div><h2>Nemico</h2><p>Descrizione Nemico</p></div>,
-    back: <div><h2>Bosses</h2><p>Elenco dei boss principali.</p></div>,
+    front: <FrontBestiary />,
+    back: <BackBosses />,
   },
   {
-    front: <div><h2>Boss</h2><p>Descrizione del boss</p></div>,
+    front: <FrontBosses />,
     back: <div><h2>Strategie</h2><p>Come sconfiggerli facilmente.</p></div>,
   },
   {
@@ -80,20 +87,25 @@ const FlipBook = () => {
   },
   {
     front: <div><h2>Crediti</h2><p>Autori e collaboratori.</p></div>,
-    back: <div><p>
-      ░██████╗██╗░░░██╗░██████╗
-      ██╔════╝██║░░░██║██╔════╝
-      ╚█████╗░██║░░░██║╚█████╗░
-      ░╚═══██╗██║░░░██║░╚═══██╗
-      ██████╔╝╚██████╔╝██████╔╝
-      ╚═════╝░░╚═════╝░╚═════╝░
-    </p></div>,
+    back: (
+      <div>
+        <p>
+          ░██████╗██╗░░░██╗░██████╗<br />
+          ██╔════╝██║░░░██║██╔════╝<br />
+          ╚█████╗░██║░░░██║╚█████╗░<br />
+          ░╚═══██╗██║░░░██║░╚═══██╗<br />
+          ██████╔╝╚██████╔╝██████╔╝<br />
+          ╚═════╝░░╚═════╝░╚═════╝░
+        </p>
+      </div>
+    ),
   },
   {
     front: <div></div>,
     back: <div></div>,
   },
 ];
+
 
 
   const renderPapers = () => {
