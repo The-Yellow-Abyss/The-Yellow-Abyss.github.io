@@ -409,6 +409,11 @@ body::-webkit-scrollbar-thumb {
 }
 
 
+.book h2, 
+.book p {
+    color: #1f1c1c;
+}
+
 #image-container {
     position: fixed;
     top: 50%;
@@ -456,9 +461,6 @@ body::-webkit-scrollbar-thumb {
     cursor: pointer; /* Indica che è un bottone cliccabile */
 }
 
-#p2 .back::before:hover {
-    transform: scale(1.1); /* Aggiungi un effetto hover per farlo sembrare cliccabile */
-}
 
 #p3 .back::before {
     content: "";
@@ -477,9 +479,7 @@ body::-webkit-scrollbar-thumb {
     cursor: pointer; /* Indica che è un bottone cliccabile */
 }
 
-#p3 .back::before:hover {
-    transform: scale(1.1); /* Aggiungi un effetto hover per farlo sembrare cliccabile */
-}
+
 
 #p4 .back::before {
     content: "";
@@ -498,9 +498,7 @@ body::-webkit-scrollbar-thumb {
     cursor: pointer; /* Indica che è un bottone cliccabile */
 }
 
-#p4 .back::before:hover {
-    transform: scale(1.1); /* Aggiungi un effetto hover per farlo sembrare cliccabile */
-}
+
 
 #p5 .back::before {
     content: "";
@@ -519,9 +517,7 @@ body::-webkit-scrollbar-thumb {
     cursor: pointer; /* Indica che è un bottone cliccabile */
 }
 
-#p5 .back::before:hover {
-    transform: scale(1.1); /* Aggiungi un effetto hover per farlo sembrare cliccabile */
-}
+
 
 #p6 .back::before {
     content: "";
@@ -540,6 +536,48 @@ body::-webkit-scrollbar-thumb {
     cursor: pointer; /* Indica che è un bottone cliccabile */
 }
 
+
+#p2 .back::before:hover ,
+#p3 .back::before:hover ,
+#p4 .back::before:hover ,
+#p5 .back::before:hover ,
 #p6 .back::before:hover {
-    transform: scale(1.1); /* Aggiungi un effetto hover per farlo sembrare cliccabile */
+    transform: scale(1.1); 
+}
+
+
+
+@media (max-width: 1500px) {
+    .book {
+        width: min(90vw, 350px); /* Riduce leggermente la larghezza massima */
+        font-size: 0.95rem;
+    }
+
+    .front-content,
+    .back-content {
+        font-size: clamp(0.7rem, 1.8vw, 1rem); /* Riduce il testo */
+        padding: clamp(0.8rem, 4vw, 1.5rem);
+    }
+
+    #b1 {
+        font-size: clamp(0.8rem, 1.2vw, 1rem);
+    }
+
+    #b1 h2 {
+        font-size: clamp(1rem, 3.5vw, 1.5rem);
+    }
+
+    #b1 p {
+        font-size: clamp(0.7rem, 1.8vw, 0.9rem);
+    }
+
+    .book-title {
+        font-size: 2.5em;
+    }
+
+    #prev-btn img,
+    #next-btn img {
+        width: 40px;
+        height: 40px;
+    }
 }

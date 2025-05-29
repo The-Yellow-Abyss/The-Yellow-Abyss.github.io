@@ -380,6 +380,11 @@ footer .footer-links li:hover {
     text-decoration: none;
     font-weight: normal;
     transition: color 0.3s ease;
+    line-height: 1;
+    vertical-align: middle; 
+    display: inline-block;  /* Espande l'area cliccabile */
+    padding: 0.25rem 0.5rem; /* Aggiunge area attorno al testo */
+    border-radius: 4px;      /* (Facoltativo) migliora l'estetica */
 }
 
 /* Link hover della breadcrumb */
@@ -387,6 +392,7 @@ footer .footer-links li:hover {
     color: #ff9e00; /* Colore giallo scuro al passaggio del mouse */
     text-decoration: underline;
 }
+
 
 /* Link corrente nella breadcrumb */
 .breadcrumb-current {
