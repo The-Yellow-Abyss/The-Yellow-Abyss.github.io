@@ -437,3 +437,109 @@ body::-webkit-scrollbar-thumb {
 #hide-button:hover {
     background-color: #f3d219;
 }
+
+
+#p2 .back::before {
+    content: "";
+    position: absolute;
+    top: 10%;
+    left: 98%;
+    width: 20%;
+    height: 10%;
+    background-image: url('../assets/inventario-codex-bookmark.png'); /* <-- cambia questo con il nome corretto */
+    background-size: cover; /* oppure 'contain' se vuoi mantenere proporzioni */
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 1; /* Assicurati che sia sopra il contenuto, ma sotto eventuali interazioni */
+    border-radius: 10px;
+    pointer-events: all; /* Consente l'interazione con il bottone */
+    cursor: pointer; /* Indica che è un bottone cliccabile */
+}
+
+#p2 .back::before:hover {
+    transform: scale(1.1); /* Aggiungi un effetto hover per farlo sembrare cliccabile */
+}
+
+#p3 .back::before {
+    content: "";
+    position: absolute;
+    top: 23%;
+    left: 98%;
+    width: 20%;
+    height: 10%;
+    background-image: url('../assets/armi-codex-bookmark.png'); /* <-- cambia questo con il nome corretto */
+    background-size: cover; /* oppure 'contain' se vuoi mantenere proporzioni */
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 1; /* Assicurati che sia sopra il contenuto, ma sotto eventuali interazioni */
+    border-radius: 10px;
+    pointer-events: all; /* Consente l'interazione con il bottone */
+    cursor: pointer; /* Indica che è un bottone cliccabile */
+}
+
+#p3 .back::before:hover {
+    transform: scale(1.1); /* Aggiungi un effetto hover per farlo sembrare cliccabile */
+}
+
+#p4 .back::before {
+    content: "";
+    position: absolute;
+    top: 36%;
+    left: 98%;
+    width: 20%;
+    height: 10%;
+    background-image: url('../assets/tesori-codex-bookmark.png'); /* <-- cambia questo con il nome corretto */
+    background-size: cover; /* oppure 'contain' se vuoi mantenere proporzioni */
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 1; /* Assicurati che sia sopra il contenuto, ma sotto eventuali interazioni */
+    border-radius: 10px;
+    pointer-events: all; /* Consente l'interazione con il bottone */
+    cursor: pointer; /* Indica che è un bottone cliccabile */
+}
+
+#p4 .back::before:hover {
+    transform: scale(1.1); /* Aggiungi un effetto hover per farlo sembrare cliccabile */
+}
+
+#p5 .back::before {
+    content: "";
+    position: absolute;
+    top: 48%;
+    left: 98%;
+    width: 20%;
+    height: 10%;
+    background-image: url('../assets/bestiario-codex-bookmark.png'); /* <-- cambia questo con il nome corretto */
+    background-size: cover; /* oppure 'contain' se vuoi mantenere proporzioni */
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 1; /* Assicurati che sia sopra il contenuto, ma sotto eventuali interazioni */
+    border-radius: 10px;
+    pointer-events: all; /* Consente l'interazione con il bottone */
+    cursor: pointer; /* Indica che è un bottone cliccabile */
+}
+
+#p5 .back::before:hover {
+    transform: scale(1.1); /* Aggiungi un effetto hover per farlo sembrare cliccabile */
+}
+
+#p6 .back::before {
+    content: "";
+    position: absolute;
+    top: 60%;
+    left: 98%;
+    width: 20%;
+    height: 10%;
+    background-image: url('../assets/boss-codex-bookmark.png'); /* <-- cambia questo con il nome corretto */
+    background-size: cover; /* oppure 'contain' se vuoi mantenere proporzioni */
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 1; /* Assicurati che sia sopra il contenuto, ma sotto eventuali interazioni */
+    border-radius: 10px;
+    pointer-events: all; /* Consente l'interazione con il bottone */
+    cursor: pointer; /* Indica che è un bottone cliccabile */
+}
+
+#p6 .back::before:hover {
+    transform: scale(1.1); /* Aggiungi un effetto hover per farlo sembrare cliccabile */
+}
