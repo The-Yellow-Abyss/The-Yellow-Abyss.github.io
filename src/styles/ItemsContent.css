@@ -1,5 +1,5 @@
 .items-content {
-  height: 100vh; /* altezza intera viewport */
+  height: 100vh;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -20,16 +20,208 @@
 
 .treasure-grid-container {
   display: grid;
-  grid-template-columns: repeat(3, 80px);
-  gap: 16px;
+  grid-template-columns: repeat(3, 4.5rem);
+  gap: 1rem;
   justify-content: center;
 }
 
 .treasure-tile {
-  width: 80px;
-  height: 80px;
+  width: 4.5rem;
+  height: 4.5rem;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), 
+              box-shadow 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.treasure-tile::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  border-radius: 8px;
   background-image: url('../codex/object-frame-codex-list.PNG');
   background-size: cover;
   background-position: center;
-  border-radius: 8px;
+  /* Sposta ombra: -3px a sinistra, +4px in basso, con blur 4px */
+  filter: drop-shadow(3px 10px 20px rgba(0, 0, 0, 0.4));
+  z-index: -1;
+}
+
+.treasure-tile:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer; /* fa capire che è interattivo */
+}
+
+
+
+.treasure-image {
+  width: 80%;
+  height: 80%;
+  object-fit: cover; /* Ingrandisce l'immagine mantenendo l'aspetto */
+}
+
+
+.question-mark {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+
+
+/* Container principale dell'item */
+.item-content {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-image-content {
+  width: 15rem;
+  height: 15rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.item-image-content img.item-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.image-frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  object-fit: contain;
+}
+
+
+/* Wrapper titolo + descrizione - PIÙ GRANDE */
+.item-title-description-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  max-width: 500px;
+  background: transparent;
+}
+
+/* Container del titolo - PIÙ GRANDE E TESTO CENTRATO */
+.item-title-content {
+  margin-top: 1rem;
+  padding: 1.3rem;
+  background-image: url('../codex/content-title-box-codex.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 4px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2rem;
+  min-width: 13em;
+  overflow: hidden; /* IMPORTANTE per evitare espansione */
+  text-overflow: ellipsis; /* opzionale, se vuoi troncare il testo */
+  white-space: nowrap;      /* impedisce l'andata a capo */
+}
+
+/* Titolo - più piccolo del container */
+.item-title-content h1 {
+  margin: 0;
+  font-size: 12px;
+  padding: 5px;
+  max-width: 100%;
+  color: #0f0f0f;
+}
+
+/* Container descrizione - PIÙ GRANDE E CENTRATO */
+.item-description-content {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  background-image: url('../codex/content-description-box-codex.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 4px;
+  display: flex;
+  align-items: flex-start; /* <-- questa è la modifica chiave */
+  justify-content: center;
+  height: 11rem;
+  width: 17em;
+}
+
+
+/* Testo descrizione centrato e più piccolo */
+.item-description-content p {
+  font-size: 11px;
+  padding-top: 20px;
+  padding: 25px 20px;
+  text-align:justify;
+  max-width: 90%;
+  margin: 0;
+  color: #0f0f0f;
+  overflow: hidden;
+  text-overflow: ellipsis; /* opzionale */
+}
+
+
+@media (max-width: 1400px) {
+  
+
+  .item-image-content {
+    width: 14rem;
+    height: 11rem;
+  }
+
+  .item-title-content {
+    padding: 1rem;
+    height: 1.8rem;
+  }
+
+  .item-image-content img.item-image {
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
+  display: block;
+}
+
+
+  .item-title-content h1 {
+    font-size: 10px;
+    padding: 3px;
+  }
+
+  .item-description-content {
+    height: 9rem;
+    width: 20rem;
+  }
+
+  .item-description-content p {
+    font-size: 9.5px;
+    padding: 4px 25px;
+  }
+
+  .item-title-description-wrapper {
+    max-width: 400px;
+  }
 }

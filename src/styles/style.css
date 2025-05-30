@@ -301,7 +301,15 @@ a,li {
     color: #fff; /* corretto anche il valore colore */
 }
 
-
+.main-content .lore-content-box {
+    display: flex;
+    align-items: center;        /* Allinea verticalmente */
+    justify-content: center;    /* Allinea orizzontalmente */
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    color: #fff; /* corretto anche il valore colore */
+}
 
 
 /* Stile per il footer */
@@ -406,4 +414,5 @@ footer .footer-links li:hover {
     color: #ffde59;
     font-weight: bold;
 }
+
 

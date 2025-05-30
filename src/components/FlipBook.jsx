@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import "../styles/FlipBook.css";
+import { treasures } from "../data/items"; // Se segui la struttura consigliata
 
 import { FrontInventory, BackInventory } from "./InventoryContent";
 import { FrontItems, BackItems } from "./ItemsContent";
+
 import { FrontWeapons, BackWeapons } from "./WeaponsContent";
 import { FrontBestiary, BackBestiary } from "./BestiaryContent";
 import { FrontBosses, BackBosses } from "./BossesContent";
@@ -11,9 +13,12 @@ import { FrontBosses, BackBosses } from "./BossesContent";
 import backArrow from "../assets/back-arrow.png";
 import nextArrow from "../assets/next-arrow.png";
 
+
+
+
 const FlipBook = () => {
   const [currentState, setCurrentState] = useState(1);
-
+  const [selectedItem, setSelectedItem] = useState(treasures[0]);
   const numOfPapers = 11;
   const maxState = numOfPapers + 1;
 
@@ -63,10 +68,10 @@ const FlipBook = () => {
   },
   {
     front: <FrontWeapons />,
-    back: <BackItems />,
+    back: <BackItems treasures={treasures} onSelect={setSelectedItem} />,
   },
   {
-    front: <FrontItems />,
+    front: <FrontItems item={selectedItem} />,
     back: <BackBestiary />,
   },
   {
@@ -155,7 +160,7 @@ const FlipBook = () => {
               )}
             </div>
           </div>
-          <div className="back">
+          <div id="codex" className="back">
             <div className="back-content">{pages[index].back}</div>
           </div>
         </div>
@@ -171,7 +176,7 @@ const FlipBook = () => {
       : "translateX(50%)";
 
   return (
-    <div className="book-container">
+    <div className={`book-container ${currentState > 1 && currentState < maxState ? 'book-open' : ''}`}>
       <button
         id="prev-btn"
         onClick={goPrevious}
