@@ -25,7 +25,7 @@ const LorePage = () => {
           <div className="lore-content-box">
             <LoreCodex/>
           </div>
-          <div className="content-bottom">content-bottom</div>
+          <div className="content-bottom"></div>
         </div>
 
         <div className="right-sidebar">
