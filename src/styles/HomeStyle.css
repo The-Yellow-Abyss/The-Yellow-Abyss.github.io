@@ -29,7 +29,8 @@
   flex: 1 1 500px;
   max-width: 700px;
   aspect-ratio: 16 / 9;
-  border-radius: 8px;
+  border: 7px solid #522828; 
+  border-radius: 0px;
   overflow: hidden;
 }
 
@@ -43,12 +44,14 @@
   flex: 1 1 500px;
   max-width: 700px;
   padding: 20px;
-  background-color: #1a1a1a00;
+  background-color: #b4ac9f;
   border-radius: 8px;
-  color: #f0f0f0;
-  font-size: 18px;
+  color: #0c0c0c;
+  font-size: 21px;
   line-height: 1.6;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border: 7px solid #796f5e; 
+  border-radius: 0%;
 }
 
 .steam-button {
@@ -56,20 +59,17 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  width: 200px; /* adatta se serve */
+  height: 100px;
   border: none;
-  width: 200px; /* adatta la dimensione a piacere */
-  height: 90px;
-  cursor: pointer;
-  transition: background-image 0.3s ease;
-  outline: none;
   padding: 0;
+  cursor: url('../assets/personalized-cursor-2-blood.png'), pointer;
+  transition: background-image 0.3s ease;
 }
 
-.steam-button:hover {
-  background-image: url('../assets/Steam button 2.png');
-}
-
+.steam-button:hover,
 .steam-button:active {
   background-image: url('../assets/Steam button 2.png');
 }
+
 
