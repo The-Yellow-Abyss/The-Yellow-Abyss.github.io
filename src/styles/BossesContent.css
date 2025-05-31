@@ -1,33 +1,33 @@
-.items-content {
+.bosses-content {
   height: 100vh;
   display: flex;
   flex-direction: column;
   overflow: hidden;
 }
 
-.treasure-title {
+.bosses-title {
   font-size: 2rem;
   position: sticky;
   top: 0;
   z-index: 10;
 }
 
-.treasure-grid-scroll-container {
+.bosses-grid-scroll-container {
   flex-grow: 1;
   overflow-y: auto;
   padding: 16px;
 }
 
-.treasure-grid-container {
+.bosses-grid-container {
   display: grid;
-  grid-template-columns: repeat(4, 3.5rem);
+  grid-template-columns: repeat(2, 6rem);
   gap: 1rem;
   justify-content: center;
 }
 
-.treasure-tile {
-  width: 3.5rem;
-  height: 3.5rem;
+.bosses-tile {
+  width: 6rem;
+  height: 6rem;
   position: relative;
   border-radius: 8px;
   overflow: hidden;
@@ -38,7 +38,7 @@
               box-shadow 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.treasure-tile::before {
+.bosses-tile::before {
   content: '';
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
@@ -51,7 +51,7 @@
   z-index: -1;
 }
 
-.treasure-tile:hover {
+.bosses-tile:hover {
   transform: scale(1.1);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -60,7 +60,7 @@
 
 
 
-.treasure-image {
+.bosses-image {
   width: 80%;
   height: 80%;
   object-fit: cover; /* Ingrandisce l'immagine mantenendo l'aspetto */
@@ -76,7 +76,7 @@
 
 
 /* Container principale dell'item */
-.item-content {
+.boss-content {
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -85,9 +85,9 @@
   align-items: center;
 }
 
-.item-image-content {
-  width: 15rem;
-  height: 15rem;
+.boss-image-content {
+  width: 16rem;
+  height: 16rem;
   position: relative;
   display: flex;
   align-items: center;
@@ -95,9 +95,9 @@
   overflow: hidden;
 }
 
-.item-image-content img.item-image {
-  width: 100%;
-  height: 100%;
+.boss-image-content img.boss-image {
+  width: 90%;
+  height: 90%;
   object-fit: contain;
   display: block;
 }
@@ -115,7 +115,7 @@
 
 
 /* Wrapper titolo + descrizione - PIÙ GRANDE */
-.item-title-description-wrapper {
+.boss-title-description-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -126,7 +126,7 @@
 }
 
 /* Container del titolo - PIÙ GRANDE E TESTO CENTRATO */
-.item-title-content {
+.boss-title-content {
   margin-top: 1rem;
   padding: 1.3rem;
   background-image: url('../codex/content-title-box-codex.png');
@@ -146,7 +146,7 @@
 }
 
 /* Titolo - più piccolo del container */
-.item-title-content h1 {
+.boss-title-content h1 {
   margin: 0;
   font-size: 12px;
   padding: 5px;
@@ -155,7 +155,7 @@
 }
 
 /* Container descrizione - PIÙ GRANDE E CENTRATO */
-.item-description-content {
+.boss-description-content {
   margin-top: 1rem;
   margin-bottom: 1rem;
   background-image: url('../codex/content-description-box-codex.png');
@@ -167,15 +167,15 @@
   align-items: flex-start; /* <-- questa è la modifica chiave */
   justify-content: center;
   height: 11rem;
-  width: 17em;
+  width: 18em;
 }
 
 
 /* Testo descrizione centrato e più piccolo */
-.item-description-content p {
-  font-size: 11px;
+.boss-description-content p {
+  font-size: 10.5px;
   padding-top: 20px;
-  padding: 27px 20px;
+  padding: 22px 20px;
   text-align:justify;
   max-width: 90%;
   margin: 0;
@@ -187,48 +187,50 @@
 
 @media (max-width: 1400px) {
   
+  .bosses-grid-container {
+    grid-template-columns: repeat(2, 6rem);
+    gap: 1rem;
+  }
+  .bosses-tile {
+    width: 6rem;
+    height: 6rem;
+}
 
-  .item-image-content {
+
+  .boss-image-content {
     width: 14rem;
     height: 11rem;
   }
 
-  .item-title-content {
+  .boss-title-content {
     padding: 1rem;
     height: 1.8rem;
   }
 
-  .item-image-content img.item-image {
-  width: 90%;
-  height: 90%;
+  .boss-image-content img.boss-image {
+  width: 80%;
+  height: 80%;
   object-fit: contain;
   display: block;
 }
 
-.treasure-grid-container {
-  display: grid;
-  grid-template-columns: repeat(4, 3.2rem);
-  gap: 1rem;
-  justify-content: center;
-}
 
-
-  .item-title-content h1 {
-    font-size: 10px;
+  .boss-title-content h1 {
+    font-size: 9px;
     padding: 3px;
   }
 
-  .item-description-content {
-    height: 9rem;
+  .boss-description-content {
+    height: 9.2rem;
     width: 20rem;
   }
 
-  .item-description-content p {
-    font-size: 9.5px;
-    padding: 25px 25px;
+  .boss-description-content p {
+    font-size: 8.5px;
+    padding: 20px 25px;
   }
 
-  .item-title-description-wrapper {
+  .boss-title-description-wrapper {
     max-width: 400px;
   }
 }

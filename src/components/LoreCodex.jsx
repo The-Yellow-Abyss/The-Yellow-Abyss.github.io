@@ -15,7 +15,7 @@ import nextArrow from "../assets/next-arrow.png";
 const LoreCodex = () => {
   const [currentState, setCurrentState] = useState(1);
 
-  const numOfPapers = 11;
+  const numOfPapers = 7;
   const maxState = numOfPapers + 1;
 
   // Funzione per scorrere avanti/indietro in modo progressivo
@@ -56,11 +56,7 @@ const LoreCodex = () => {
   { front: <Page5 />, back: <Page6 /> },
   { front: <Page7 />, back: <Page8 /> },
   { front: <Page9 />, back: <Page10 /> },
-  { front: <Page11 />, back: <Page12 /> },
-  { front: <Page13 />, back: <Page14 /> },
-  { front: <Page15 />, back: <Page16 /> },
-  { front: <Page17 />, back: <Page18 /> },
-  { front: <div></div>, back:<div></div>  }
+  { front: <div></div>, back:<div></div>}
 ];
 
 
@@ -76,7 +72,7 @@ const LoreCodex = () => {
       <div
         key={index}
         className={`paper ${flipped ? "flipped" : ""}`}
-        id={`p${pageNum}`}
+        id={`pl${pageNum}`}
         style={{ zIndex }}
       >
         <div className="front">

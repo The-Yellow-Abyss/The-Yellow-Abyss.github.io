@@ -1,33 +1,33 @@
-.items-content {
+.bestiary-content {
   height: 100vh;
   display: flex;
   flex-direction: column;
   overflow: hidden;
 }
 
-.treasure-title {
+.bestiary-title {
   font-size: 2rem;
   position: sticky;
   top: 0;
   z-index: 10;
 }
 
-.treasure-grid-scroll-container {
+.bestiary-grid-scroll-container {
   flex-grow: 1;
   overflow-y: auto;
   padding: 16px;
 }
 
-.treasure-grid-container {
+.bestiary-grid-container {
   display: grid;
-  grid-template-columns: repeat(4, 3.5rem);
+  grid-template-columns: repeat(3, 5.5rem);
   gap: 1rem;
   justify-content: center;
 }
 
-.treasure-tile {
-  width: 3.5rem;
-  height: 3.5rem;
+.bestiary-tile {
+  width: 5.5rem;
+  height: 5.5rem;
   position: relative;
   border-radius: 8px;
   overflow: hidden;
@@ -38,7 +38,7 @@
               box-shadow 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.treasure-tile::before {
+.bestiary-tile::before {
   content: '';
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
@@ -51,7 +51,7 @@
   z-index: -1;
 }
 
-.treasure-tile:hover {
+.bestiary-tile:hover {
   transform: scale(1.1);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -60,7 +60,7 @@
 
 
 
-.treasure-image {
+.bestiary-image {
   width: 80%;
   height: 80%;
   object-fit: cover; /* Ingrandisce l'immagine mantenendo l'aspetto */
@@ -76,7 +76,7 @@
 
 
 /* Container principale dell'item */
-.item-content {
+.enemy-content {
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -85,7 +85,7 @@
   align-items: center;
 }
 
-.item-image-content {
+.enemy-image-content {
   width: 15rem;
   height: 15rem;
   position: relative;
@@ -95,9 +95,9 @@
   overflow: hidden;
 }
 
-.item-image-content img.item-image {
-  width: 100%;
-  height: 100%;
+.enemy-image-content img.enemy-image {
+  width: 90%;
+  height: 90%;
   object-fit: contain;
   display: block;
 }
@@ -115,7 +115,7 @@
 
 
 /* Wrapper titolo + descrizione - PIÙ GRANDE */
-.item-title-description-wrapper {
+.enemy-title-description-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -126,7 +126,7 @@
 }
 
 /* Container del titolo - PIÙ GRANDE E TESTO CENTRATO */
-.item-title-content {
+.enemy-title-content {
   margin-top: 1rem;
   padding: 1.3rem;
   background-image: url('../codex/content-title-box-codex.png');
@@ -146,7 +146,7 @@
 }
 
 /* Titolo - più piccolo del container */
-.item-title-content h1 {
+.enemy-title-content h1 {
   margin: 0;
   font-size: 12px;
   padding: 5px;
@@ -155,7 +155,7 @@
 }
 
 /* Container descrizione - PIÙ GRANDE E CENTRATO */
-.item-description-content {
+.enemy-description-content {
   margin-top: 1rem;
   margin-bottom: 1rem;
   background-image: url('../codex/content-description-box-codex.png');
@@ -172,7 +172,7 @@
 
 
 /* Testo descrizione centrato e più piccolo */
-.item-description-content p {
+.enemy-description-content p {
   font-size: 11px;
   padding-top: 20px;
   padding: 27px 20px;
@@ -187,48 +187,50 @@
 
 @media (max-width: 1400px) {
   
+  .bestiary-grid-container {
+    grid-template-columns: repeat(3, 4.5rem);
+    gap: 1rem;
+  }
+  .bestiary-tile {
+    width: 5rem;
+    height: 5rem;
+}
 
-  .item-image-content {
+
+  .enemy-image-content {
     width: 14rem;
     height: 11rem;
   }
 
-  .item-title-content {
+  .enemy-title-content {
     padding: 1rem;
     height: 1.8rem;
   }
 
-  .item-image-content img.item-image {
-  width: 90%;
-  height: 90%;
+  .enemy-image-content img.enemy-image {
+  width: 80%;
+  height: 80%;
   object-fit: contain;
   display: block;
 }
 
-.treasure-grid-container {
-  display: grid;
-  grid-template-columns: repeat(4, 3.2rem);
-  gap: 1rem;
-  justify-content: center;
-}
 
-
-  .item-title-content h1 {
+  .enemy-title-content h1 {
     font-size: 10px;
     padding: 3px;
   }
 
-  .item-description-content {
+  .enemy-description-content {
     height: 9rem;
     width: 20rem;
   }
 
-  .item-description-content p {
+  .enemy-description-content p {
     font-size: 9.5px;
     padding: 25px 25px;
   }
 
-  .item-title-description-wrapper {
+  .enemy-title-description-wrapper {
     max-width: 400px;
   }
 }

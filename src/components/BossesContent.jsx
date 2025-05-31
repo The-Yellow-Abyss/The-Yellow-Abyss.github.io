@@ -1,14 +1,57 @@
 // src/pages/BossesContent.jsx
-export const FrontBosses = () => (
-  <div>
-    <h2>Boss</h2>
-    <p>Desrizione del boss</p>
-  </div>
-);
+import '../styles/BossesContent.css';
+import frame from '../codex/content-image-frame-codex.png';
 
-export const BackBosses = () => (
-  <div>
-    <h2>Bosses</h2>
-    <p>Elenco dei boss principali.</p>
-  </div>
-);
+function FrontBosses({ boss }) {
+  const isPlaceholder = !boss;
+
+ return (
+     <div className="boss-content">
+       <div className="boss-image-content">
+         <img src={boss.image} alt={boss.title} className="boss-image" />
+         <img src={frame} alt="Frame" className="image-frame" />
+       </div>
+       <div className="boss-title-description-wrapper">
+         <div className="boss-title-content">
+           <h1>{boss.title}</h1>
+         </div>
+         <div className="boss-description-content">
+           <p>{boss.description}</p>
+         </div>
+       </div>
+     </div>
+   );
+}
+
+function BackBosses({ bosses, onSelect }) {
+  return (
+    <div className="bosses-content">
+      <h2 className="bosses-title">Bosses</h2>
+      <div className="bosses-grid-scroll-container">
+        <div className="bosses-grid-container">
+          {Array.from({ length: 30 }).map((_, index) => (
+            <div
+              key={index}
+              className="bosses-tile"
+              onClick={() => {
+                if (index < bosses.length) onSelect(bosses[index]);
+              }}
+            >
+              {index < bosses.length ? (
+                <img
+                  src={bosses[index].symbol}
+                  alt={`boss-${index}`}
+                  className="bosses-image"
+                />
+              ) : (
+                <span className="question-mark">?</span>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export { FrontBosses, BackBosses };

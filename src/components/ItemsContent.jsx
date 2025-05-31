@@ -1,7 +1,6 @@
 // src/pages/ItemsContent.jsx
 import '../styles/ItemsContent.css';
 import frame from '../codex/content-image-frame-codex.png';
-import { treasures } from '../data/items';
 
 function FrontItems({ item }) {
   return (
@@ -28,7 +27,7 @@ function BackItems({ treasures, onSelect }) {
       <h2 className="treasure-title">Tesori</h2>
       <div className="treasure-grid-scroll-container">
         <div className="treasure-grid-container">
-          {Array.from({ length: 30 }).map((_, index) => (
+          {Array.from({ length: 32 }).map((_, index) => (
             <div
               key={index}
               className="treasure-tile"

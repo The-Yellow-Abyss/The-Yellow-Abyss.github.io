@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import "../styles/FlipBook.css";
-import { treasures } from "../data/items"; // Se segui la struttura consigliata
+import { weapons } from "../data/weapons"; 
+import { treasures } from "../data/items";
+import { enemies } from "../data/bestiary"; 
+import { bosses } from "../data/bosses"; 
 
 import { FrontInventory, BackInventory } from "./InventoryContent";
 import { FrontItems, BackItems } from "./ItemsContent";
@@ -18,7 +21,11 @@ import nextArrow from "../assets/next-arrow.png";
 
 const FlipBook = () => {
   const [currentState, setCurrentState] = useState(1);
+  const [selectedWeapons, setSelectedWeapons] = useState(weapons[0]);
   const [selectedItem, setSelectedItem] = useState(treasures[0]);
+  const [selectedEnemy, setSelectedEnemy] = useState(enemies[0]);
+  const [selectedBosses, setSelectedBosses] = useState(bosses[0]);
+  
   const numOfPapers = 11;
   const maxState = numOfPapers + 1;
 
@@ -64,22 +71,22 @@ const FlipBook = () => {
   },
   {
     front: <FrontInventory />,
-    back: <BackWeapons />,
+    back: <BackWeapons weapons={weapons} onSelect={setSelectedWeapons}/>,
   },
   {
-    front: <FrontWeapons />,
+    front: <FrontWeapons weapon={selectedWeapons}/>,
     back: <BackItems treasures={treasures} onSelect={setSelectedItem} />,
   },
   {
     front: <FrontItems item={selectedItem} />,
-    back: <BackBestiary />,
+    back: <BackBestiary enemies={enemies} onSelect={setSelectedEnemy} />,
   },
   {
-    front: <FrontBestiary />,
-    back: <BackBosses />,
+    front: <FrontBestiary enemy={selectedEnemy} />,
+    back: <BackBosses bosses={bosses} onSelect={setSelectedBosses}/>,
   },
   {
-    front: <FrontBosses />,
+    front: <FrontBosses boss={selectedBosses}/>,
     back: <div><h2>Strategie</h2><p>Come sconfiggerli facilmente.</p></div>,
   },
   {

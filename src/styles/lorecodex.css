@@ -237,7 +237,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 /* Paper Z-index */
-#p1 .front {
+#pl1 .front {
     background-image: url(../assets/codex_book_front.png);
     background-size: contain;  /* Mantiene il rapporto di aspetto */
     background-repeat: no-repeat;  /* Evita che l'immagine si ripeta */
@@ -245,7 +245,7 @@ body::-webkit-scrollbar-thumb {
     object-fit: contain;
     image-rendering: pixelated; 
 }
-#p1 .back {
+#pl1 .back {
     background-image: url(../assets/back_codex.PNG);
     background-size: contain;  /* Mantiene il rapporto di aspetto */
     background-repeat: no-repeat;  /* Evita che l'immagine si ripeta */
@@ -254,14 +254,12 @@ body::-webkit-scrollbar-thumb {
     image-rendering: pixelated; 
 }
 
-#p2 .front, 
-#p3 .front,
-#p4 .front,
-#p5 .front,
-#p6 .front,
-#p7 .front,
-#p8 .front,
-#p9 .front {
+#pl2 .front, 
+#pl3 .front,
+#pl4 .front,
+#pl5 .front,
+#pl6 .front,
+#pl7 .front{
     background-image: url(../assets/front_codex_open.png);
     background-size: contain;  /* Mantiene il rapporto di aspetto */
     background-repeat: no-repeat;  /* Evita che l'immagine si ripeta */
@@ -270,16 +268,7 @@ body::-webkit-scrollbar-thumb {
     image-rendering: pixelated; 
 }
 
-#p10 .front {
-    background-image: url(../assets/front_codex_open.png);
-    background-size: contain;  /* Mantiene il rapporto di aspetto */
-    background-repeat: no-repeat;  /* Evita che l'immagine si ripeta */
-    background-position: center;  /* Centra l'immagine */
-    object-fit: contain;
-    image-rendering: pixelated; 
-}
-
-#p2 .back {
+#pl2 .back {
     background-image: url(../assets/back_codex_open_3.png);
     background-size: contain;  /* Mantiene il rapporto di aspetto */
     background-repeat: no-repeat;  /* Evita che l'immagine si ripeta */
@@ -290,14 +279,10 @@ body::-webkit-scrollbar-thumb {
 
 
 
-#p3 .back,
-#p4 .back,
-#p5 .back,
-#p6 .back,
-#p7 .back,
-#p8 .back,
-#p9 .back,
-#p10 .back {
+#pl3 .back,
+#pl4 .back,
+#pl5 .back,
+#pl6 .back {
     background-image: url(../assets/back_codex_open_2.png);
     background-size: contain;  /* Mantiene il rapporto di aspetto */
     background-repeat: no-repeat;  /* Evita che l'immagine si ripeta */
@@ -307,7 +292,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 
-#p11 .front {
+#pl7 .front {
     background-image: url(../assets/back_codex.PNG);
     background-size: contain;  /* Mantiene il rapporto di aspetto */
     background-repeat: no-repeat;  /* Evita che l'immagine si ripeta */
@@ -315,7 +300,7 @@ body::-webkit-scrollbar-thumb {
     object-fit: contain;
     image-rendering: pixelated; 
 }
-#p11 .back {
+#pl7 .back {
     background-image: url(../assets/back_codex.PNG);
     background-size: contain;  /* Mantiene il rapporto di aspetto */
     background-repeat: no-repeat;  /* Evita che l'immagine si ripeta */
@@ -325,44 +310,31 @@ body::-webkit-scrollbar-thumb {
 }
 
 
-#p1 {
+#pl1 {
     z-index: 11;
 }
 
-#p2 {
+#pl2 {
     z-index: 10;
 }
 
-#p3 {
+#pl3 {
     z-index: 9;
 }
 
-#p4 {
+#pl4 {
     z-index: 8;
 }
 
-#p5 {
+#pl5 {
     z-index: 7;
 }
-#p6 {
+#pl6 {
     z-index: 6;
 }
-#p7 {
+#pl7 {
     z-index: 5;
 }
-#p8 {
-    z-index: 4;
-}
-#p9 {
-    z-index: 3;
-}
-#p10 {
-    z-index: 2;
-}
-#p11 {
-    z-index: 1;
-}
-
 
 /* Customization */
 
