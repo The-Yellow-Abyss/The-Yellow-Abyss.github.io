@@ -30,7 +30,7 @@
   max-width: 700px;
   aspect-ratio: 16 / 9;
   border: 7px solid #522828; 
-  border-radius: 0px;
+  border-radius: 3px;
   overflow: hidden;
   cursor: url('../assets/personalized-cursor-2-blood.png'), pointer;
 }
@@ -47,26 +47,36 @@
   max-width: 700px;
   padding: 30px;
   background-image: url('../assets/Home-description-frame.png');
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   box-sizing: border-box;
-  position: relative; /* se vuoi posizionare eventuali contenuti assoluti */
-  overflow: hidden;   /* per sicurezza, evita traboccamenti */
+  position: relative;
+  overflow: hidden;
   color: #0c0c0c;
-  
+  border: 7px solid #522828; 
+  border-radius: 100%;
   font-size: 18px;
   line-height: 1.6;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   border-radius: 0;
+
+  /* Evita scroll nascosto o overflow */
+  word-wrap: break-word;
+  word-break: break-word;
 }
 
 .description-text {
-  width: 90%;               /* Rimpicciolisce il testo per non toccare i bordi */
-  margin: 0 auto;           /* Centra il testo dentro il box */
-  padding: 1rem 0;          /* Spaziatura verticale interna */
-  overflow-wrap: break-word; /* Evita che il testo debordi */
+  width: 100%;             /* Usa tutta la larghezza disponibile */
+  max-width: 100%;         /* Limita la larghezza massima al contenitore */
+  margin: 0 auto;
+  padding: 1rem 0;
+  overflow-wrap: break-word;
+  word-wrap: break-word;   /* Compatibilità */
+  word-break: break-word;  /* Spezza parole troppo lunghe */
+  white-space: normal;     /* Impedisce che il testo resti su una sola riga */
 }
+
 
 
 /* Se lo schermo è più largo di 1800px cambia l'immagine di background */

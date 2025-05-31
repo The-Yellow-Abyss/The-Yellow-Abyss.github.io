@@ -58,12 +58,12 @@ const HomePage = () => {
           </div>
 
           {/* Bottone sotto */}
-<div className="button-container">
-  <button
-    className="steam-button"
-    onClick={() => window.open(stemImage, '_blank')}
-  ></button>
-</div>
+          <div className="button-container">
+            <button
+              className="steam-button"
+              onClick={() => window.open(stemImage, '_blank')}
+            ></button>
+          </div>
         </div>
 
         <div className="right-sidebar">
