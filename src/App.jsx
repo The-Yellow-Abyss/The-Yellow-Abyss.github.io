@@ -9,12 +9,13 @@ import CodexPage from './pages/CodexPage';
 import AdminPage from './admin/AdminPage';
 import LoginPage from './admin/LoginPage';
 import MechanicsPage from './pages/MechanicsPage';
+import ScrollToTop from './components/ScrollToTop';
 // import Navbar from './components/Navbar';
 
 function App() {
   return (
     <Router>
-      {/* <Navbar /> */}
+      <ScrollToTop />      
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/bestiary" element={<BestiaryPage />} />
