@@ -26,12 +26,12 @@ const ItemsPage = () => {
         </div>
 
         <div className="main-content">
-          <div className="content-title breadcrumb">
+          <div className="breadcrumb">
             <Link to="/" className="breadcrumb-link">Home</Link> &gt;{' '}
             <Link to="/items" className="breadcrumb-current">Items</Link>
           </div>
 
-          <div className="content-title">Oggetti disponibili</div>
+          <div className="content-title">ITEMS</div>
 
           <div className="content-box-items">
             {items.length === 0 ? (
@@ -50,8 +50,6 @@ const ItemsPage = () => {
               ))
             )}
           </div>
-
-          <div className="content-bottom">content-bottom</div>
         </div>
 
         <div className="right-sidebar">

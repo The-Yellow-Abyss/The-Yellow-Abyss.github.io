@@ -21,15 +21,14 @@ const CodexPage = () => {
         </div>
 
         <div className="main-content">
-          <div className="content-title breadcrumb">
+          <div className="breadcrumb">
             <Link to="/" className="breadcrumb-link">Home</Link> &gt;{' '}
             <Link to="/codex" className="breadcrumb-current">Codex</Link>
           </div>
-
+          <div className="content-title">CODEX</div>
           <div className="codex-content-box">
             <FlipBook />
           </div>
-          <div className="content-bottom">content-bottom</div>
         </div>
 
         <div className="right-sidebar">

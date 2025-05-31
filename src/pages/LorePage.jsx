@@ -18,14 +18,14 @@ const LorePage = () => {
         </div>
 
         <div className="main-content">
-          <div className="content-title breadcrumb">
+          <div className="breadcrumb">
             <Link to="/" className="breadcrumb-link">Home</Link> &gt;{' '}
             <Link to="/lore" className="breadcrumb-current">Lore</Link>
           </div>
+          <div className="content-title">LORE</div>
           <div className="lore-content-box">
             <LoreCodex/>
           </div>
-          <div className="content-bottom"></div>
         </div>
 
         <div className="right-sidebar">

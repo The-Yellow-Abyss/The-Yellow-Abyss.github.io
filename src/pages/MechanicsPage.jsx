@@ -18,11 +18,11 @@ const MechanicsPage = () => {
         </div>
 
         <div className="main-content">
-          <div className="content-title breadcrumb">
+          <div className="breadcrumb">
             <Link to="/" className="breadcrumb-link">Home</Link> &gt;{' '}
             <Link to="/gamemechanics" className="breadcrumb-current">Game Mechanics</Link>
           </div>
-          <div className="content-title">content-title</div>
+          <div className="content-title">GAME MECHANICS</div>
           <div className="content-box">content-box</div>
           <div className="content-bottom"></div>
         </div>

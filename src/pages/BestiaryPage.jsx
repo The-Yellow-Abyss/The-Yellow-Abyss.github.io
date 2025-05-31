@@ -73,11 +73,11 @@ const BestiaryPage = () => {
         </div>
 
         <div className="main-content">
-          <div className="content-title breadcrumb">
+          <div className="breadcrumb">
             <Link to="/" className="breadcrumb-link">Home</Link> &gt;{' '}
             <Link to="/bestiary" className="breadcrumb-current">Bestiary</Link>
           </div>
-          <div className="content-title">Bestiary Title</div>
+          <div className="content-title">BESTIARY</div>
 
           <div className="content-box-bestiary">
             <Carousel>
@@ -87,7 +87,6 @@ const BestiaryPage = () => {
             </Carousel>
           </div>
 
-          <div className="content-bottom">content-bottom</div>
         </div>
 
         <div className="right-sidebar">

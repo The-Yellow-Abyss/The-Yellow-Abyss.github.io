@@ -124,27 +124,26 @@ left: 0;
 }
 
 .main-content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Per spingere titolo e footer in alto e in basso */
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Assicura l'allineamento in alto */    
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .main-content .content-title {
     display: flex;
-    align-items: flex-start;
-    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: 10%;
     min-height: 10vh;
+    font-size: 2.5rem;
     color: #ffff;
-
-
 }
 
 .main-content .content-bottom {
@@ -409,18 +408,19 @@ footer {
 }
 
 
-
-
-
-
 /* Stile per la breadcrumb */
-.content-title.breadcrumb {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 1.2rem;
-    color: #fff;
-    margin-bottom: 1rem;
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  height: 10%;
+  min-height: 10vh;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.2rem;
+  color: #fff;
 }
 
 /* Link di base nella breadcrumb */

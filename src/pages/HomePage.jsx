@@ -24,15 +24,14 @@ const HomePage = () => {
         </div>
 
         <div className="main-content">
-          <div className="content-title breadcrumb">
+          <div className="breadcrumb">
             <Link to="/" className="breadcrumb-current">Home</Link>
           </div>
-
           {/* Titolo centrale */}
           <div className="title-image-container">
             <img src={titleImage} alt="Game Title" className="title-image" />
           </div>
-
+          
           {/* Sezione video + descrizione */}
           <div className="video-description-container">
             <div className="video-box">

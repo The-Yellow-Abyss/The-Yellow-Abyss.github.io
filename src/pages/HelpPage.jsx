@@ -13,11 +13,11 @@ const HelpPage = () => {
         <div className="left-sidebar" />
 
         <div className="main-content">
-          <div className="content-title breadcrumb">
+          <div className="breadcrumb">
             <Link to="/" className="breadcrumb-link">Home</Link> &gt;{' '}
             <Link to="/help" className="breadcrumb-current">Help</Link>
           </div>
-          <div className="content-title">content-title</div>
+          <div className="content-title">HELP PAGE</div>
           <div className="content-box">content-box</div>
           <div className="content-bottom"></div>
           
