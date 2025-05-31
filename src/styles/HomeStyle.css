@@ -43,16 +43,37 @@
 .description-box {
   flex: 1 1 500px;
   max-width: 700px;
-  padding: 20px;
-  background-color: #b4ac9f;
-  border-radius: 8px;
+  padding: 30px;
+  background-image: url('../assets/Home-description-frame.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  position: relative; /* se vuoi posizionare eventuali contenuti assoluti */
+  overflow: hidden;   /* per sicurezza, evita traboccamenti */
   color: #0c0c0c;
-  font-size: 21px;
+  font-size: 18px;
   line-height: 1.6;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  border: 7px solid #796f5e; 
-  border-radius: 0%;
+  border-radius: 0;
 }
+
+.description-text {
+  width: 90%;               /* Rimpicciolisce il testo per non toccare i bordi */
+  margin: 0 auto;           /* Centra il testo dentro il box */
+  padding: 1rem 0;          /* Spaziatura verticale interna */
+  overflow-wrap: break-word; /* Evita che il testo debordi */
+}
+
+
+/* Se lo schermo è più largo di 1800px cambia l'immagine di background */
+@media (min-width: 1400px) {
+  .description-box {
+    background-image: url('../assets/RiquadroHomeSritte.png');
+  }
+}
+
+
 
 .steam-button {
   background-image: url('../assets/Steam button 1.png');

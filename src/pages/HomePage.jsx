@@ -45,12 +45,14 @@ const HomePage = () => {
             ></iframe>
             </div>
             <div className="description-box">
-              <p>
-                Un cavaliere di nome Rosalind si addentra nelle catacombe della cattedrale della santa chiesa dell’impero, in cerca della sua amata Valerika scomparsa. 
-                Dovrà affrontare creature grottesche per raggiungere le profondità delle catacombe, ricevendo l'aiuto da un particolare vecchio signore vestito di giallo. 
-                I cittadini della citta' Tetai, capitale dell'impero, sono caduti sotto una profonda follia finendo per mutare in forme grottesche. 
-                L'epicentro di questa follia sono le catacombe della santa chiesa. Tutti coloro che hanno provato ad addentrarsi nelle catacombe sono ora esposti al suo ingresso come monito per i futuri avventurieri. 
-              </p>
+              <div className="description-text">
+                <p>
+                  Un cavaliere di nome Rosalind si addentra nelle catacombe della cattedrale della santa chiesa dell’impero, in cerca della sua amata Valerika scomparsa. 
+                  Dovrà affrontare creature grottesche per raggiungere le profondità delle catacombe, ricevendo l'aiuto da un particolare vecchio signore vestito di giallo. 
+                  I cittadini della citta' Tetai, capitale dell'impero, sono caduti sotto una profonda follia finendo per mutare in forme grottesche. 
+                  L'epicentro di questa follia sono le catacombe della santa chiesa. Tutti coloro che hanno provato ad addentrarsi nelle catacombe sono ora esposti al suo ingresso come monito per i futuri avventurieri. 
+                </p>
+              </div>
             </div>
           </div>
 
@@ -63,6 +65,7 @@ const HomePage = () => {
         <div className="right-sidebar">
           <img src={sidebarRightImage} alt="Sidebar Right" className="sidebar-img" />
         </div>
+        
       </div>
       <Footer />
     </div>

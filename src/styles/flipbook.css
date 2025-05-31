@@ -53,10 +53,10 @@ img {
 
 
 /* Contenitore dei bottoni (ora dentro .book-container) */
-#prev-btn,
-#next-btn {
-    position: absolute;
-    top: 50%;
+#prev-btn, #next-btn {
+    position: relative;
+    top: auto;
+    margin: 0 2rem;
     transform: translateY(-50%);
     z-index: 2;
     transition: transform 0.5s ease;
@@ -64,13 +64,120 @@ img {
 
 /* Pulsante precedente a sinistra */
 #prev-btn {
-    left: 15em;
+    left: -10em;
 }
 
 /* Pulsante successivo a destra */
 #next-btn {
-    right: 13em;
+    right: -10em;
 }
+
+#prev-btn img,
+#next-btn img {
+    transform: scale(1);
+    transition: transform 0.3s ease;
+}
+
+/* Hover base */
+#prev-btn img:hover,
+#next-btn img:hover {
+    transform: scale(1.2);
+}
+
+/* Schermo medio: aumenta scala */
+@media (min-width: 1024px) {
+    #prev-btn img,
+    #next-btn img {
+        transform: scale(1.2);
+    }
+
+    #prev-btn img:hover,
+    #next-btn img:hover {
+        transform: scale(1.4);
+    }
+
+    #prev-btn {
+        left: -20em;
+    }
+
+    /* Pulsante successivo a destra */
+    #next-btn {
+        right: -20em;
+    }
+}
+
+/* Schermo grande: scala ancora maggiore */
+@media (min-width: 1440px) {
+    #prev-btn img,
+    #next-btn img {
+        transform: scale(1.4);
+    }
+
+    #prev-btn img:hover,
+    #next-btn img:hover {
+        transform: scale(1.6);
+    }
+}
+
+@media (min-width: 1700px) {
+    #prev-btn img,
+    #next-btn img {
+        transform: scale(1.6);
+    }
+
+    #prev-btn img:hover,
+    #next-btn img:hover {
+        transform: scale(1.8);
+    }
+}
+
+@media (min-width: 1900px) {
+    #prev-btn img,
+    #next-btn img {
+        transform: scale(2);
+    }
+
+    #prev-btn img:hover,
+    #next-btn img:hover {
+        transform: scale(2.3);
+    }
+}
+
+
+@media (min-width: 2000px) {
+    #prev-btn img,
+    #next-btn img {
+        transform: scale(2.5);
+    }
+
+    #prev-btn img:hover,
+    #next-btn img:hover {
+        transform: scale(3);
+    }
+
+    #prev-btn {
+        left: -25em;
+    }
+
+    /* Pulsante successivo a destra */
+    #next-btn {
+        right: -25em;
+    }
+}
+
+@media (min-width: 2200px) {
+    #prev-btn img,
+    #next-btn img {
+        transform: scale(4.5);
+    }
+
+    #prev-btn img:hover,
+    #next-btn img:hover {
+        transform: scale(6);
+    }
+}
+
+
 
 /* Quando il libro è aperto (aggiungiamo classe .shifted in React) */
 .book-open #prev-btn {
@@ -569,6 +676,7 @@ body::-webkit-scrollbar-thumb {
         width: 40px;
         height: 40px;
     }
+    
 }
 
 

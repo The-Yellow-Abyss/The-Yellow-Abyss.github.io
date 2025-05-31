@@ -57,6 +57,7 @@ const ItemsPage = () => {
         <div className="right-sidebar">
           <img src={sidebarRightImage} alt="Sidebar Right" className="sidebar-img" />
         </div>
+        
       </div>
       <Footer />
     </div>

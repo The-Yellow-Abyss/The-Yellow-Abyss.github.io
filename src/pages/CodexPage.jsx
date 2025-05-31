@@ -35,6 +35,7 @@ const CodexPage = () => {
         <div className="right-sidebar">
             <img src={sidebarRightImage} alt="Sidebar Image" className="sidebar-img" />
         </div>
+        
       </div>
 
       <Footer/>

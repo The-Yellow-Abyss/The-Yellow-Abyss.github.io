@@ -53,10 +53,10 @@ img {
 
 
 /* Contenitore dei bottoni (ora dentro .book-container) */
-#prev-btn,
-#next-btn {
-    position: absolute;
-    top: 50%;
+#prev-btn, #next-btn {
+    position: relative;
+    top: auto;
+    margin: 0 2rem;
     transform: translateY(-50%);
     z-index: 2;
     transition: transform 0.5s ease;
@@ -64,12 +64,18 @@ img {
 
 /* Pulsante precedente a sinistra */
 #prev-btn {
-    left: 15em;
+    left: -7em;
 }
 
 /* Pulsante successivo a destra */
 #next-btn {
-    right: 13em;
+    right: -7em;
+}
+
+.back-arrow img,  .back-arrow { 
+    width: 300px;
+    height: 300px;
+    transition: transform 0.3s ease;
 }
 
 /* Quando il libro è aperto (aggiungiamo classe .shifted in React) */

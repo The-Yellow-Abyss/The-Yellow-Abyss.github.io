@@ -1,4 +1,5 @@
 
+
 * {
     margin: 0;
     padding: 0;
@@ -7,6 +8,22 @@
     font-family: 'MyPixelFont', sans-serif;
     cursor: url('../assets/personalized-cursor.png') , auto;
 }
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Previene uscita orizzontale */
+    overflow-y: auto;   /* Permette lo scroll verticale se necessario */
+}
+
+#root {
+    flex: 1; /* Fa sì che il contenuto cresca per riempire la pagina */
+    display: flex;
+    flex-direction: column;
+}
+
+
 
 img {
     image-rendering: pixelated;
@@ -28,22 +45,25 @@ body {
 
 body {
     display: flex;
-    width: 100%;
-    height: 100%; /* Usa l'altezza della viewport */
-    margin: 0;
     flex-direction: column;
-    justify-content: center;
-    align-items: stretch;
+    min-height: 100%;
 }
 
+.main {
+    flex: 1; /* Riempie lo spazio rimanente tra header e footer */
+}
+
+
 body {
+
+    height: 100%; /* Massima altezza disponibile */
     background-image: url('../assets/catacomb-3.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed; /* Fissa l'immagine di sfondo */
-    margin: 0;
+    background-attachment: fixed;
 }
+
 
 
 a,li {
@@ -63,33 +83,56 @@ a,li {
   display: block;
 }
 
-.main .main-content{
-    margin-top: 80px; /* Aggiungi un margine per compensare l'altezza della nav fissa */
+.left-sidebar,
+.right-sidebar {
+  display: flex;
+  position: fixed;
+  height: 100vh; /* o quanto serve */
+  width: 6%;
+  object-fit: cover;
+  display: block;
+  background-size: contain;
+  background-position: center;
+  background-repeat: repeat;
+
 }
+
+/* Sidebar sinistra */
+.left-sidebar {
+left: 0;
+  background-image: url('../assets/right-sideBar-catacomb.png'); /* immagine DESTRA va nella sidebar SINISTRA */
+}
+
+/* Sidebar destra */
+.right-sidebar {
+  right: 0;
+  background-image: url('../assets/left-sideBar-catacomb.png'); /* immagine SINISTRA va nella sidebar DESTRA */
+}
+
+
+.main .main-content {
+  padding: max(80px, 4%) max(100px, 7%) 5% max(100px, 7%);
+}
+
 
 .main {
+    flex: 1; /* Riempie lo spazio tra header e footer */
     display: flex;
+    flex-direction: column;
     width: 100%;
-    height: 100%;
-    align-items: stretch; 
-    box-sizing: border-box; /* Aggiunto per evitare overflow dovuti al padding */
+    height: 100%; /* Fa sì che si adatti allo schermo */
 }
 
-
 .main-content {
+    flex: 1;
     display: flex;
-    margin: 0.5rem;
-    height: 100%;
-    width: 94%;
-    flex-grow: 1; /* Fa in modo che questa sezione occupi lo spazio rimanente */
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    box-sizing: border-box; /* Aggiunto per evitare overflow dovuti al padding */
-    background: none;
-    background-color: none;
-
-
+    justify-content: space-between; /* Per spingere titolo e footer in alto e in basso */
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .main-content .content-title {
@@ -313,58 +356,56 @@ a,li {
 
 
 /* Stile per il footer */
+/* Stile per il footer */
 footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
     width: 100%;
-    height: 70px;
-    min-height: 70px;
-    box-sizing: border-box;
-    bottom: 0;
-}
-
-/* Stile per l'immagine all'interno del footer */
-footer .footer-bar {
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    width: 100%;
-    object-fit: cover;
-    z-index: 1;
-}
-
-/* Stile per i contenuti (link) sopra l'immagine */
-footer .footer-container {
-    position: relative;
-    z-index: 2;
+    min-height: 200px;
+    padding: 50px 0;
     color: white;
+    margin-top: auto;
+    position: relative;
+    z-index: 1;
+
+    /* Sfondo con immagine */
+    background-image: url('../assets/footer-the-yellow-abyss-2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-/* Stile per i link nel footer */
-footer .footer-links ul {
+
+/* Contenitore centrale */
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
     display: flex;
-    justify-content: center; /* Mantiene i link centrati */
-    gap: 50%; /* Distanza tra i link */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Lista link */
+.footer-links ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Fa andare i link a capo su schermi piccoli */
+    gap: 2rem;
     padding: 0;
     margin: 0;
-}
-
-footer .footer-links li {
     list-style: none;
 }
 
-footer .footer-links li {
-    text-decoration: none;
+/* Singolo link */
+.footer-links li a {
     color: white;
+    text-decoration: none;
     font-size: 1.2rem;
-    transition: transform 0.3s ease, color 0.4s ease; /* Transizione morbida */
+    transition: transform 0.3s ease, color 0.4s ease;
 }
 
-footer .footer-links li:hover {
-    transform: scale(1.3); /* Ingrandisce leggermente il link */
-    color: #FFD700; /* Cambia colore al passaggio del mouse (opzionale) */
+.footer-links li a:hover {
+    transform: scale(1.1);
+    color: #FFD700;
 }
 
 

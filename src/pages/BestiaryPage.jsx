@@ -61,7 +61,7 @@ const BestiaryPage = () => {
   const cardsData = [
     { image: enemiesImage, title: 'Enemies' },
     { image: bossesImage, title: 'Bosses' },
-    { image: creaturesImage, title: 'Creatures' },
+    { image: creaturesImage, title: 'NPC' },
   ];
 
   return (

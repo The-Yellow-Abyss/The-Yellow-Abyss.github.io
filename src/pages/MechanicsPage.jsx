@@ -24,11 +24,14 @@ const MechanicsPage = () => {
           </div>
           <div className="content-title">content-title</div>
           <div className="content-box">content-box</div>
+          <div className="content-bottom"></div>
         </div>
 
         <div className="right-sidebar">
           <img src={sidebarRightImage} alt="Sidebar Image" className="sidebar-img" />
         </div>
+        
+        
       </div>
       <Footer />
     </div>
