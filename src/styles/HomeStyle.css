@@ -76,12 +76,12 @@
 
 
 .steam-button {
-  background-image: url('../assets/Steam button 1.png');
+  background-image: url('../assets/steamButton0.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  width: 200px; /* adatta se serve */
-  height: 100px;
+  width: 500px; 
+  height: 130px;
   border: none;
   padding: 0;
   cursor: url('../assets/personalized-cursor-2-blood.png'), pointer;
@@ -90,7 +90,7 @@
 
 .steam-button:hover,
 .steam-button:active {
-  background-image: url('../assets/Steam button 2.png');
+  background-image: url('../assets/steamButton1.png');
 }
 
 
