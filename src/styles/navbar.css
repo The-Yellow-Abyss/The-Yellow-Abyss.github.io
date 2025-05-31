@@ -50,6 +50,20 @@ nav {
     position: relative;
 }
 
+/* Schermi molto grandi */
+@media (min-width: 2000px) {
+    .hyperlinks-container {
+        margin-top: 0.5rem;
+    }
+}
+
+/* Schermi molto grandi */
+@media (min-width: 2500px) {
+    .hyperlinks-container {
+        margin-top: 1rem;
+    }
+}
+
 /* Contenitore per il logo, allineato a sinistra */
 .logo-container {
     display: flex;
