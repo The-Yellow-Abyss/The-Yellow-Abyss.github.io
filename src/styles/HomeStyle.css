@@ -8,12 +8,12 @@
 
 .title-image-container {
   text-align: center;
-  margin-top: 0px;
+  margin-top: -120px;
 }
 
 .title-image {
   max-width: 100%;
-  height: auto;
+  height: -20px;
 }
 
 .video-description-container {
@@ -86,6 +86,7 @@
   padding: 0;
   cursor: url('../assets/personalized-cursor-2-blood.png'), pointer;
   transition: background-image 0.3s ease;
+  margin-bottom: auto;
 }
 
 .steam-button:hover,
