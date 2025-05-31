@@ -9,8 +9,9 @@ import Footer from '../components/Footer';
 import sidebarLeftImage from '../assets/right-sideBar-catacomb.png';
 import sidebarRightImage from '../assets/left-sideBar-catacomb.png';
 import titleImage from '../assets/The_Yellow_Abyss_game_Title_3.png';
-import steamBtn1 from '../assets/Steam button 1.png';
-import steamBtn2 from '../assets/Steam button 2.png';
+import steamBtn1 from '../assets/steamButton0.png';
+import steamBtn2 from '../assets/steamButton1.png';
+import stemImage from '../assets/StemPagezs.png';
 
 const HomePage = () => {
   return (
@@ -57,9 +58,12 @@ const HomePage = () => {
           </div>
 
           {/* Bottone sotto */}
-          <div className="button-container">
-            <button className="steam-button"></button>
-          </div>
+<div className="button-container">
+  <button
+    className="steam-button"
+    onClick={() => window.open(stemImage, '_blank')}
+  ></button>
+</div>
         </div>
 
         <div className="right-sidebar">

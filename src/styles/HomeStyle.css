@@ -32,12 +32,14 @@
   border: 7px solid #522828; 
   border-radius: 0px;
   overflow: hidden;
+  cursor: url('../assets/personalized-cursor-2-blood.png'), pointer;
 }
 
 .video-box iframe {
   width: 100%;
   height: 100%;
   border: none;
+  cursor: url('../assets/personalized-cursor-2-blood.png'), pointer;
 }
 
 .description-box {
@@ -52,6 +54,7 @@
   position: relative; /* se vuoi posizionare eventuali contenuti assoluti */
   overflow: hidden;   /* per sicurezza, evita traboccamenti */
   color: #0c0c0c;
+  
   font-size: 18px;
   line-height: 1.6;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
