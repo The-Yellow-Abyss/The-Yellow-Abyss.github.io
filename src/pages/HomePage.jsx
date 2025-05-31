@@ -31,9 +31,6 @@ const HomePage = () => {
           {/* Titolo centrale */}
           <div className="title-image-container">
             <img src={titleImage} alt="Game Title" className="title-image" />
-            <Link to="/codex" className="diary-button">
-              <img src={diaryIcon} alt="Diario" />
-            </Link>
           </div>
 
           {/* Sezione video + descrizione */}
@@ -59,6 +56,13 @@ const HomePage = () => {
                 </p>
               </div>
             </div>
+            <Link to="/codex" className="diary-button">
+              <img src={diaryIcon} alt="Diario" />
+            </Link>
+          </div>
+
+          <div>
+            
           </div>
 
           {/* Bottone sotto */}
