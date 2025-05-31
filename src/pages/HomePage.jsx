@@ -12,6 +12,7 @@ import titleImage from '../assets/The_Yellow_Abyss_game_Title_3.png';
 import steamBtn1 from '../assets/steamButton0.png';
 import steamBtn2 from '../assets/steamButton1.png';
 import stemImage from '../assets/StemPagezs.png';
+import diaryIcon from '../assets/Diario-icona.PNG';
 
 const HomePage = () => {
   return (
@@ -30,6 +31,9 @@ const HomePage = () => {
           {/* Titolo centrale */}
           <div className="title-image-container">
             <img src={titleImage} alt="Game Title" className="title-image" />
+            <Link to="/codex" className="diary-button">
+              <img src={diaryIcon} alt="Diario" />
+            </Link>
           </div>
 
           {/* Sezione video + descrizione */}
