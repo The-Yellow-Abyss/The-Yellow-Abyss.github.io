@@ -68,8 +68,9 @@ const HomePage = () => {
           <div className="button-container">
             <button
               className="steam-button"
-              onClick={() => window.open(stemImage, '_blank')}
-            ></button>
+              onClick={() => window.open('/steam/steam.html', '_blank')}
+            />
+
           </div>
         </div>
 
