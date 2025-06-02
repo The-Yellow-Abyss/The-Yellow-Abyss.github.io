@@ -348,7 +348,7 @@ body::-webkit-scrollbar-thumb {
     image-rendering: pixelated; 
 }
 #p1 .back {
-    background-image: url(../assets/back_codex.PNG);
+    background-image: url(../assets/back_codex_2.png);
     background-size: contain;  /* Mantiene il rapporto di aspetto */
     background-repeat: no-repeat;  /* Evita che l'immagine si ripeta */
     background-position: center;  /* Centra l'immagine */
@@ -373,7 +373,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 #p10 .front {
-    background-image: url(../assets/front_codex_open.png);
+    background-image: url(../assets/back_codex_open_3.png);
     background-size: contain;  /* Mantiene il rapporto di aspetto */
     background-repeat: no-repeat;  /* Evita che l'immagine si ripeta */
     background-position: center;  /* Centra l'immagine */
@@ -398,8 +398,7 @@ body::-webkit-scrollbar-thumb {
 #p6 .back,
 #p7 .back,
 #p8 .back,
-#p9 .back,
-#p10 .back {
+#p9 .back {
     background-image: url(../assets/back_codex_open_2.png);
     background-size: contain;  /* Mantiene il rapporto di aspetto */
     background-repeat: no-repeat;  /* Evita che l'immagine si ripeta */
@@ -408,6 +407,14 @@ body::-webkit-scrollbar-thumb {
     image-rendering: pixelated; 
 }
 
+#p10 .back {
+    background-image: url(../assets/back_codex_open_3.png);
+    background-size: contain;  /* Mantiene il rapporto di aspetto */
+    background-repeat: no-repeat;  /* Evita che l'immagine si ripeta */
+    background-position: center;  /* Centra l'immagine */
+    object-fit: contain;
+    image-rendering: pixelated; 
+}
 
 #p11 .front {
     background-image: url(../assets/back_codex.PNG);

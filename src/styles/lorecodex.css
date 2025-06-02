@@ -238,7 +238,7 @@ body::-webkit-scrollbar-thumb {
 
 /* Paper Z-index */
 #pl1 .front {
-    background-image: url(../assets/codex_book_front.png);
+    background-image: url(../assets/codex_book_front.gif);
     background-size: contain;  /* Mantiene il rapporto di aspetto */
     background-repeat: no-repeat;  /* Evita che l'immagine si ripeta */
     background-position: center;  /* Centra l'immagine */
@@ -246,7 +246,7 @@ body::-webkit-scrollbar-thumb {
     image-rendering: pixelated; 
 }
 #pl1 .back {
-    background-image: url(../assets/back_codex.PNG);
+    background-image: url(../assets/back_codex_2.PNG);
     background-size: contain;  /* Mantiene il rapporto di aspetto */
     background-repeat: no-repeat;  /* Evita che l'immagine si ripeta */
     background-position: center;  /* Centra l'immagine */

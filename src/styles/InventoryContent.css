@@ -1,0 +1,389 @@
+.inventory-content {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+
+
+
+.inventory-title {
+  font-size: 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.inventory-section-title {
+  font-size: 1rem;
+  margin-left: 1rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.inventory-row-list-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  max-width: 16rem; /* mantiene la dimensione del contenitore */
+  margin: 0 auto;
+  
+  overflow: hidden; /* nasconde l'overflow e limita l'area visibile */
+  
+  background-image: url('../codex/inventory-codex-list.PNG');
+  border-radius: 8px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.inventory-row-scroll-container {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  gap: 0.5rem;
+  padding: 0 1rem;
+  scroll-snap-type: x mandatory;
+  
+  max-width: 14rem;  /* riduce la larghezza visibile, quindi l'area di overflow */
+  margin: 0 auto;
+  
+  /* opzionale, per far sparire la scrollbar in modo più pulito */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0,0,0,0.2) transparent;
+}
+
+
+
+
+.inventory-row-scroll-container .inventory-tile {
+  scroll-snap-align: start;
+  flex: 0 0 auto;
+  
+}
+
+
+.inventory-row-list-container { 
+  background-image: url('../codex/inventory-codex-list.PNG');
+  border-radius: 8px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;  
+}
+
+.inventory-character-container {
+  display: flex;
+  justify-content: flex-start;
+  padding: 0 1rem 0 1rem;
+  overflow: visible; /* Permette alle tile di uscire visivamente */
+  position: relative; /* Per contesto di stacking, se serve */
+}
+
+.inventory-character-container img {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+  filter: drop-shadow(3px 10px 20px rgba(0, 0, 0, 0.4));
+  z-index: 0;
+}
+
+.inventory-character-tile {
+  width: 8rem;
+  height: 8rem;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), 
+              box-shadow 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.inventory-character-tile::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  border-radius: 8px;
+  background-image: url('../codex/character-image-box-codex.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* Sposta ombra: -3px a sinistra, +4px in basso, con blur 4px */
+  z-index: -1;
+}
+
+.inventory-character-tile:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer; /* fa capire che è interattivo */
+}
+
+
+/* Opzionale: dimensione e aspetto frecce */
+.scroll-arrow {
+  border-radius: 4px;
+  padding: 0.3rem 0.7rem;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.scroll-arrow:hover {
+    transform: scale(1.2);
+}
+
+
+.inventory-scroll-box {
+  display: flex;
+  align-items: center;  /* verticalmente centrati */
+  justify-content: center; /* centro orizzontale */
+  gap: 1rem; /* spazio tra frecce e lista */
+  width: 17rem;
+  max-width: 25em; /* adatta a seconda della larghezza desiderata */
+  position: relative;
+}
+
+
+
+
+.inventory-row-list-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  max-width: 16rem; /* o il valore desiderato */
+  margin: 0 auto;   /* centra */
+  overflow: visible; /* permette alle frecce di uscire */
+}
+
+
+
+.scroll-arrow.left {
+  position: absolute;  /* elimina absolute */
+  left: -4rem;
+  right: auto;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-image: url('../codex/Inventory-Arrow1.png'); /* metti qui il path corretto */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.scroll-arrow.right {
+  position: absolute;  /* elimina absolute */
+  left: auto;
+  right: -4rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-image: url('../codex/Inventory-Arrow2.png'); /* metti qui il path corretto */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+}
+
+
+
+
+
+.inventory-tile {
+  width: 4.5rem;
+  height: 4.5rem;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), 
+              box-shadow 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1;
+}
+
+.inventory-tile::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  border-radius: 8px;
+  background-size: cover;
+  background-position: center;
+  /* Sposta ombra: -3px a sinistra, +4px in basso, con blur 4px */
+  filter: drop-shadow(3px 10px 20px rgba(0, 0, 0, 0.4));
+  z-index: -1;
+}
+
+.inventory-tile:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer; /* fa capire che è interattivo */
+}
+
+
+
+.inventory-image {
+  width: 70%;
+  height: 70%;
+  object-fit: cover; /* Ingrandisce l'immagine mantenendo l'aspetto */
+}
+
+
+.question-mark {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+
+
+/* Container principale dell'item */
+.inventory-item-content {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+}
+
+.inventory-item-image-content {
+  width: 15rem;
+  height: 15rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.inventory-item-image-content img.inventory-item-image {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+  display: block;
+}
+
+/* Wrapper titolo + descrizione - PIÙ GRANDE */
+.inventory-item-title-description-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  max-width: 500px;
+  background: transparent;
+}
+
+/* Container del titolo - PIÙ GRANDE E TESTO CENTRATO */
+.inventory-item-title-content {
+  margin-top: 1rem;
+  padding: 1.3rem;
+  background-image: url('../codex/content-title-box-codex.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 4px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2rem;
+  min-width: 13em;
+  overflow: hidden; /* IMPORTANTE per evitare espansione */
+  text-overflow: ellipsis; /* opzionale, se vuoi troncare il testo */
+  white-space: nowrap;      /* impedisce l'andata a capo */
+}
+
+/* Titolo - più piccolo del container */
+.inventory-item-title-content h1 {
+  margin: 0;
+  font-size: 12px;
+  padding: 5px;
+  max-width: 100%;
+  color: #0f0f0f;
+}
+
+/* Container descrizione - PIÙ GRANDE E CENTRATO */
+.inventory-item-description-content {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  background-image: url('../codex/content-description-box-codex.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 4px;
+  display: flex;
+  align-items: flex-start; /* <-- questa è la modifica chiave */
+  justify-content: center;
+  height: 11rem;
+  width: 17em;
+}
+
+
+/* Testo descrizione centrato e più piccolo */
+.inventory-item-description-content p {
+  font-size: 11px;
+  padding: 25px 15px;
+  text-align:justify;
+  max-width: 90%;
+  margin: 0;
+  color: #0f0f0f;
+  overflow: hidden;
+  text-overflow: ellipsis; /* opzionale */
+}
+
+
+@media (max-width: 1400px) {
+  
+  .inventory-tile {
+    width: 4rem;
+    height: 4rem;
+}
+
+
+  .inventory-item-image-content {
+    width: 14rem;
+    height: 11rem;
+  }
+
+  .inventory-item-title-content {
+    padding: 1rem;
+    height: 1.8rem;
+  }
+
+  .inventory-item-image-content img.inventory-item-image {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+  display: block;
+}
+
+
+  .inventory-item-title-content h1 {
+    font-size: 10px;
+    padding: 3px;
+  }
+
+  .inventory-item-description-content {
+    height: 9rem;
+    width: 20rem;
+  }
+
+  .inventory-item-description-content p {
+    font-size: 9.5px;
+    padding: 20px 25px;
+  }
+
+  .inventory-item-title-description-wrapper {
+    max-width: 400px;
+  }
+}

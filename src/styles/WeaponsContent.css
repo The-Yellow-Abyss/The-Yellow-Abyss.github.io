@@ -61,8 +61,8 @@
 
 
 .weapons-image {
-  width: 80%;
-  height: 80%;
+  width: 70%;
+  height: 70%;
   object-fit: cover; /* Ingrandisce l'immagine mantenendo l'aspetto */
 }
 
@@ -96,8 +96,8 @@
 }
 
 .weapon-image-content img.weapon-image {
-  width: 90%;
-  height: 90%;
+  width: 80%;
+  height: 80%;
   object-fit: contain;
   display: block;
 }

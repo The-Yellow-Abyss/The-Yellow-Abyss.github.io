@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../styles/FlipBook.css";
+import { inventory } from "../data/inventory"; 
 import { weapons } from "../data/weapons"; 
 import { treasures } from "../data/items";
 import { enemies } from "../data/bestiary"; 
@@ -21,6 +22,7 @@ import nextArrow from "../assets/next-arrow.png";
 
 const FlipBook = () => {
   const [currentState, setCurrentState] = useState(1);
+  const [selectedInventory, setSelectedInventory] = useState(inventory[0]);
   const [selectedWeapons, setSelectedWeapons] = useState(weapons[0]);
   const [selectedItem, setSelectedItem] = useState(treasures[0]);
   const [selectedEnemy, setSelectedEnemy] = useState(enemies[0]);
@@ -66,11 +68,18 @@ const FlipBook = () => {
     back: <div></div>,
   },
   {
-    front: <div><h2>Introduzione</h2><p>Benvenuto nel Codex!</p></div>,
-    back: <BackInventory />,
+    front:  
+      <div>
+        <h2>Benvenuto nel Codex!</h2>
+        <p>Qui troverai dettagli su personaggi chiave, armi leggendarie, tesori nascosti e i pericoli che affronterai nel tuo viaggio.</p>
+        <br></br>
+        <br></br>
+        <p>Usa questo Codex come guida e compagno fedele mentre esplori il mondo, scopri alleati e nemici, e sveli il destino che ti attende.</p>
+      </div>,
+    back: <BackInventory inventory={inventory} onSelect={setSelectedInventory}/>,
   },
   {
-    front: <FrontInventory />,
+    front: <FrontInventory item={selectedInventory}/>,
     back: <BackWeapons weapons={weapons} onSelect={setSelectedWeapons}/>,
   },
   {
