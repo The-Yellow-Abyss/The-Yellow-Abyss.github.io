@@ -11,7 +11,7 @@ import FilterIcon from '../assets/filter_icon.png';
 
 import itemsData from '../data/items.json';
 
-const ItemsPage = () => {
+const NPCPage = () => {
   const [items, setItems] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedType, setSelectedType] = useState('all'); // 'all', 'treasure', 'weapon'
@@ -37,10 +37,11 @@ const ItemsPage = () => {
         <div className="main-content">
           <div className="breadcrumb">
             <Link to="/" className="breadcrumb-link">Home</Link> &gt;{' '}
-            <Link to="/items" className="breadcrumb-current">Items</Link>
+            <Link to="/creatures" className="breadcrumb-current">Creatures</Link> &gt;{' '}
+            <Link to="/creatures/npc" className="breadcrumb-current">NPC</Link>
           </div>
 
-          <div className="content-title">ITEMS</div>
+          <div className="content-title">NPC</div>
 
           <div className="content-search">
             <div className="search-bar">
@@ -94,4 +95,4 @@ const ItemsPage = () => {
   );
 };
 
-export default ItemsPage;
+export default NPCPage;

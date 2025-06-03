@@ -14,11 +14,14 @@ import creaturesImage from '../admin/assets/Rat-King-BOSS.png';
 
 const MAX_VISIBILITY = 3;
 
-const Card = ({ image, title }) => (
-  <div className="bestiary-card">
-    <img src={image} alt={title} className="bestiary-card-image" />
-    <h2>{title}</h2>
-  </div>
+// ✅ Card ora include un link
+const Card = ({ image, title, link }) => (
+  <Link to={link} className="bestiary-card-link">
+    <div className="bestiary-card">
+      <img src={image} alt={title} className="bestiary-card-image" />
+      <h2>{title}</h2>
+    </div>
+  </Link>
 );
 
 const Carousel = ({ children }) => {
@@ -35,6 +38,7 @@ const Carousel = ({ children }) => {
       {React.Children.map(children, (child, i) => (
         <div
           className="card-container"
+          key={i}
           style={{
             '--active': i === active ? 1 : 0,
             '--offset': (active - i) / 3,
@@ -57,11 +61,11 @@ const Carousel = ({ children }) => {
   );
 };
 
-const BestiaryPage = () => {
+const CreaturesPage = () => {
   const cardsData = [
-    { image: enemiesImage, title: 'Enemies' },
-    { image: bossesImage, title: 'Bosses' },
-    { image: creaturesImage, title: 'NPC' },
+    { image: enemiesImage, title: 'Enemies', link: '/creatures/enemies' },
+    { image: bossesImage, title: 'Bosses', link: '/creatures/bosses' },
+    { image: creaturesImage, title: 'NPC', link: '/creatures/npc' },
   ];
 
   return (
@@ -75,14 +79,19 @@ const BestiaryPage = () => {
         <div className="main-content">
           <div className="breadcrumb">
             <Link to="/" className="breadcrumb-link">Home</Link> &gt;{' '}
-            <Link to="/bestiary" className="breadcrumb-current">Bestiary</Link>
+            <Link to="/creatures" className="breadcrumb-current">Creatures</Link>
           </div>
-          <div className="content-title">BESTIARY</div>
+          <div className="content-title">CREATURES</div>
 
           <div className="content-box-bestiary">
             <Carousel>
               {cardsData.map((card, i) => (
-                <Card key={i} image={card.image} title={card.title} />
+                <Card
+                  key={i}
+                  image={card.image}
+                  title={card.title}
+                  link={card.link}
+                />
               ))}
             </Carousel>
           </div>
@@ -98,4 +107,4 @@ const BestiaryPage = () => {
   );
 };
 
-export default BestiaryPage;
+export default CreaturesPage;

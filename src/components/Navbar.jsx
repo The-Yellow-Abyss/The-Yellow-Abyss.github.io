@@ -24,7 +24,7 @@ const Navbar = () => {
             <div className="links-group left-group">
               <ul>
                 <li><Link to="/">HOME</Link></li>
-                <li><Link to="/bestiary">BESTIARY</Link></li>
+                <li><Link to="/creatures">CREATURES</Link></li>
                 <li><Link to="/lore">LORE</Link></li>
               </ul>
             </div>

@@ -1,14 +1,100 @@
 [
   {
-    "id": "kraken",
-    "name": "Il Kraken",
-    "description": "Una creatura colossale degli abissi, dotata di tentacoli giganti.",
-    "image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADEAAAAgCAYAAAC7FpAiAAAACXBIWXMAAC4jAAAuIwF4pT92AAADN0lEQVRYCe2XvWsUURTFn5pEI6gIAzGbBEJUDKSwENYmFgY0hVhqKTb+DVZWVpZWFjZiYZHGwkoCWiQgTiuBBKNEjKuBBTFNdKOs87u7Z3yus7szs0MK2QeZO/Peu/eec7+WONdf/QgUFoF9aSyddIP1dvfeud1UNtrpF2G7IwDfwc3yrOGovt8wuVrdMrnudk3ySEvIt3vKDZr+dDBiMpiaNPkoXDbJo5vdjiRiK82Xu+WLcUZayXAFQt0cQkDA0WkFz96d8GUmXJku48AnwjfLJ9SJiAgkAW9Yyk4AvQEp9yJVAtMYaZRZvTUjPoHS3AVzV9v42IvbWDc3iaHJidhI/NLsl2a5WOmJjF9Cuu/b6IVQZhK+Y4FJkgIdkbBjyow9BkIpQSG2GyYcdtnK1BP3rt+w6FZeLBkY2daEAmSanvDvywZ9ojK7vfA4E67UlzUWFWE1JyA0bnnvRGLeHY6nG3eTbIigypB73VbqcpLR6PfiLyA4WK9uWqnMls87fk2iGf9PYwsId5bD1/p0GgpzzWZ/njELGNofW0v5wgynfuMa9vS0zw+jMqfjkhuov3G1WE8R51y2spaRbGcmIUXfOe8AvL/wxI4BpbKzjebj1tjp+I72RUDfeWQuEkRMI9EHIZCcEWn1gOSXHzttMebNAgZTN3aSd00rQD8Il1z5aOBGhg65Z1GPsIYj8zvuTwv559eCCesHgtALAfzkygSKWsoI3+F21Z04OGxkAAwB5NVg3JElzrdq36VamMyVCZo0CUHJHXAV98uOAO4DJkMQfPjprZ2TCX4Xes0CxlKPWPMcPSBAVLX8OqeMfCJEnkywROjSmRm3uLZSGAFs586EwJ09chw7DjIicS4YNdBjM1Pu6aswJnJstPE/A/chUnE/c/lH31+5jaikIEOpKNJEnyWScgYBgCsT7BdFIndjC4AfXYABnpKCDH+b21/ZtnXl8rwRQRa5MvdEknONVM4g4EsafTzaWFlbdZUoE6zah8YIto8CHj2VE6Xx7fOWRRwsZEHl1IqNM2WtyH7AT24SKNMXmkaUF98qM879pR5ir90d//6evvvg9tRx31k/Av0I/N8R+A3XekR/7acdeAAAAABJRU5ErkJggg=="
+    "title": "Medico della pestilenza",
+    "description": "Medici provenienti da tutto il continente che, come Maria dalle Donne, sono giunti per studiare la pestilenza. Non riuscendo a resistere agli effetti incomprensibili della malattia, sono diventati creature grottesche e violente. Sembrano capaci di controllare i ratti mutati dalla pestilenza.",
+    "image": "../codex/enemies/medico_della_pestilenza.png",
+    "skills": ["controllo dei ratti", "aggressività grottesca", "resistenza alla pestilenza"],
+    "danger_level": "High"
   },
   {
-    "id": "siren",
-    "name": "La Sirena tetttaaaaa",
-    "description": "Incanta i marinai con il suo canto mortale.",
-    "image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADEAAAAgCAYAAAC7FpAiAAAACXBIWXMAAC4jAAAuIwF4pT92AAADfklEQVRYCe1YW0hUQRj+V9ez7rVdy1JEKKyIQukhsQQJCRGyGyH0UvgQ0YWwG0T0FPVgSfUQvQU9RRBFEBQh0pMQBL1E9BJUQl4qtLykq2fdneafs/86rrN7Zo+WG/jDOf/Mf/2+mXNmDwuwLH99BZhOhwKdoCWKYT33q7C1LZF8JqG9dnlNYvR3XItIXpPo+x77/0l86Te1SORrEOtoL8MX2valRgJ5+zh97vv3u6CzYjoxuLDseOtK7V3AhMUQakhaVZNdbCvN5qcc1rY3ohNH8Y41NiFhnWfLxcUN1NxOU65KswONIcpX+ZU2l9Jqb5SJiOhtm/3gMQpg2kyAYcyWNU0G5gyDyWgCJqJxGByac2zOBvJFOHawBO49/Yn1ZLstmpyCk9VSBHY3hIXJV5z5fIhOJWCKE0Pp/xEDrwdgR40PVvSY0DE4jmbEwA41h+FR1wjNUWtLLiQE+PqtAQgH3aKBDP5Jt1jBrI131YXg1Zsx4I+giCvmO9beOQDnD6+C2w+G0JYLnlQvC01qqhwI8NUbfFAamQWfDrq1qWReMu6CStZXGsKMi3D3UgWcvt6Pc0cEdBJZzUafaGgUueDthwkxxpsKNNozAUcfPVa4G8kvVMDvoz3tveh2TMJ2J8Z4k96BaWwCtVv8EAoUQiRkpWUDLBL4DYFP8Zc7XYZH4+D3FsCnjmFyYZAjIrYkvHzL11V4wF3o4qcLnjAJGPo1AwF/IeAzjSKDNJMvMdrNGAPcQRqjpvnDlyNQ9T4Om1zWI5c8mYhtTmR0ghmSQEEiM3EmdJHbSiUtAvhtbML6fPZ6rBMrxo9XN481kvHvPk5Cc30Qul6Pw/6wF56NRDEVi7EjLRGxc4+7R8mG2lZ0SGARWiGoLDNSZKg6415c9UTCCiviq4+Ev35Tfv8IwC0NQXjRkzpiU6Vw4PT3goroaEQ676qqLGZ4pfmoHmvaHiAf2ti1U2vkOcWRZldOZPVT3KJrdvXkvMYC6K0L5SrAKpsMit08p8yTYxyPsTkJAWE3zsxpKOz7dobkL1I5D/Mpl2qpNHt+Z61OnCrX1iYK11X7WGNtgF0+ulpuRGNZY0Gay8XRZif4r4cq1y5P6adCmTQmpYNKn6sKa8VkI2L7OyEBU51kBEDlQ8CZ7DIZnRg5PucxgVQlZvOp4hdqc9TPUdJCkS7nL6/AEq/AH8uSV3zBbX7OAAAAAElFTkSuQmCC"
+    "title": "Re dei ratti",
+    "description": "Un groviglio di ratti legati per la coda, mutati dalla pestilenza. Queste abominazioni sembrano esercitare un'influenza innaturale sugli altri ratti infetti, guidandoli in attacchi coordinati.",
+    "image": "../codex/enemies/re_dei_ratti_nemico.png",
+    "skills": ["comando dei ratti", "attacchi coordinati", "influenza innaturale"],
+    "danger_level": "High"
+  },
+  {
+    "title": "Monaco",
+    "description": "Monaci cappuccini di Elealia, un tempo accompagnati dall'esercito papale del ducato di Gheya per purificare le catacombe. Ormai tutti colpiti dalla pestilenza, hanno assunto forme mostruose, perfino più disturbanti dei medici della peste.",
+    "image": "../codex/enemies/monaco_deforme.png",
+    "skills": ["forma mostruosa", "forza disturbante", "resistenza al dolore"],
+    "danger_level": "High"
+  },
+  {
+    "title": "Ratto delle cantine",
+    "description": "Un ratto comune delle fogne, reso più aggressivo dalla pestilenza. I suoi attacchi sono caotici ma prevedibili.",
+    "image": "../codex/enemies/ratto_normale.png",
+    "skills": ["attacchi caotici", "aggressività", "comportamento prevedibile"],
+    "danger_level": "Low"
+  },
+  {
+    "title": "Ratto del flagello",
+    "description": "Ricoperto di pustole pulsanti, questo ratto è stato profondamente deformato dalla pestilenza. È feroce, imprevedibile e porta con sé un'infezione che si diffonde rapidamente.",
+    "image": "../codex/enemies/ratto_infetto.png",
+    "skills": ["infezione rapida", "ferocia", "imprevedibilità"],
+    "danger_level": "Medium"
+  },
+  {
+    "title": "Ragno Vedetta",
+    "description": "La sua presenza segnala l'inizio di un'area infestata. Il suo veleno è letale e agisce in pochi secondi. È veloce, silenzioso e difficile da colpire.",
+    "image": "../codex/enemies/ragno_vedetta.png",
+    "skills": ["veleno letale", "velocità", "furtività"],
+    "danger_level": "Low"
+  },
+  {
+    "title": "Ragno Ematofago",
+    "description": "Si nutre del sangue delle sue vittime ancora vive. Il suo morso non è letale all'istante, ma induce febbre e dissanguamento rapido.",
+    "image": "../codex/enemies/ragno_ematofago.png",
+    "skills": ["succhiasangue", "morso debilitante", "febbre e dissanguamento"],
+    "danger_level": "Medium"
+  },
+  {
+    "title": "Ragno Carogna",
+    "description": "Caccia solo su corpi agonizzanti. Il suo veleno distrugge lentamente i tessuti, prolungando il dolore delle vittime.",
+    "image": "../codex/enemies/ragno_carogna.png",
+    "skills": ["veleno necrotico", "caccia opportunistica", "tortura prolungata"],
+    "danger_level": "High"
+  },
+  {
+    "title": "Ragno Silente",
+    "description": "Creatura comune nelle zone buie delle catacombe. Non particolarmente pericoloso se affrontato singolarmente, ma letale in gruppo.",
+    "image": "../codex/enemies/ragno_silente.png",
+    "skills": ["letale in gruppo", "mimetismo", "attacchi coordinati"],
+    "danger_level": "Medium"
+  },
+  {
+    "title": "Blatta Oscura",
+    "description": "Insetto comune mutato. Attacca in piccoli gruppi e si nutre di carne in decomposizione. Una minaccia solo se ignorato.",
+    "image": "../codex/enemies/blatta_oscura.png",
+    "skills": ["attacchi in gruppo", "alimentazione necrofaga", "bassa pericolosità"],
+    "danger_level": "Low"
+  },
+  {
+    "title": "Blatta Serrata",
+    "description": "Questa variante emana una sostanza viscosa che rallenta i movimenti e irrita la pelle. Il contatto prolungato può essere fatale.",
+    "image": "../codex/enemies/blatta_serrata.png",
+    "skills": ["sostanza viscosa", "rallentamento", "irritazione cutanea"],
+    "danger_level": "High"
+  },
+  {
+    "title": "Blatta Rancida",
+    "description": "Insetto corazzato dalla corazza rossastra. Le sue mandibole possono lacerare anche il cuoio spesso. È territorialmente aggressiva.",
+    "image": "../codex/enemies/blatta_rancida.png",
+    "skills": ["corazza resistente", "mandibole taglienti", "aggressività territoriale"],
+    "danger_level": "Medium"
+  },
+  {
+    "title": "Pipistrello Cieco",
+    "description": "Un tempo inoffensivo abitante delle catacombe, ora attacca senza esitazione. I suoi attacchi sono rapidi ma disorganizzati.",
+    "image": "../codex/enemies/pipistrello_cieco.png",
+    "skills": ["attacchi rapidi", "aggressione cieca", "movimenti disorganizzati"],
+    "danger_level": "Low"
+  },
+  {
+    "title": "Pipistrello Famelico",
+    "description": "Mutato dalla pestilenza, presenta un corpo emaciato ma ali ampie. Si lancia sulle vittime per nutrirsi del loro sangue.",
+    "image": "../codex/enemies/pipistrello_famelico.png",
+    "skills": ["attacco a volo radente", "succhiasangue", "corpo emaciato"],
+    "danger_level": "High"
   }
 ]

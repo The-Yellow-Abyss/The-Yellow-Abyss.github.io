@@ -1,7 +1,10 @@
 // my-app/src/App.jsx
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
-import BestiaryPage from './pages/BestiaryPage';
+import CreaturesPage from './pages/CreaturesPage';
+import EnemiesPage from './pages/EnemiesPage';
+import BossesPage from './pages/BossesPage';
+import NPCPage from './pages/NPCPage';
 import ItemsPage from './pages/ItemsPage';
 import LorePage from './pages/LorePage';
 import HelpPage from './pages/HelpPage';
@@ -10,6 +13,7 @@ import AdminPage from './admin/AdminPage';
 import LoginPage from './admin/LoginPage';
 import MechanicsPage from './pages/MechanicsPage';
 import ScrollToTop from './components/ScrollToTop';
+
 // import Navbar from './components/Navbar';
 
 function App() {
@@ -18,7 +22,10 @@ function App() {
       <ScrollToTop />      
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/bestiary" element={<BestiaryPage />} />
+        <Route path="/creatures" element={<CreaturesPage />} />
+        <Route path="/creatures/enemies" element={<EnemiesPage />} />
+        <Route path="/creatures/bosses" element={<BossesPage />} />
+        <Route path="/creatures/npc" element={<NPCPage />} />
         <Route path="/items" element={<ItemsPage />} />
         <Route path="/lore" element={<LorePage />} />
         <Route path="/help" element={<HelpPage />} />

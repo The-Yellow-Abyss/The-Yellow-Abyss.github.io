@@ -302,8 +302,8 @@ left: 0;
   overflow: hidden;
   box-shadow: 0 0 8px rgba(0,0,0,0.4);
   transition: transform 0.2s ease;
-  max-width: 300px; /* per evitare che si allarghi troppo */
-  min-width: 240px; /* larghezza minima */
+  max-width: 200px; /* per evitare che si allarghi troppo */
+  min-width: 200px; /* larghezza minima */
 }
 .item-container:hover {
   transform: scale(1.03);
@@ -316,14 +316,16 @@ left: 0;
   height: 100%;
   justify-content: center;
   align-items: center;
-  padding: 0.5rem; /* opzionale, per creare uno spazio interno */
+  padding: 0.5rem;
 }
 
 .item-image img {
-  width: 50%;
-  height: 100%;
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
   filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.7));
 }
+
 
 .item-label {
   padding: 0.5rem;
@@ -456,4 +458,79 @@ footer {
     font-weight: bold;
 }
 
+
+
+.main-content .content-search {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    box-sizing: border-box;
+    width: 100%;
+    height: 10%;
+    min-height: 20vh;
+    color: #ffff;
+ 
+}
+
+/* Barra di ricerca */
+.search-bar {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-end; /* Allineamento a destra */
+  gap: 10px; /* Spazio tra input e select */
+  padding-right: 40px; /* Optional: spazio dal bordo destro */
+}
+
+.search-input {
+  background-color: #B4AC9F;
+  padding: 10px;
+  width: 400px; /* Allungata */
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #796F5E;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+/* Quando la barra di ricerca è attiva (focus) */
+.search-input:focus {
+  background-color: #DCD6CB;
+  border-color: #592B25;
+  outline: 2px solid #796F5E;
+  outline-offset: 2px;
+}
+
+/* Select per filtro */
+.filter-select {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  background-color: #3D1C19;
+  color: #ffffff;
+  border: 1px solid #291311;
+  transition: background-color 0.3s, border-color 0.3s;
+  cursor: pointer;
+}
+
+/* Hover sulla select */
+.filter-select:hover {
+  background-color: #522622;
+  border-color: #3A1A17;
+}
+
+/* Focus della select */
+.filter-select:focus {
+  outline: 2px solid #796F5E;
+  outline-offset: 2px;
+}
+
+.filter-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.filter-icon {
+  width: 24px;
+  height: 24px;
+}
 
