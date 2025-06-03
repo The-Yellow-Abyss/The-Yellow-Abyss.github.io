@@ -423,6 +423,7 @@ footer {
   gap: 0.5rem;
   font-size: 1.2rem;
   color: #fff;
+  padding-top: 1.5rem;
 }
 
 /* Link di base nella breadcrumb */

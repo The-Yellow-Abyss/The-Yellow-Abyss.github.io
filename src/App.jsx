@@ -3,6 +3,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import CreaturesPage from './pages/CreaturesPage';
 import EnemiesPage from './pages/EnemiesPage';
+import EnemyDetailPage from './pages/EnemyDetailPage'; 
+
+
 import BossesPage from './pages/BossesPage';
 import NPCPage from './pages/NPCPage';
 import ItemsPage from './pages/ItemsPage';
@@ -24,6 +27,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/creatures" element={<CreaturesPage />} />
         <Route path="/creatures/enemies" element={<EnemiesPage />} />
+        <Route path="/creatures/enemies/:enemyName" element={<EnemyDetailPage />} />
         <Route path="/creatures/bosses" element={<BossesPage />} />
         <Route path="/creatures/npc" element={<NPCPage />} />
         <Route path="/items" element={<ItemsPage />} />

@@ -6,25 +6,20 @@ import Footer from '../components/Footer';
 
 import sidebarLeftImage from '../assets/right-sideBar-catacomb.png';
 import sidebarRightImage from '../assets/left-sideBar-catacomb.png';
-import FilterIcon from '../assets/filter_icon.png';
 
-
-import itemsData from '../data/items.json';
+import npcData from '../data/npc.json';
 
 const NPCPage = () => {
-  const [items, setItems] = useState([]);
+  const [npcs, setNpcs] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
-  const [selectedType, setSelectedType] = useState('all'); // 'all', 'treasure', 'weapon'
 
   useEffect(() => {
-    setItems(itemsData);
+    setNpcs(npcData);
   }, []);
 
-  const filteredItems = items.filter((item) => {
-    const matchesName = item.name.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesType = selectedType === 'all' || item.object === selectedType;
-    return matchesName && matchesType;
-  });
+  const filteredNpcs = npcs.filter((npc) =>
+    npc.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   return (
     <div>
@@ -52,34 +47,21 @@ const NPCPage = () => {
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="search-input"
               />
-             <div className="filter-wrapper">
-              <img src={FilterIcon} alt="All Items Icon" className="filter-icon" />
-              <select
-                value={selectedType}
-                onChange={(e) => setSelectedType(e.target.value)}
-                className="filter-select"
-              >
-                <option value="all">All Items</option>
-                <option value="treasure">Treasure</option>
-                <option value="weapon">Weapon</option>
-              </select>
-            </div>
             </div>
           </div>
 
-
           <div className="content-box-items">
-            {filteredItems.length === 0 ? (
+            {filteredNpcs.length === 0 ? (
               <p style={{ color: "#fff", textAlign: "center", width: "100%" }}>
                 Nessun item corrispondente alla ricerca.
               </p>
             ) : (
-              filteredItems.map((item) => (
-                <div key={item.id} className="item-container">
+              filteredNpcs.map((npc) => (
+                <div key={npc.id} className="item-container">
                   <div className="item-image">
-                    <img src={`${item.icon}`} alt={item.name} />
+                    <img src={`${npc.image}`} alt={npc.name} />
                   </div>
-                  <div className="item-label">{item.name}</div>
+                  <div className="item-label">{npc.name}</div>
                 </div>
               ))
             )}

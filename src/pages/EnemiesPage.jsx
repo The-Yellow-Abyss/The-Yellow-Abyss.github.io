@@ -19,6 +19,16 @@ const EnemiesPage = () => {
     setEnemies(enemiesData);
   }, []);
 
+  // Funzione per creare uno slug dal titolo del nemico
+  const slugify = (text) =>
+    text
+      .toString()
+      .toLowerCase()
+      .trim()
+      .replace(/\s+/g, '-')       // Sostituisce spazi con -
+      .replace(/[^\w\-]+/g, '')   // Rimuove caratteri non validi
+      .replace(/\-\-+/g, '-');    // Rimuove doppie linee
+
   // Array dei livelli di pericolosità unici
   const allDangerLevels = Array.from(new Set(enemies.map((enemy) => enemy.danger_level)));
 
@@ -65,7 +75,7 @@ const EnemiesPage = () => {
                   <option value="all">All Danger Levels</option>
                   {allDangerLevels.map((level) => (
                     <option key={level} value={level}>
-                      {level.charAt(0).toUpperCase() + level.slice(1)} {/* Capitalize level */}
+                      {level.charAt(0).toUpperCase() + level.slice(1)}
                     </option>
                   ))}
                 </select>
@@ -80,12 +90,18 @@ const EnemiesPage = () => {
               </p>
             ) : (
               filteredEnemies.map((enemy, index) => (
-                <div key={index} className="item-container">
-                  <div className="item-image">
-                    <img src={enemy.image} alt={enemy.title} />
+                <Link
+                  to={`/creatures/enemies/${slugify(enemy.title)}`}
+                  key={index}
+                  className="item-link" // opzionale: per aggiungere stile
+                >
+                  <div className="item-container">
+                    <div className="item-image">
+                      <img src={enemy.image} alt={enemy.title} />
+                    </div>
+                    <div className="item-label">{enemy.title}</div>
                   </div>
-                  <div className="item-label">{enemy.title}</div>
-                </div>
+                </Link>
               ))
             )}
           </div>
