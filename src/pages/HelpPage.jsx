@@ -17,7 +17,7 @@ const HelpPage = () => {
             <Link to="/" className="breadcrumb-link">Home</Link> &gt;{' '}
             <Link to="/help" className="breadcrumb-current">Help</Link>
           </div>
-          <div className="content-title">HELP PAGE</div>
+          <div className="content-title">HELP</div>
           <div className="content-box">content-box</div>
           <div className="content-bottom"></div>
           

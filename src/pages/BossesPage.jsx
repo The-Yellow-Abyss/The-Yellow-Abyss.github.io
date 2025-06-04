@@ -1,37 +1,42 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/style.css';
-import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
 import sidebarLeftImage from '../assets/right-sideBar-catacomb.png';
 import sidebarRightImage from '../assets/left-sideBar-catacomb.png';
 import FilterIcon from '../assets/filter_icon.png';
 
-import enemiesData from '../data/bosses.json';
+import bossesData from '../data/bosses.json';
 
 const BossesPage = () => {
-  const [enemies, setEnemies] = useState([]);
+  const [bosses, setBosses] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedDangerLevel, setSelectedDangerLevel] = useState('all');
 
   useEffect(() => {
-    setEnemies(enemiesData);
+    setBosses(bossesData);
   }, []);
 
-  // Array dei livelli di pericolosità unici
-  const allDangerLevels = Array.from(new Set(enemies.map((enemy) => enemy.danger_level)));
+  const slugify = (text) =>
+    text
+      .toString()
+      .toLowerCase()
+      .trim()
+      .replace(/\s+/g, '-')       // Replace spaces with -
+      .replace(/[^\w\-]+/g, '')   // Remove all non-word chars
+      .replace(/\-\-+/g, '-');    // Replace multiple - with single -
 
-  // Filtra i nemici in base al nome e al livello di pericolosità
-  const filteredEnemies = enemies.filter((enemy) => {
-    const matchesName = enemy.title.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesDangerLevel = selectedDangerLevel === 'all' || enemy.danger_level === selectedDangerLevel;
+  const allDangerLevels = Array.from(new Set(bosses.map((boss) => boss.danger_level)));
+
+  const filteredBosses = bosses.filter((boss) => {
+    const matchesName = boss.title.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesDangerLevel = selectedDangerLevel === 'all' || boss.danger_level === selectedDangerLevel;
     return matchesName && matchesDangerLevel;
   });
 
   return (
     <div>
-      <Navbar />
       <div className="main">
         <div className="left-sidebar">
           <img src={sidebarLeftImage} alt="Sidebar Left" className="sidebar-img" />
@@ -40,11 +45,11 @@ const BossesPage = () => {
         <div className="main-content">
           <div className="breadcrumb">
             <Link to="/" className="breadcrumb-link">Home</Link> &gt;{' '}
-            <Link to="/creatures" className="breadcrumb-current">Creatures</Link> &gt;{' '}
-            <Link to="/creatures/bosses" className="breadcrumb-current">Bosses</Link>
+            <Link to="/creatures" className="breadcrumb-link">Creature</Link> &gt;{' '}
+            <Link to="/creatures/bosses" className="breadcrumb-current">Boss</Link>
           </div>
 
-          <div className="content-title">BOSSES</div>
+          <div className="content-title">BOSS</div>
 
           <div className="content-search">
             <div className="search-bar">
@@ -62,10 +67,10 @@ const BossesPage = () => {
                   onChange={(e) => setSelectedDangerLevel(e.target.value)}
                   className="filter-select"
                 >
-                  <option value="all">All Danger Levels</option>
+                  <option value="all">Livelli di pericolosità</option>
                   {allDangerLevels.map((level) => (
                     <option key={level} value={level}>
-                      {level.charAt(0).toUpperCase() + level.slice(1)} {/* Capitalize level */}
+                      {level.charAt(0).toUpperCase() + level.slice(1)}
                     </option>
                   ))}
                 </select>
@@ -74,18 +79,24 @@ const BossesPage = () => {
           </div>
 
           <div className="content-box-items">
-            {filteredEnemies.length === 0 ? (
+            {filteredBosses.length === 0 ? (
               <p style={{ color: "#fff", textAlign: "center", width: "100%" }}>
-                Nessun nemico corrispondente alla ricerca.
+                Nessun boss corrispondente alla ricerca.
               </p>
             ) : (
-              filteredEnemies.map((enemy, index) => (
-                <div key={index} className="item-container">
-                  <div className="item-image">
-                    <img src={enemy.symbol} alt={enemy.title} />
+              filteredBosses.map((boss, index) => (
+                <Link
+                  to={`/creatures/bosses/${slugify(boss.title)}`}
+                  key={index}
+                  className="item-link"
+                >
+                  <div className="item-container">
+                    <div className="item-image">
+                      <img src={boss.symbol} alt={boss.title} />
+                    </div>
+                    <div className="item-label">{boss.title}</div>
                   </div>
-                  <div className="item-label">{enemy.title}</div>
-                </div>
+                </Link>
               ))
             )}
           </div>

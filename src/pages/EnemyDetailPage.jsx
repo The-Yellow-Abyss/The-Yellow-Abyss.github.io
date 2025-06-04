@@ -70,8 +70,8 @@ const EnemyDetailPage = () => {
         <div className="main-content">
           <div className="breadcrumb">
             <Link to="/" className="breadcrumb-link">Home</Link> &gt;{' '}
-            <Link to="/creatures" className="breadcrumb-link">Creatures</Link> &gt;{' '}
-            <Link to="/creatures/enemies" className="breadcrumb-link">Enemies</Link> &gt;{' '}
+            <Link to="/creatures" className="breadcrumb-link">Creature</Link> &gt;{' '}
+            <Link to="/creatures/enemies" className="breadcrumb-link">Nemici</Link> &gt;{' '}
             <span className="breadcrumb-current">{enemy.title}</span>
           </div>
 

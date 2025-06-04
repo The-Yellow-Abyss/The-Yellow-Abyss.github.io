@@ -20,9 +20,9 @@ const MechanicsPage = () => {
         <div className="main-content">
           <div className="breadcrumb">
             <Link to="/" className="breadcrumb-link">Home</Link> &gt;{' '}
-            <Link to="/gamemechanics" className="breadcrumb-current">Game Mechanics</Link>
+            <Link to="/gamemechanics" className="breadcrumb-current">Meccaniche di gioco</Link>
           </div>
-          <div className="content-title">GAME MECHANICS</div>
+          <div className="content-title">MECCANICHE DI GIOCO</div>
           <div className="content-box">content-box</div>
           <div className="content-bottom"></div>
         </div>

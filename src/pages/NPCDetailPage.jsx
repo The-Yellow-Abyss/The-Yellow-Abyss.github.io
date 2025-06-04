@@ -14,24 +14,24 @@ const slugify = (text) =>
     .replace(/[^\w\-]+/g, '')
     .replace(/\-\-+/g, '-');
 
-const BossDetailPage = () => {
-  const { bossName } = useParams();
-  const [boss, setBoss] = useState(null);
+const NPCDetailPage = () => {
+  const { npcName } = useParams();
+  const [npc, setNpc] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('/data/bosses.json')
+    fetch('/data/npc.json')
       .then((res) => res.json())
       .then((data) => {
-        const matchedBoss = data.find((b) => slugify(b.title) === bossName);
-        setBoss(matchedBoss || null);
+        const matchedNpc = data.find((n) => slugify(n.name) === npcName);
+        setNpc(matchedNpc || null);
         setLoading(false);
       })
       .catch((error) => {
         console.error('Errore nel caricamento del JSON:', error);
         setLoading(false);
       });
-  }, [bossName]);
+  }, [npcName]);
 
   if (loading) {
     return (
@@ -45,14 +45,14 @@ const BossDetailPage = () => {
     );
   }
 
-  if (!boss) {
+  if (!npc) {
     return (
       <div>
         <Navbar />
         <div className="main-content" style={{ padding: '2rem', color: 'white' }}>
-          <h2>Boss non trovato</h2>
-          <p>Non esiste alcun boss con il nome specificato.</p>
-          <Link to="/creatures/bosses" style={{ color: '#aaa' }}>&larr; Torna ai Boss</Link>
+          <h2>NPC non trovato</h2>
+          <p>Non esiste alcun NPC con il nome specificato.</p>
+          <Link to="/creatures/npc" style={{ color: '#aaa' }}>&larr; Torna alla lista NPC</Link>
         </div>
         <Footer />
       </div>
@@ -71,45 +71,33 @@ const BossDetailPage = () => {
           <div className="breadcrumb">
             <Link to="/" className="breadcrumb-link">Home</Link> &gt;{' '}
             <Link to="/creatures" className="breadcrumb-link">Creature</Link> &gt;{' '}
-            <Link to="/creatures/bosses" className="breadcrumb-link">Boss</Link> &gt;{' '}
-            <span className="breadcrumb-current">{boss.title}</span>
+            <Link to="/creatures/npc" className="breadcrumb-link">NPC</Link> &gt;{' '}
+            <span className="breadcrumb-current">{npc.name}</span>
           </div>
 
-          <div className="content-title">{boss.title}</div>
+          <div className="content-title">{npc.name}</div>
 
           <div className="content-box-details">
             <div className="content-box-detail">
               <div className="detail-left">
-                <div
-                  className="danger-level-box"
-                  style={{
-                    backgroundColor:
-                      boss.danger_level === 'High' ? 'red' :
-                      boss.danger_level === 'Medium' ? 'orange' :
-                      'green'
-                  }}
-                >
-                  {boss.danger_level}
-                </div>
                 <div className="detail-image">
-                  <img src={boss.image} alt={boss.title} className="detail-img" />
+                  <img src={npc.image} alt={npc.name} className="detail-img" />
                 </div>
-                <div className="detail-skills">
-                  <h4>Skills</h4>
-                  <ul>
-                    {boss.skills?.map((skill, index) => (
-                      <li key={index}>{skill}</li>
-                    ))}
-                  </ul>
-                </div>
+                {npc.role && (
+                  <div className="detail-skills">
+                    <h4>Ruolo</h4>
+                    <p>{npc.role}</p>
+                  </div>
+                )}
               </div>
             </div>
+
             <div className="detail-right-paper">
               <div className="detail-container-paper">
                 <div id="detail-page" className="page-container">
                   <div className="page-detail-content">
                     <div className="detail-description-content">
-                      <p>{boss.description}</p>
+                      <p>{npc.description}</p>
                     </div>
                   </div>
                 </div>
@@ -129,4 +117,4 @@ const BossDetailPage = () => {
   );
 };
 
-export default BossDetailPage;
+export default NPCDetailPage;
