@@ -81,7 +81,7 @@ function BackInventory({ inventory, onSelect }) {
             <div className="inventory-character-tile" onClick={() => onSelect(character)}>
               <img src={character.image} alt="Character" className="inventory-image" />
             </div>
-            <div className="inventory-character-tile-dialogue">
+            <div className="inventory-character-tile-dialogue" onClick={() => onSelect(character)}>
               {character.dialogue_image && (
                 <img
                   src={character.dialogue_image}

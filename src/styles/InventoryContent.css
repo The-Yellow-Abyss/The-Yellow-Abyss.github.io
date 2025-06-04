@@ -399,14 +399,19 @@
   height: 7rem;
   content: '';
   position: absolute;
-  top: 0;  right: 0; bottom: 0;
+  top: 0;  right: 0.3rem; bottom: 0;
   border-radius: 8px;
   background-image: url('../codex/character-image-box-codex.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  /* Sposta ombra: -3px a sinistra, +4px in basso, con blur 4px */
-  z-index: -1;
+}
+
+
+.inventory-character-tile-dialogue:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer; 
 }
 
 

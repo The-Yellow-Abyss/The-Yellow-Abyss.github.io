@@ -17,12 +17,19 @@ import LoginPage from './admin/LoginPage';
 import MechanicsPage from './pages/MechanicsPage';
 import ScrollToTop from './components/ScrollToTop';
 
+
+import GoogleTranslate from './components/GoogleTranslate';
 // import Navbar from './components/Navbar';
 
 function App() {
+
   return (
     <Router>
       <ScrollToTop />      
+
+      {/* Inserisco il widget Google Translate */}
+      <GoogleTranslate />
+      
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/creatures" element={<CreaturesPage />} />
