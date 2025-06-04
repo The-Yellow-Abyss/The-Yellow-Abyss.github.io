@@ -80,13 +80,17 @@
   position: relative; /* Per contesto di stacking, se serve */
 }
 
-.inventory-character-container img {
+.inventory-character-container .inventory-image img {
   position: absolute;
   width: 80%;
   height: 80%;
   object-fit: contain;
-  filter: drop-shadow(3px 10px 20px rgba(0, 0, 0, 0.4));
   z-index: 0;
+}
+
+.inventory-character-container .inventory-image img {
+    filter: drop-shadow(3px 10px 20px rgba(0, 0, 0, 0.4));
+
 }
 
 .inventory-character-tile {
@@ -387,3 +391,38 @@
     max-width: 400px;
   }
 }
+.inventory-character-tile-dialogue {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 7rem;
+  height: 7rem;
+  content: '';
+  position: absolute;
+  top: 0;  right: 0; bottom: 0;
+  border-radius: 8px;
+  background-image: url('../codex/character-image-box-codex.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* Sposta ombra: -3px a sinistra, +4px in basso, con blur 4px */
+  z-index: -1;
+}
+
+
+.inventory-dialogue-image {
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  width: 65%;  
+  height: 65%; 
+  object-fit: contain; 
+  border-radius: 10px; 
+  filter: none;
+  image-rendering: auto; 
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  z-index: 2;
+}
+
+

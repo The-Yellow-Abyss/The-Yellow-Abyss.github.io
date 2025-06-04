@@ -77,8 +77,19 @@ function BackInventory({ inventory, onSelect }) {
       {/* Character container */}
       <div className="inventory-character-container">
         {character ? (
-          <div className="inventory-character-tile" onClick={() => onSelect(character)}>
-            <img src={character.image} alt="Character" className="inventory-image" />
+          <div>
+            <div className="inventory-character-tile" onClick={() => onSelect(character)}>
+              <img src={character.image} alt="Character" className="inventory-image" />
+            </div>
+            <div className="inventory-character-tile-dialogue">
+              {character.dialogue_image && (
+                <img
+                  src={character.dialogue_image}
+                  alt="Dialogue"
+                  className="inventory-dialogue-image"
+                />
+              )}
+            </div>
           </div>
         ) : (
           <div className="inventory-tile">
@@ -86,6 +97,7 @@ function BackInventory({ inventory, onSelect }) {
           </div>
         )}
       </div>
+
 
       {/* Weapons scroll row */}
       <div className="inventory-section-title">Armi</div>

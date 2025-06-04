@@ -1,6 +1,7 @@
 // src/codex/inventory.js
 
 import Rosalind from '../codex/Rosalind-sprite.png';
+import Rosalind_dialogue from '../codex/Rosalind_dialogue.png';
 import spadaRosalind from '../codex/weapons/Spada_di_Rosalind.PNG';
 import lanciaRosalind from '../codex/weapons/Lancia_di_Rosalind.PNG';
 
@@ -11,6 +12,7 @@ export const inventory = [
     title: "Rosalind Bernard",
     description: "Cavaliere nobile di Acaina, una delle poche donne guerriere della sua epoca. A 27 anni, eccelle nell'uso della spada e nell'arte del combattimento. Condivide un amore segreto con Valerika, scomparsa durante una missione militare. Dopo aver ricevuto da un misterioso uomo il pendente donato a Valerika, Rosalind è determinata a scoprire la verità.",
     image: Rosalind,
+    dialogue_image: Rosalind_dialogue,
   }
   ,
   {
