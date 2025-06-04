@@ -536,51 +536,83 @@ footer {
 /* Mechanics page custom styles */
 .mechanics-list {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 2.5rem;
   width: 100%;
   padding: 2.5rem 2rem 2rem 2rem;
-  background: rgba(0,0,0,0.45);
-  border-radius: 18px;
-  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.25);
+  background: none;
+  box-shadow: none;
 }
 
 .mechanic-item {
-  background: rgba(30, 30, 30, 0.55);
-  border-left: 6px solid #dabb8a;
-  padding: 1.2rem 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 1px 8px 0 rgba(0,0,0,0.18);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 220px;
+  max-width: 320px;
+  flex: 1 1 260px;
+  margin: 0.5rem;
+  padding: 1.2rem 1.2rem 1.2rem 1.2rem;
+  background: linear-gradient(
+    135deg,
+    #e2c58b 0%,
+    #e2c58b 25%,
+    #b48a3c 25%,
+    #b48a3c 50%,
+    #e2c58b 50%,
+    #e2c58b 75%,
+    #b48a3c 75%,
+    #b48a3c 100%
+  );
+  image-rendering: pixelated;
+  border: 4px solid #1F130B;
+  border-radius: 12px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.4);
+  transition: transform 0.2s, box-shadow 0.2s, border 0.2s;
+}
+
+.mechanic-item:hover {
+  transform: scale(1.04);
+  border: 4px solid #FFD700;
+  box-shadow: 0 0 16px 2px #ffe9b0;
 }
 
 .mechanic-title {
-  font-size: 1.7rem;
-  color: #ffe9b0;
+  font-size: 1.3rem;
+  color: #FFD700;
   font-family: 'MyPixelFont', sans-serif;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.7rem;
   letter-spacing: 1px;
+  text-shadow: 1px 1px 0 #1F130B;
+  text-align: center;
 }
 
 .mechanic-desc {
-  font-size: 1.1rem;
-  color: #ffff;
+  font-size: 1.05rem;
+  color: #fff;
   font-family: 'MyPixelFont', sans-serif;
   line-height: 1.5;
+  text-align: center;
+  text-shadow: 1px 1px 0 #1F130B;
 }
 
 @media (max-width: 900px) {
   .mechanics-list {
-    padding: 1.2rem 0.5rem;
     gap: 1.2rem;
+    padding: 1.2rem 0.5rem;
   }
   .mechanic-item {
+    min-width: 140px;
+    max-width: 100%;
     padding: 0.8rem 0.7rem;
   }
   .mechanic-title {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
   .mechanic-desc {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
   }
 }
 
