@@ -551,51 +551,74 @@ footer {
   align-items: center;
   justify-content: flex-start;
   min-width: 220px;
-  max-width: 320px;
+  max-width: 340px;
   flex: 1 1 260px;
   margin: 0.5rem;
-  padding: 1.2rem 1.2rem 1.2rem 1.2rem;
-  background: linear-gradient(
-    135deg,
-    #e2c58b 0%,
-    #e2c58b 25%,
-    #b48a3c 25%,
-    #b48a3c 50%,
-    #e2c58b 50%,
-    #e2c58b 75%,
-    #b48a3c 75%,
-    #b48a3c 100%
-  );
+  padding: 2.2rem 1.5rem 2.2rem 1.5rem;
+  background: #e2c58b;
   image-rendering: pixelated;
-  border: 4px solid #1F130B;
-  border-radius: 12px;
-  box-shadow: 0 0 8px rgba(0,0,0,0.4);
-  transition: transform 0.2s, box-shadow 0.2s, border 0.2s;
+  border: 0;
+  border-radius: 0;
+  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.25);
+  position: relative;
+  overflow: visible;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.mechanic-item:hover {
-  transform: scale(1.04);
-  border: 4px solid #FFD700;
-  box-shadow: 0 0 16px 2px #ffe9b0;
+.mechanic-item:before, .mechanic-item:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 32px;
+  background: url('../assets/scroll-top.png') repeat-x;
+  background-size: contain;
+  z-index: 2;
+  pointer-events: none;
+}
+.mechanic-item:before {
+  top: -28px;
+}
+.mechanic-item:after {
+  bottom: -28px;
+  background-image: url('../assets/scroll-bottom.png');
+}
+
+.mechanic-item .scroll-side {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 32px;
+  background: url('../assets/scroll-side.png') repeat-y;
+  background-size: contain;
+  z-index: 2;
+  pointer-events: none;
+}
+.mechanic-item .scroll-side.left {
+  left: -28px;
+}
+.mechanic-item .scroll-side.right {
+  right: -28px;
+  transform: scaleX(-1);
 }
 
 .mechanic-title {
   font-size: 1.3rem;
-  color: #FFD700;
+  color: #b48a3c;
   font-family: 'MyPixelFont', sans-serif;
   margin-bottom: 0.7rem;
   letter-spacing: 1px;
-  text-shadow: 1px 1px 0 #1F130B;
+  text-shadow: 1px 1px 0 #fffbe6;
   text-align: center;
 }
 
 .mechanic-desc {
   font-size: 1.05rem;
-  color: #fff;
+  color: #5a3c0a;
   font-family: 'MyPixelFont', sans-serif;
   line-height: 1.5;
   text-align: center;
-  text-shadow: 1px 1px 0 #1F130B;
+  text-shadow: 1px 1px 0 #fffbe6;
 }
 
 @media (max-width: 900px) {
@@ -606,7 +629,7 @@ footer {
   .mechanic-item {
     min-width: 140px;
     max-width: 100%;
-    padding: 0.8rem 0.7rem;
+    padding: 1.2rem 0.7rem 1.2rem 0.7rem;
   }
   .mechanic-title {
     font-size: 1rem;
