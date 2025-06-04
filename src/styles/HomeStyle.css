@@ -80,6 +80,8 @@
   border: 7px solid #522828; 
   border-radius: 100%;
   font-size: 18px;
+  font-weight: bold;
+  text-shadow: 3px 3px 7px #897F6F;
   line-height: 1.6;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   border-radius: 0;
