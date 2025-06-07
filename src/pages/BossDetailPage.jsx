@@ -83,10 +83,10 @@ const BossDetailPage = () => {
                 <div
                   className="danger-level-box"
                   style={{
-                    backgroundColor:
-                      boss.danger_level === 'High' ? 'red' :
-                      boss.danger_level === 'Medium' ? 'orange' :
-                      'green'
+                    backgroundColor: ['High', 'Alto'].includes(boss.danger_level) ? 'red' :
+                                    ['Medium', 'Medio'].includes(boss.danger_level) ? 'orange' :
+                                    ['Low', 'Basso'].includes(boss.danger_level) ? 'green' :
+                                    'gray'
                   }}
                 >
                   {boss.danger_level}

@@ -84,10 +84,10 @@ const EnemyDetailPage = () => {
                 <div
                   className="danger-level-box"
                   style={{
-                    backgroundColor:
-                      enemy.danger_level === 'High' ? 'red' :
-                      enemy.danger_level === 'Medium' ? 'orange' :
-                      'green'
+                    backgroundColor: ['High', 'Alto'].includes(enemy.danger_level) ? 'red' :
+                                    ['Medium', 'Medio'].includes(enemy.danger_level) ? 'orange' :
+                                    ['Low', 'Basso'].includes(enemy.danger_level) ? 'green' :
+                                    'gray'
                   }}
                 >
                   {enemy.danger_level}
