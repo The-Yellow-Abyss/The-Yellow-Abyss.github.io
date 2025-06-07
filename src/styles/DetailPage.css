@@ -27,6 +27,7 @@
 }
 
 
+
 .danger-level-box {
   padding: 0.5rem 1rem;         /* spazio interno per leggibilità */
   color: white;
@@ -40,12 +41,37 @@
   margin-bottom: 20px;
 }
 
-
 .detail-img {
   width: 100%;
   max-width: 250px;
   height: auto;
-  border-radius: 6px;
+  border-radius: 0px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+
+
+
+.detail-skills {
+  position: relative;
+  padding: 30px;
+  color: #000;
+  z-index: 1;
+}
+
+.detail-skills::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('../codex/detail-page.png');
+  background-size: 100% 100%; /* Si adatta sia in larghezza che in altezza */
+  background-repeat: no-repeat;
+  background-position: top center;
+  image-rendering: pixelated;
+  z-index: -1; /* Va dietro il testo */
 }
 
 .detail-skills ul {

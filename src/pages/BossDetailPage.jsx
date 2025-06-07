@@ -59,6 +59,13 @@ const BossDetailPage = () => {
     );
   }
 
+  // Calcolo colore per danger-level e filtro contorno immagine
+  const dangerColor =
+    ['High', 'Alto'].includes(boss.danger_level) ? 'red' :
+    ['Medium', 'Medio'].includes(boss.danger_level) ? 'orange' :
+    ['Low', 'Basso'].includes(boss.danger_level) ? 'green' :
+    'gray';
+
   return (
     <div>
       <Navbar />
@@ -82,17 +89,25 @@ const BossDetailPage = () => {
               <div className="detail-left">
                 <div
                   className="danger-level-box"
-                  style={{
-                    backgroundColor: ['High', 'Alto'].includes(boss.danger_level) ? 'red' :
-                                    ['Medium', 'Medio'].includes(boss.danger_level) ? 'orange' :
-                                    ['Low', 'Basso'].includes(boss.danger_level) ? 'green' :
-                                    'gray'
-                  }}
+                  style={{ backgroundColor: dangerColor }}
                 >
                   {boss.danger_level}
                 </div>
                 <div className="detail-image">
-                  <img src={boss.image} alt={boss.title} className="detail-img" />
+                  <img
+                    src={boss.image}
+                    alt={boss.title}
+                    className="detail-img"
+                    style={{
+                      filter: `
+                        drop-shadow(0 0 0 ${dangerColor})
+                        drop-shadow(7px 0 0 ${dangerColor})
+                        drop-shadow(-7px 0 0 ${dangerColor})
+                        drop-shadow(0 7px 0 ${dangerColor})
+                        drop-shadow(0 -7px 0 ${dangerColor})
+                      `,
+                    }}
+                  />
                 </div>
                 <div className="detail-skills">
                   <h4>Skills</h4>

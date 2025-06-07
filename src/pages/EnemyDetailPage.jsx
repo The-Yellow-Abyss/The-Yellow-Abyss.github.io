@@ -59,6 +59,13 @@ const EnemyDetailPage = () => {
     );
   }
 
+  // Calcolo colore per danger-level e filtro contorno immagine
+  const dangerColor =
+    ['High', 'Alto'].includes(enemy.danger_level) ? 'red' :
+    ['Medium', 'Medio'].includes(enemy.danger_level) ? 'orange' :
+    ['Low', 'Basso'].includes(enemy.danger_level) ? 'green' :
+    'gray';
+
   return (
     <div>
       <Navbar />
@@ -79,21 +86,28 @@ const EnemyDetailPage = () => {
 
           <div className="content-box-details">
             <div className="content-box-detail">
-              {/* Colonna sinistra: danger, image, skills */}
               <div className="detail-left">
                 <div
                   className="danger-level-box"
-                  style={{
-                    backgroundColor: ['High', 'Alto'].includes(enemy.danger_level) ? 'red' :
-                                    ['Medium', 'Medio'].includes(enemy.danger_level) ? 'orange' :
-                                    ['Low', 'Basso'].includes(enemy.danger_level) ? 'green' :
-                                    'gray'
-                  }}
+                  style={{ backgroundColor: dangerColor }}
                 >
                   {enemy.danger_level}
                 </div>
                 <div className="detail-image">
-                  <img src={enemy.image} alt={enemy.title} className="detail-img" />
+                  <img
+                    src={enemy.image}
+                    alt={enemy.title}
+                    className="detail-img"
+                    style={{
+                      filter: `
+                        drop-shadow(0 0 0 ${dangerColor})
+                        drop-shadow(7px 0 0 ${dangerColor})
+                        drop-shadow(-7px 0 0 ${dangerColor})
+                        drop-shadow(0 7px 0 ${dangerColor})
+                        drop-shadow(0 -7px 0 ${dangerColor})
+                      `,
+                    }}
+                  />
                 </div>
                 <div className="detail-skills">
                   <h4>Skills</h4>
@@ -104,9 +118,9 @@ const EnemyDetailPage = () => {
                   </ul>
                 </div>
               </div>
-              </div>
-              <div className="detail-right-paper">
-                <div className="detail-container-paper">
+            </div>
+            <div className="detail-right-paper">
+              <div className="detail-container-paper">
                 <div id="detail-page" className="page-container">
                   <div className="page-detail-content">
                     <div className="detail-description-content">
@@ -114,8 +128,8 @@ const EnemyDetailPage = () => {
                     </div>
                   </div>
                 </div>
-                </div>
               </div>
+            </div>
           </div>
 
           <div className="content-bottom"></div>
