@@ -81,7 +81,9 @@ const AboutPage = () => {
           </div>
           <div className="content-title">ABOUT PAGE</div>
           <div className="about-vertical-layout">
-            <div className="about-video-horizontal-placeholder"></div>
+            <div className="about-video-horizontal-placeholder" style={{ width: '560px', height: '315px', maxWidth: '90vw', maxHeight: '50vh', background: '#111', borderRadius: '18px', boxShadow: '0 4px 24px 0 rgba(0,0,0,0.18)', margin: '0 auto 2.5vh auto', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              {/* Video Placeholder (16:9 ratio, same as HomePage) */}
+            </div>
             <div className="about-image-container site-map-bg-container">
               <img
                 src={siteMap}

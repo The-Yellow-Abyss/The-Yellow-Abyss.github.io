@@ -18,6 +18,7 @@ import MechanicsPage from './pages/MechanicsPage';
 import ScrollToTop from './components/ScrollToTop';
 import GoogleTranslate from './components/GoogleTranslate';
 import AboutPage from './pages/AboutPage'; // Importazione mancante di AboutPage
+import ContactPage from './pages/ContactPage';
 
 function App() {
 
@@ -39,6 +40,7 @@ function App() {
         <Route path="/lore" element={<LorePage />} />
         <Route path="/help" element={<HelpPage />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/contact" element={<ContactPage />} />
         <Route path="/codex" element={<CodexPage />} />
         <Route path="/gamemechanics" element={<MechanicsPage />} />
         <Route path="/login" element={<LoginPage />} />

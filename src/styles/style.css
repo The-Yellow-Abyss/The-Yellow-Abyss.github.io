@@ -895,43 +895,77 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: stretch;
+  align-items: center;
   width: 100%;
   gap: 3vw;
   margin: 2.5vh 0 2vh 0;
 }
 
-.about-vertical-layout {
+.about-video-side {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  width: 100%;
-  gap: 2.5vh;
-  margin: 3vh 0 2vh 0;
+  justify-content: flex-end;
+  height: 100%;
+  min-width: 340px;
+  max-width: 560px;
+  flex: 0 0 560px;
 }
 
-.about-video-horizontal-placeholder {
+.about-video-horizontal-placeholder.about-video-side {
   width: 560px;
-  height: 315px;
+  aspect-ratio: 16/9;
   max-width: 90vw;
   max-height: 50vh;
   background: #111;
   border-radius: 18px;
   box-shadow: 0 4px 24px 0 rgba(0,0,0,0.18);
+  margin: 0 0 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-.about-image-container {
-  width: 100%;
+.about-map-side {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   justify-content: center;
+  margin-left: 2vw;
+  margin-right: 2vw;
+  position: relative;
+  left: 2vw;
 }
 
-.main-content.about-hide-bottom .content-bottom {
-  display: none !important;
+.site-map-bg-container.about-map-side {
+  align-items: flex-start;
+  justify-content: flex-start;
 }
+
+@media (max-width: 1100px) {
+  .about-row-layout {
+    flex-direction: column;
+    gap: 2vh;
+    align-items: center;
+  }
+  .about-video-side, .about-video-horizontal-placeholder.about-video-side {
+    width: 95vw;
+    max-width: 95vw;
+    min-width: unset;
+    margin: 0 auto;
+    top: unset;
+    transform: none;
+  }
+  .about-map-side, .site-map-bg-container.about-map-side {
+    left: 0;
+    margin-left: 0;
+    margin-right: 0;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* ...existing code... */
 
