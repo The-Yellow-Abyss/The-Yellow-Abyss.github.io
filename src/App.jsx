@@ -16,10 +16,8 @@ import AdminPage from './admin/AdminPage';
 import LoginPage from './admin/LoginPage';
 import MechanicsPage from './pages/MechanicsPage';
 import ScrollToTop from './components/ScrollToTop';
-
-
 import GoogleTranslate from './components/GoogleTranslate';
-// import Navbar from './components/Navbar';
+import AboutPage from './pages/AboutPage'; // Importazione mancante di AboutPage
 
 function App() {
 
@@ -40,6 +38,7 @@ function App() {
         <Route path="/items" element={<ItemsPage />} />
         <Route path="/lore" element={<LorePage />} />
         <Route path="/help" element={<HelpPage />} />
+        <Route path="/about" element={<AboutPage />} />
         <Route path="/codex" element={<CodexPage />} />
         <Route path="/gamemechanics" element={<MechanicsPage />} />
         <Route path="/login" element={<LoginPage />} />
