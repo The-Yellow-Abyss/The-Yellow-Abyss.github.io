@@ -78,11 +78,11 @@ const HelpPage = () => {
             <Link to="/" className="breadcrumb-link">Home</Link> &gt;{' '}
             <Link to="/help" className="breadcrumb-current">Help</Link>
           </div>
-          <div className="content-title">HELP PAGE</div>
+          <div className="content-title">HELP</div>
           <div className="content-box">
             <form onSubmit={handleSubmit} className="bug-report-form">
               <label>
-                Name:
+                Nome:
                 <input type="text" name="name" value={form.name} onChange={handleChange} required />
               </label>
               <label>
@@ -90,31 +90,31 @@ const HelpPage = () => {
                 <input type="email" name="email" value={form.email} onChange={handleChange} required />
               </label>
               <label>
-                Bug Title:
+                Soggetto bug:
                 <input type="text" name="title" value={form.title} onChange={handleChange} required />
               </label>
               <label>
-                Description:
+                Descrizione:
                 <textarea name="description" value={form.description} onChange={handleChange} required />
               </label>
               <label>
-                Steps to Reproduce:
+                Passi per riprodurre:
                 <textarea name="steps" value={form.steps} onChange={handleChange} required />
               </label>
               <label>
-                Severity:
+                Gravità del bug:
                 <select name="severity" value={form.severity} onChange={handleChange}>
-                  <option value="Low">Low</option>
-                  <option value="Medium">Medium</option>
-                  <option value="High">High</option>
-                  <option value="Critical">Critical</option>
+                  <option value="Low">Basso</option>
+                  <option value="Medium">Medio</option>
+                  <option value="High">Alto</option>
+                  <option value="Critical">Critico</option>
                 </select>
               </label>
-              <button type="submit">Submit Bug Report</button>
+              <button type="submit">Invia</button>
             </form>
             {showPopup && (
               <div className="popup-success-message">
-                <span>Bug report saved and downloaded!</span>
+                <span>Report salvato e scaricato!</span>
                 <button className="popup-close-btn" onClick={handleClosePopup} aria-label="Close">&times;</button>
               </div>
             )}
