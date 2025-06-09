@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/style.css';
-import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
 import sidebarLeftImage from '../assets/right-sideBar-catacomb.png';
@@ -17,13 +16,18 @@ const NPCPage = () => {
     setNpcs(npcData);
   }, []);
 
+  const slugify = (text) =>
+    text.toString().toLowerCase().trim()
+      .replace(/\s+/g, '-')
+      .replace(/[^\w\-]+/g, '')
+      .replace(/\-\-+/g, '-');
+
   const filteredNpcs = npcs.filter((npc) =>
     npc.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   return (
     <div>
-      <Navbar />
       <div className="main">
         <div className="left-sidebar">
           <img src={sidebarLeftImage} alt="Sidebar Left" className="sidebar-img" />
@@ -32,7 +36,7 @@ const NPCPage = () => {
         <div className="main-content">
           <div className="breadcrumb">
             <Link to="/" className="breadcrumb-link">Home</Link> &gt;{' '}
-            <Link to="/creatures" className="breadcrumb-current">Creatures</Link> &gt;{' '}
+            <Link to="/creatures" className="breadcrumb-link">Creature</Link> &gt;{' '}
             <Link to="/creatures/npc" className="breadcrumb-current">NPC</Link>
           </div>
 
@@ -42,7 +46,7 @@ const NPCPage = () => {
             <div className="search-bar">
               <input
                 type="text"
-                placeholder="Search..."
+                placeholder="Cerca per nome..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="search-input"
@@ -53,16 +57,22 @@ const NPCPage = () => {
           <div className="content-box-items">
             {filteredNpcs.length === 0 ? (
               <p style={{ color: "#fff", textAlign: "center", width: "100%" }}>
-                Nessun item corrispondente alla ricerca.
+                Nessun NPC corrispondente alla ricerca.
               </p>
             ) : (
-              filteredNpcs.map((npc) => (
-                <div key={npc.id} className="item-container">
-                  <div className="item-image">
-                    <img src={`${npc.image}`} alt={npc.name} />
+              filteredNpcs.map((npc, index) => (
+                <Link
+                  to={`/creatures/npc/${slugify(npc.name)}`}
+                  key={index}
+                  className="item-link"
+                >
+                  <div className="item-container">
+                    <div className="item-image">
+                      <img src={npc.image} alt={npc.name} />
+                    </div>
+                    <div className="item-label">{npc.name}</div>
                   </div>
-                  <div className="item-label">{npc.name}</div>
-                </div>
+                </Link>
               ))
             )}
           </div>

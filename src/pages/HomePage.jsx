@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/style.css';
 import '../styles/HomeStyle.css';
-import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
 // Importazione immagini
@@ -17,7 +16,6 @@ import diaryIcon from '../assets/Diario-icona.PNG';
 const HomePage = () => {
   return (
     <div>
-      <Navbar />
       <div className="main">
         <div className="left-sidebar">
           <img src={sidebarLeftImage} alt="Sidebar Left" className="sidebar-img" />
@@ -38,7 +36,7 @@ const HomePage = () => {
             <iframe 
               width="100%" 
               height="315" 
-              src="https://www.youtube.com/embed/U0arvSdTXAc"
+              src="https://www.youtube.com/embed/ovdiGDEuoYU"
               title="YouTube video player"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

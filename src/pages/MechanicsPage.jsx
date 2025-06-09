@@ -92,9 +92,9 @@ const MechanicsPage = () => {
         <div className="main-content">
           <div className="breadcrumb">
             <Link to="/" className="breadcrumb-link">Home</Link> &gt;{' '}
-            <Link to="/gamemechanics" className="breadcrumb-current">Game Mechanics</Link>
+            <Link to="/gamemechanics" className="breadcrumb-current">Meccaniche di gioco</Link>
           </div>
-          <div className="content-title">GAME MECHANICS</div>
+          <div className="content-title">MECCANICHE DI GIOCO</div>
           <div className="content-box mechanics-carousel">
             <button className="mechanics-carousel-arrow left" onClick={prev} aria-label="Previous" style={{background: 'none', border: 'none', padding: 0, cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
               <img src={backArrow} alt="Previous" className="mechanics-arrow-img" style={{width: '80px', height: '80px'}} />

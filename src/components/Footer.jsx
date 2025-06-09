@@ -28,8 +28,8 @@ const Footer = () => {
             <div className="footer-container">
                 <div className="footer-links">
                     <ul>
-                        <li><Link to="/about">About</Link></li>
-                        <li><Link to="/contact">Contact</Link></li>
+                        <li><Link to="/about">Chi siamo</Link></li>
+                        <li><Link to="/contact">Contattaci</Link></li>
                         <li><a href="#githubpage">Github</a></li>
                         <li><Link to="/help">Help</Link></li>
                     </ul>

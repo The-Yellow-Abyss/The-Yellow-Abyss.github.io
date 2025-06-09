@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/style.css';
-import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
 import sidebarLeftImage from '../assets/right-sideBar-catacomb.png';
@@ -41,7 +40,6 @@ const EnemiesPage = () => {
 
   return (
     <div>
-      <Navbar />
       <div className="main">
         <div className="left-sidebar">
           <img src={sidebarLeftImage} alt="Sidebar Left" className="sidebar-img" />
@@ -50,17 +48,17 @@ const EnemiesPage = () => {
         <div className="main-content">
           <div className="breadcrumb">
             <Link to="/" className="breadcrumb-link">Home</Link> &gt;{' '}
-            <Link to="/creatures" className="breadcrumb-current">Creatures</Link> &gt;{' '}
-            <Link to="/creatures/enemies" className="breadcrumb-current">Enemies</Link>
+            <Link to="/creatures" className="breadcrumb-link">Creature</Link> &gt;{' '}
+            <Link to="/creatures/enemies" className="breadcrumb-current">Nemici</Link>
           </div>
 
-          <div className="content-title">ENEMIES</div>
+          <div className="content-title">NEMICI</div>
 
           <div className="content-search">
             <div className="search-bar">
               <input
                 type="text"
-                placeholder="Search by name..."
+                placeholder="Search..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="search-input"
@@ -72,7 +70,7 @@ const EnemiesPage = () => {
                   onChange={(e) => setSelectedDangerLevel(e.target.value)}
                   className="filter-select"
                 >
-                  <option value="all">All Danger Levels</option>
+                  <option value="all">Livelli di pericolosità</option>
                   {allDangerLevels.map((level) => (
                     <option key={level} value={level}>
                       {level.charAt(0).toUpperCase() + level.slice(1)}

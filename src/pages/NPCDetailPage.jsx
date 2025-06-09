@@ -14,24 +14,24 @@ const slugify = (text) =>
     .replace(/[^\w\-]+/g, '')
     .replace(/\-\-+/g, '-');
 
-const EnemyDetailPage = () => {
-  const { enemyName } = useParams();
-  const [enemy, setEnemy] = useState(null);
+const NPCDetailPage = () => {
+  const { npcName } = useParams();
+  const [npc, setNpc] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('/data/enemies.json')
+    fetch('/data/npc.json')
       .then((res) => res.json())
       .then((data) => {
-        const matchedEnemy = data.find((e) => slugify(e.title) === enemyName);
-        setEnemy(matchedEnemy || null);
+        const matchedNpc = data.find((n) => slugify(n.name) === npcName);
+        setNpc(matchedNpc || null);
         setLoading(false);
       })
       .catch((error) => {
         console.error('Errore nel caricamento del JSON:', error);
         setLoading(false);
       });
-  }, [enemyName]);
+  }, [npcName]);
 
   if (loading) {
     return (
@@ -45,26 +45,19 @@ const EnemyDetailPage = () => {
     );
   }
 
-  if (!enemy) {
+  if (!npc) {
     return (
       <div>
         <Navbar />
         <div className="main-content" style={{ padding: '2rem', color: 'white' }}>
-          <h2>Nemico non trovato</h2>
-          <p>Non esiste alcun nemico con il nome specificato.</p>
-          <Link to="/creatures/enemies" style={{ color: '#aaa' }}>&larr; Torna agli Enemies</Link>
+          <h2>NPC non trovato</h2>
+          <p>Non esiste alcun NPC con il nome specificato.</p>
+          <Link to="/creatures/npc" style={{ color: '#aaa' }}>&larr; Torna alla lista NPC</Link>
         </div>
         <Footer />
       </div>
     );
   }
-
-  // Calcolo colore per danger-level e filtro contorno immagine
-  const dangerColor =
-    ['High', 'Alto'].includes(enemy.danger_level) ? 'red' :
-    ['Medium', 'Medio'].includes(enemy.danger_level) ? 'orange' :
-    ['Low', 'Basso'].includes(enemy.danger_level) ? 'green' :
-    'gray';
 
   return (
     <div>
@@ -78,53 +71,33 @@ const EnemyDetailPage = () => {
           <div className="breadcrumb">
             <Link to="/" className="breadcrumb-link">Home</Link> &gt;{' '}
             <Link to="/creatures" className="breadcrumb-link">Creature</Link> &gt;{' '}
-            <Link to="/creatures/enemies" className="breadcrumb-link">Nemici</Link> &gt;{' '}
-            <span className="breadcrumb-current">{enemy.title}</span>
+            <Link to="/creatures/npc" className="breadcrumb-link">NPC</Link> &gt;{' '}
+            <span className="breadcrumb-current">{npc.name}</span>
           </div>
 
-          <div className="content-title">{enemy.title}</div>
+          <div className="content-title">{npc.name}</div>
 
           <div className="content-box-details">
             <div className="content-box-detail">
               <div className="detail-left">
-                <div
-                  className="danger-level-box"
-                  style={{ backgroundColor: dangerColor }}
-                >
-                  {enemy.danger_level}
-                </div>
                 <div className="detail-image">
-                  <img
-                    src={enemy.image}
-                    alt={enemy.title}
-                    className="detail-img"
-                    style={{
-                      filter: `
-                        drop-shadow(0 0 0 ${dangerColor})
-                        drop-shadow(7px 0 0 ${dangerColor})
-                        drop-shadow(-7px 0 0 ${dangerColor})
-                        drop-shadow(0 7px 0 ${dangerColor})
-                        drop-shadow(0 -7px 0 ${dangerColor})
-                      `,
-                    }}
-                  />
+                  <img src={npc.image} alt={npc.name} className="detail-img" />
                 </div>
-                <div className="detail-skills">
-                  <h4>Skills</h4>
-                  <ul>
-                    {enemy.skills?.map((skill, index) => (
-                      <li key={index}>{skill}</li>
-                    ))}
-                  </ul>
-                </div>
+                {npc.role && (
+                  <div className="detail-skills">
+                    <h4>Ruolo</h4>
+                    <p>{npc.role}</p>
+                  </div>
+                )}
               </div>
             </div>
+
             <div className="detail-right-paper">
               <div className="detail-container-paper">
                 <div id="detail-page" className="page-container">
                   <div className="page-detail-content">
                     <div className="detail-description-content">
-                      <div><p>{enemy.description}</p></div>
+                      <p>{npc.description}</p>
                     </div>
                   </div>
                 </div>
@@ -144,4 +117,4 @@ const EnemyDetailPage = () => {
   );
 };
 
-export default EnemyDetailPage;
+export default NPCDetailPage;

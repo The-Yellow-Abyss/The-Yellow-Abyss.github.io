@@ -63,8 +63,8 @@ const Carousel = ({ children }) => {
 
 const CreaturesPage = () => {
   const cardsData = [
-    { image: enemiesImage, title: 'Enemies', link: '/creatures/enemies' },
-    { image: bossesImage, title: 'Bosses', link: '/creatures/bosses' },
+    { image: enemiesImage, title: 'Nemici', link: '/creatures/enemies' },
+    { image: bossesImage, title: 'Boss', link: '/creatures/bosses' },
     { image: creaturesImage, title: 'NPC', link: '/creatures/npc' },
   ];
 
@@ -79,9 +79,9 @@ const CreaturesPage = () => {
         <div className="main-content">
           <div className="breadcrumb">
             <Link to="/" className="breadcrumb-link">Home</Link> &gt;{' '}
-            <Link to="/creatures" className="breadcrumb-current">Creatures</Link>
+            <Link to="/creatures" className="breadcrumb-current">Creature</Link>
           </div>
-          <div className="content-title">CREATURES</div>
+          <div className="content-title">CREATURE</div>
 
           <div className="content-box-bestiary">
             <Carousel>

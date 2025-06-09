@@ -8,17 +8,22 @@ import sidebarLeftImage from '../assets/right-sideBar-catacomb.png';
 import sidebarRightImage from '../assets/left-sideBar-catacomb.png';
 import FilterIcon from '../assets/filter_icon.png';
 
-
 import itemsData from '../data/items.json';
 
 const ItemsPage = () => {
   const [items, setItems] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
-  const [selectedType, setSelectedType] = useState('all'); // 'all', 'treasure', 'weapon'
+  const [selectedType, setSelectedType] = useState('all');
 
   useEffect(() => {
     setItems(itemsData);
   }, []);
+
+  const slugify = (text) =>
+    text.toString().toLowerCase().trim()
+      .replace(/\s+/g, '-')
+      .replace(/[^\w\-]+/g, '')
+      .replace(/\-\-+/g, '-');
 
   const filteredItems = items.filter((item) => {
     const matchesName = item.name.toLowerCase().includes(searchTerm.toLowerCase());
@@ -37,10 +42,10 @@ const ItemsPage = () => {
         <div className="main-content">
           <div className="breadcrumb">
             <Link to="/" className="breadcrumb-link">Home</Link> &gt;{' '}
-            <Link to="/items" className="breadcrumb-current">Items</Link>
+            <Link to="/items" className="breadcrumb-current">Oggetti</Link>
           </div>
 
-          <div className="content-title">ITEMS</div>
+          <div className="content-title">OGGETTI</div>
 
           <div className="content-search">
             <div className="search-bar">
@@ -51,21 +56,20 @@ const ItemsPage = () => {
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="search-input"
               />
-             <div className="filter-wrapper">
-              <img src={FilterIcon} alt="All Items Icon" className="filter-icon" />
-              <select
-                value={selectedType}
-                onChange={(e) => setSelectedType(e.target.value)}
-                className="filter-select"
-              >
-                <option value="all">All Items</option>
-                <option value="treasure">Treasure</option>
-                <option value="weapon">Weapon</option>
-              </select>
-            </div>
+              <div className="filter-wrapper">
+                <img src={FilterIcon} alt="All Items Icon" className="filter-icon" />
+                <select
+                  value={selectedType}
+                  onChange={(e) => setSelectedType(e.target.value)}
+                  className="filter-select"
+                >
+                  <option value="all">All Items</option>
+                  <option value="treasure">Tesori</option>
+                  <option value="weapon">Armi</option>
+                </select>
+              </div>
             </div>
           </div>
-
 
           <div className="content-box-items">
             {filteredItems.length === 0 ? (
@@ -73,13 +77,19 @@ const ItemsPage = () => {
                 Nessun item corrispondente alla ricerca.
               </p>
             ) : (
-              filteredItems.map((item) => (
-                <div key={item.id} className="item-container">
-                  <div className="item-image">
-                    <img src={`${item.icon}`} alt={item.name} />
+              filteredItems.map((item, index) => (
+                <Link
+                  to={`/items/${slugify(item.name)}`}
+                  key={index}
+                  className="item-link"
+                >
+                  <div className="item-container">
+                    <div className="item-image">
+                      <img src={item.icon} alt={item.name} />
+                    </div>
+                    <div className="item-label">{item.name}</div>
                   </div>
-                  <div className="item-label">{item.name}</div>
-                </div>
+                </Link>
               ))
             )}
           </div>

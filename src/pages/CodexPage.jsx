@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/style.css';
-import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
 // Importazione delle immagini
@@ -14,7 +13,6 @@ import FlipBook from '../components/FlipBook';
 const CodexPage = () => {
   return (
     <div>
-        <Navbar /> {/* Navbar visibile in tutte le pagine */}
       <div className="main">
         <div className="left-sidebar">
             <img src={sidebarLeftImage} alt="Sidebar Image" className="sidebar-img" />

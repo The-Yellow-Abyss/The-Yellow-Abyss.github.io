@@ -1,26 +1,26 @@
 [
   {
-    "title": "Sebastian - Medico della pestilenza",
+    "title": "Sebastian Medico della pestilenza",
     "description": "Medici che si sono spinti troppo oltre per studiare la pestilenza, ora più degli altri loro colleghi sono perseguitati da visioni orribili, e con mutazioni grottesche. Lo strano legame che hanno con i ratti sembra essersi acuito, permettendogli di usarli come armi ancor più letali, vettori della pestilenza.",
-    "image": "../codex/bosses/plague_doctor_boss.png",
-    "symbol": "../codex/bosses/plague_doctor_symbol.png",
+    "image": "/codex/bosses/plague_doctor_boss.png",
+    "symbol": "/codex/bosses/plague_doctor_symbol.png",
     "skills": ["controllo dei ratti", "aggressività grottesca", "resistenza alla pestilenza"],
-    "danger_level": "High"
+    "danger_level": "Alto"
   },
   {
-    "title": "Frate Romulus - Monaco",
+    "title": "Frate Romulus Monaco",
     "description": "Tra i monaci scesi nelle catacombe, questi sembrano aver subito il destino peggiore, dalle parole disconnesse che producono gorgogliando con quello che rimane della loro bocca, sembra che hanno visto qualcosa di terrificante.",
-    "image": "../codex/bosses/monk_boss.png",
-    "symbol": "../codex/bosses/monk_symbol.png",
+    "image": "/codex/bosses/monk_boss.png",
+    "symbol": "/codex/bosses/monk_symbol.png",
     "skills": ["forma mostruosa", "forza disturbante", "resistenza al dolore"],
-    "danger_level": "Medium"
+    "danger_level": "Medio"
   },
   {
-    "title": "Hastur - re giallo",
+    "title": "Hastur re giallo",
     "description": "La sua natura non è chiara e probabilmente non lo potrà mai essere alle menti umane. L'unica cosa chiara è che vuole che qualcuno raggiunga il fondo delle catacombe, ma che lo faccia solo chi ritiene meritevole. Le uniche tracce storiche che si hanno della sua esistenza sono qualche menzione sporadica negli scritti di Babele, la più grande fonte di informazione riguardante il mondo antico e della civiltà dei Vissomnius.",
-    "image": "../codex/bosses/yellow_king_boss.png",
-    "symbol": "../codex/bosses/yellow_king_symbol.png",
+    "image": "/codex/bosses/yellow_king_boss.png",
+    "symbol": "/codex/bosses/yellow_king_symbol.png",
     "skills": ["manipolazione mentale", "potere divino", "controllo della realtà"],
-    "danger_level": "Extreme"
+    "danger_level": "Estremo"
   }
 ]

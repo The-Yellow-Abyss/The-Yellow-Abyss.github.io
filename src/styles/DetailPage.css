@@ -11,7 +11,7 @@
   display: flex;
   justify-content: center; /* centro il contenuto orizzontalmente */
   align-items: flex-start;
-  gap: 2rem;
+  gap: clamp(4rem, 5vw, 3rem); /* minimo 1rem, massimo 3rem */
   flex-wrap: wrap;
   margin: 0 auto;
   max-width: 90%; /* limita l'espansione */
@@ -23,25 +23,55 @@
   flex: 1;
   max-width: 50%; /* impedisce che uno dei due superi metà larghezza */
   min-width: 300px; /* opzionale, per evitare che si rimpiccioliscano troppo */
+  
 }
 
 
+
 .danger-level-box {
-  width: 60px;
-  height: 60px;
+  padding: 0.5rem 1rem;         /* spazio interno per leggibilità */
   color: white;
   font-weight: bold;
-  display: flex;
+  display: inline-flex;         /* si adatta al contenuto */
   align-items: center;
   justify-content: center;
   border-radius: 8px;
+  font-size: 1rem;
+  white-space: nowrap;          /* evita andare a capo */
+  margin-bottom: 20px;
 }
 
 .detail-img {
   width: 100%;
   max-width: 250px;
   height: auto;
-  border-radius: 6px;
+  border-radius: 0px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+
+
+
+.detail-skills {
+  position: relative;
+  padding: 30px;
+  color: #000;
+  z-index: 1;
+}
+
+.detail-skills::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('../codex/detail-page.png');
+  background-size: 100% 100%; /* Si adatta sia in larghezza che in altezza */
+  background-repeat: no-repeat;
+  background-position: top center;
+  image-rendering: pixelated;
+  z-index: -1; /* Va dietro il testo */
 }
 
 .detail-skills ul {
@@ -114,6 +144,7 @@
     align-items: center;
     border-radius: 8px;
     min-height: 26rem;
+    min-width: auto;
     overflow: hidden;
 }
 
