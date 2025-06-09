@@ -82,7 +82,16 @@ const AboutPage = () => {
           <div className="content-title">ABOUT PAGE</div>
           <div className="about-vertical-layout">
             <div className="about-video-horizontal-placeholder" style={{ width: '560px', height: '315px', maxWidth: '90vw', maxHeight: '50vh', background: '#111', borderRadius: '18px', boxShadow: '0 4px 24px 0 rgba(0,0,0,0.18)', margin: '0 auto 2.5vh auto', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              {/* Video Placeholder (16:9 ratio, same as HomePage) */}
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/ovdiGDEuoYU"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                style={{ borderRadius: '14px', background: '#111' }}
+              ></iframe>
             </div>
             <div className="about-image-container site-map-bg-container">
               <img
