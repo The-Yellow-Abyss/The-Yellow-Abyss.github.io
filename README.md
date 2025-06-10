@@ -13,6 +13,7 @@
 3. usa react e segui i comandi di vite da terminale usa r per reload
 
 
-## Video panoramica sito e documentazione
-1. https://youtu.be/C2zgA6FvGac
+## Cosegna progetto
+1. Video panoramica del sitito: https://youtu.be/C2zgA6FvGac
 2. La docimentazione e' "The Yellow Abyss - PPM Documentazione_ V_1.2.pdf"
+3. Video trailer del gioco: https://youtu.be/ovdiGDEuoYU
