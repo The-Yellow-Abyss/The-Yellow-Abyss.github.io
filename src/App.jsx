@@ -26,7 +26,8 @@ import Navbar from './components/Navbar';
 
 
 import GoogleTranslate from './components/GoogleTranslate';
-// import Navbar from './components/Navbar';
+import AboutPage from './pages/AboutPage'; // Importazione mancante di AboutPage
+import ContactPage from './pages/ContactPage';
 
 function App() {
 
@@ -50,6 +51,8 @@ function App() {
         <Route path="/items/:itemName" element={<ItemDetailPage />} />
         <Route path="/lore" element={<LorePage />} />
         <Route path="/help" element={<HelpPage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/contact" element={<ContactPage />} />
         <Route path="/codex" element={<CodexPage />} />
         <Route path="/gamemechanics" element={<MechanicsPage />} />
       </Routes>
