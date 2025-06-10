@@ -1,0 +1,114 @@
+[
+  {
+    "id": "reliquary_agata",
+    "object": "treasure",
+    "name": "Reliquario di Sant'Agata",
+    "type": "Passivo",
+    "effect": "Aumenta permanentemente la vita massima di un cuore (2 HP).",
+    "description": "Reliquiario contenente il seno destro della santa martire Agata, nonostante i secoli, esso sembra fresco come il giorno in cui venne tagliato. Dopo aver divorato il seno, senti il tuo corpo fortificarsi e irrobustirsi.",
+    "icon": "../assets/items/Reliquario_di_SantAgata.PNG"
+  },
+  {
+    "id": "foot_giulia",
+    "object": "treasure",
+    "name": "Piede destro di Santa Giulia",
+    "type": "Passivo",
+    "effect": "Aumenta la velocità massima di movimento del 20%.",
+    "description": "Reliquia del piede di Santa Giulia, conservata in una custodia in argento con la forma del piede della santa. Ti amputi il piede destro con la tua stessa arma per poi poggiare il piede della santa sul moncherino, il piede si attacca come se il suo posto fosse sempre stato quello. Senti che la tua velocità è in qualche modo aumentata.",
+    "icon": "../assets/items/Piede_destro_di_Santa_Giulia.PNG"
+  },
+  {
+    "id": "heart_george",
+    "object": "treasure",
+    "name": "Cuore di San Giorgio",
+    "type": "Passivo",
+    "effect": "Aumenta il danno massimo del giocatore del 25%.",
+    "description": "Scrigno dorato contenente il cuore ancora pulsante di San Giorgio. Quando divori l'organo senti che la forza del santo che sconfisse il drago inizia a scorrere dentro di te.",
+    "icon": "../assets/items/Cuore_di_San_Giorgio.PNG"
+  },
+  {
+    "id": "dagger_martyr",
+    "object": "treasure",
+    "name": "Pugnale del martire",
+    "type": "Passivo",
+    "effect": "Diminuisce la vita massima di 1 cuore (-2 HP) ma aumenta danno (+20%) e velocità di movimento (+15%).",
+    "description": "Pugnale con cui venne trafitto il cuore di Santa Giulia. Quando ti trafiggi il petto con esso, senti un dolore lancinante, ma senti anche come il pugnale comincia a fondersi con il tuo petto, rendendoti più forte e più veloce a fronte di un sacrificio che ti rende più fragile.",
+    "icon": "../assets/items/Pugnale_del_martire.PNG"
+  },
+  {
+    "id": "eye_cecilia",
+    "object": "treasure",
+    "name": "Occhio di Santa Cecilia",
+    "type": "Passivo",
+    "effect": "Segnala i nemici fuori dalla visuale con indicatori rossi sopra la loro posizione.",
+    "description": "L'occhio conservato di Santa Cecilia, afferrandolo ti sembra per un istante che ti stia osservando. Ti cavi l'occhio sinistro stringendo i denti, quando avvicini l'occhio della santa esso entra nell'orbita vuota come se quello fosse stato sempre il suo posto, donandoti una percezione maggiore del pericolo.",
+    "icon": "../assets/items/Occhio_di_Santa_Cecilia.PNG"
+  },
+  {
+    "id": "vow_paul",
+    "object": "treasure",
+    "name": "Voto di non violenza di San Paolo",
+    "type": "Passivo",
+    "effect": "Ti permette di non subire un danno per stanza (assorbe il primo colpo).",
+    "description": "Pergamena contenente il voto di non violenza di San Paolo. Le parole di compassione e pace del santo si imprimono nella tua mente, la visione ti fa sanguinare occhi e orecchie, ma ora senti che il voto ti possa proteggere da alcuni pericoli.",
+    "icon": "../assets/items/Voto_di_non_violenza_di_San_Paolo.PNG"
+  },
+  {
+    "id": "ring_michael",
+    "object": "treasure",
+    "name": "Anulare di San Michele",
+    "type": "Passivo",
+    "effect": "Aumenta la velocità di attacco del 30% ma diminuisce il danno del 10%.",
+    "description": "Dito anulare sinistro rivestito d'oro di San Michele. Ti amputi stringendo i denti il dito anulare sinistro innestandoti quello del santo, senti che esso ti doni una maggior abilità del combattimento, a discapito di una parte della tua forza.",
+    "icon": "../assets/items/Anulare_di_San_Michele.PNG"
+  },
+  {
+    "id": "hand_george",
+    "object": "treasure",
+    "name": "Mano destra di San Giorgio",
+    "type": "Passivo",
+    "effect": "Aumenta la velocità di attacco del 20%.",
+    "description": "Mano di San Giorgio conservata in un guanto d'arme in argento. Ti amputi la mano destra poggiando la mano del santo sul moncherino, la mano di San Giorgio si fonde a te come se fosse sempre stata parte di te, senti che la tua abilità nel combattimento aumenta.",
+    "icon": "../assets/items/Mano_destra_di_San_Giorgio.PNG"
+  },
+  {
+    "id": "sword_rosalind",
+    "object": "weapon",
+    "name": "Spada di Rosalind",
+    "type": "Arma",
+    "description": "Amata spada di Rosalind Bernard. Venne regalata dal padre come premio per esser riuscita a venir nominata cavaliere all'età di diciannove anni. Su di essa si possono vedere i segni degli duri allenamenti fatti dalla ragazza per non essere seconda agli altri cavalieri.",
+    "icon": "../codex/weapons/Spada_di_Rosalind.PNG"
+  },
+  {
+    "id": "sword_michael",
+    "object": "weapon",
+    "name": "Spada di San Michele",
+    "type": "Arma",
+    "description": "Reliquia del santo cavaliere, questa spada vibra ancora per i colpi sferrati dal santo, la rabbia per gli infedeli risuona ancora dentro. I fendenti sferrati con questa spada sono più pesanti e lenti, ma i danni inflitti a coloro che li ricevono sono ingenti.",
+    "icon": "../codex/weapons/Spada_di_San_Michele.PNG"
+  },
+  {
+    "id": "sword_peter",
+    "object": "weapon",
+    "name": "Spada di San Pietro",
+    "type": "Arma",
+    "description": "Spada del santo protettore delle porte, la furia del santo che protesse i cancelli della santa chiesa dagli eretici risuona dentro di essa. La lama risuona come se fosse una folata di vento, i suoi fendenti sono praticamente invisibili agli occhi umani, ma i danni totali di un singolo fendente non sono elevati.",
+    "icon": "../codex/weapons/Spada_di_San_Pietro.PNG"
+  },
+  {
+    "id": "spear_rosalind",
+    "object": "weapon",
+    "name": "Lancia di Rosalind",
+    "type": "Arma",
+    "description": "Lancia di Rosalind Bernard che le venne regalata dalla sua amata Valerika. Quest'arma nonostante l'orrore delle catacombe le ricorda perché sta combattendo, è l'unica speranza che le rimane e l'unica catena che la ancora alla realtà non facendola impazzire.",
+    "icon": "../codex/weapons/Lancia_di_Rosalind.PNG"
+  },
+  {
+    "id": "spear_george",
+    "object": "weapon",
+    "name": "Lancia di San Giorgio",
+    "type": "Arma",
+    "description": "Lancia del santo che sconfisse il drago. La furia sacra del santo risuona ancora con la lancia. Il sangue del drago che sporcò la lancia fece crescere della vite attorno al suo manico. La lancia risulta estremamente pesante, ma i colpi sferrati con essa sono capaci di trafiggere anche un'armatura a piastre.",
+    "icon": "../codex/weapons/Lancia_di_San_Giorgio.PNG"
+  }
+]

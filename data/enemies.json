@@ -1,0 +1,100 @@
+[
+  {
+    "title": "Medico della pestilenza",
+    "description": "Medici provenienti da tutto il continente che, come Maria dalle Donne, sono giunti per studiare la pestilenza. Non riuscendo a resistere agli effetti incomprensibili della malattia, sono diventati creature grottesche e violente. Sembrano capaci di controllare i ratti mutati dalla pestilenza.",
+    "image": "/codex/enemies/medico_della_pestilenza.png",
+    "skills": ["controllo dei ratti", "aggressività grottesca", "resistenza alla pestilenza"],
+    "danger_level": "Alto"
+  },
+  {
+    "title": "Re dei ratti",
+    "description": "Un groviglio di ratti legati per la coda, mutati dalla pestilenza. Queste abominazioni sembrano esercitare un'influenza innaturale sugli altri ratti infetti, guidandoli in attacchi coordinati.",
+    "image": "/codex/enemies/re_dei_ratti_nemico.png",
+    "skills": ["comando dei ratti", "attacchi coordinati", "influenza innaturale"],
+    "danger_level": "Alto"
+  },
+  {
+    "title": "Monaco",
+    "description": "Monaci cappuccini di Elealia, un tempo accompagnati dall'esercito papale del ducato di Gheya per purificare le catacombe. Ormai tutti colpiti dalla pestilenza, hanno assunto forme mostruose, perfino più disturbanti dei medici della peste.",
+    "image": "/codex/enemies/monaco_deforme.png",
+    "skills": ["forma mostruosa", "forza disturbante", "resistenza al dolore"],
+    "danger_level": "Alto"
+  },
+  {
+    "title": "Ratto delle cantine",
+    "description": "Un ratto comune delle fogne, reso più aggressivo dalla pestilenza. I suoi attacchi sono caotici ma prevedibili.",
+    "image": "/codex/enemies/ratto_normale.png",
+    "skills": ["attacchi caotici", "aggressività", "comportamento prevedibile"],
+    "danger_level": "Basso"
+  },
+  {
+    "title": "Ratto del flagello",
+    "description": "Ricoperto di pustole pulsanti, questo ratto è stato profondamente deformato dalla pestilenza. È feroce, imprevedibile e porta con sé un'infezione che si diffonde rapidamente.",
+    "image": "/codex/enemies/ratto_infetto.png",
+    "skills": ["infezione rapida", "ferocia", "imprevedibilità"],
+    "danger_level": "Medio"
+  },
+  {
+    "title": "Ragno Vedetta",
+    "description": "La sua presenza segnala l'inizio di un'area infestata. Il suo veleno è letale e agisce in pochi secondi. È veloce, silenzioso e difficile da colpire.",
+    "image": "/codex/enemies/ragno_vedetta.png",
+    "skills": ["veleno letale", "velocità", "furtività"],
+    "danger_level": "Basso"
+  },
+  {
+    "title": "Ragno Ematofago",
+    "description": "Si nutre del sangue delle sue vittime ancora vive. Il suo morso non è letale all'istante, ma induce febbre e dissanguamento rapido.",
+    "image": "/codex/enemies/ragno_ematofago.png",
+    "skills": ["succhiasangue", "morso debilitante", "febbre e dissanguamento"],
+    "danger_level": "Medio"
+  },
+  {
+    "title": "Ragno Carogna",
+    "description": "Caccia solo su corpi agonizzanti. Il suo veleno distrugge lentamente i tessuti, prolungando il dolore delle vittime.",
+    "image": "/codex/enemies/ragno_carogna.png",
+    "skills": ["veleno necrotico", "caccia opportunistica", "tortura prolungata"],
+    "danger_level": "Alto"
+  },
+  {
+    "title": "Ragno Silente",
+    "description": "Creatura comune nelle zone buie delle catacombe. Non particolarmente pericoloso se affrontato singolarmente, ma letale in gruppo.",
+    "image": "/codex/enemies/ragno_silente.png",
+    "skills": ["letale in gruppo", "mimetismo", "attacchi coordinati"],
+    "danger_level": "Medio"
+  },
+  {
+    "title": "Blatta Oscura",
+    "description": "Insetto comune mutato. Attacca in piccoli gruppi e si nutre di carne in decomposizione. Una minaccia solo se ignorato.",
+    "image": "/codex/enemies/blatta_oscura.png",
+    "skills": ["attacchi in gruppo", "alimentazione necrofaga", "bassa pericolosità"],
+    "danger_level": "Basso"
+  },
+  {
+    "title": "Blatta Serrata",
+    "description": "Questa variante emana una sostanza viscosa che rallenta i movimenti e irrita la pelle. Il contatto prolungato può essere fatale.",
+    "image": "/codex/enemies/blatta_serrata.png",
+    "skills": ["sostanza viscosa", "rallentamento", "irritazione cutanea"],
+    "danger_level": "Alto"
+  },
+  {
+    "title": "Blatta Rancida",
+    "description": "Insetto corazzato dalla corazza rossastra. Le sue mandibole possono lacerare anche il cuoio spesso. È territorialmente aggressiva.",
+    "image": "/codex/enemies/blatta_rancida.png",
+    "skills": ["corazza resistente", "mandibole taglienti", "aggressività territoriale"],
+    "danger_level": "Medio"
+  },
+  {
+    "title": "Pipistrello Cieco",
+    "description": "Un tempo inoffensivo abitante delle catacombe, ora attacca senza esitazione. I suoi attacchi sono rapidi ma disorganizzati.",
+    "image": "/codex/enemies/pipistrello_cieco.png",
+    "skills": ["attacchi rapidi", "aggressione cieca", "movimenti disorganizzati"],
+    "danger_level": "Basso"
+  },
+  {
+    "title": "Pipistrello Famelico",
+    "description": "Mutato dalla pestilenza, presenta un corpo emaciato ma ali ampie. Si lancia sulle vittime per nutrirsi del loro sangue.",
+    "image": "/codex/enemies/pipistrello_famelico.png",
+    "skills": ["attacco a volo radente", "succhiasangue", "corpo emaciato"],
+    "danger_level": "Alto"
+  }
+]

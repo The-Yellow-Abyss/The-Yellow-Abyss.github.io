@@ -1,0 +1,182 @@
+[
+  {
+    "name": "Medico della pestilenza",
+    "category": "Enemy",
+    "image": "base64string",
+    "description": "Medici provenienti da tutto il continente che, come Maria dalle Donne, sono venuti qui per studiare la pestilenza, ma non riuscendo a resistere agli effetti incomprensibili della malattia, sono finiti per diventare creature grottesche e violente. Sembrano capaci di controllare i ratti mutati dalla pestilenza.",
+    "statistics": {
+      "HP": 60,
+      "ATK": 9,
+      "DEF": 3,
+      "SPD": 2
+    },
+    "skills": [
+      "Controllo dei ratti"
+    ]
+  },
+  {
+    "name": "Re dei ratti",
+    "category": "Enemy",
+    "image": "base64string",
+    "description": "Gruppo di ratti legati per la coda mutati dalla pestilenza. Sembrano capaci di controllare altri ratti mutati dalla pestilenza.",
+    "statistics": {
+      "HP": 80,
+      "ATK": 11,
+      "DEF": 2,
+      "SPD": 3
+    },
+    "skills": [
+      "Comando roditori"
+    ]
+  },
+  {
+    "name": "Monaco",
+    "category": "Enemy",
+    "image": "base64string",
+    "description": "Monaci cappuccini della città monacale di Elealia accompagnati dagli uomini dell’esercito papale inviati dal ducato di Gheya, per purificare le catacombe della cattedrale della santa chiesa. Ormai sono tutti stati colpiti dalla pestilenza diventando mostri grotteschi, più di quanto lo sono diventati i medici della peste.",
+    "statistics": {
+      "HP": 85,
+      "ATK": 14,
+      "DEF": 4,
+      "SPD": 1
+    },
+    "skills": [
+      "Flagellazione furiosa"
+    ]
+  },
+  {
+    "name": "Ratto infetto",
+    "category": "Enemy",
+    "image": "base64string",
+    "description": "Un comune ratto di fogna mutato dalla pestilenza. I suoi occhi sono vitrei e il suo corpo emette fumi tossici.",
+    "statistics": {
+      "HP": 22,
+      "ATK": 5,
+      "DEF": 1,
+      "SPD": 4
+    },
+    "skills": [
+      "Morso contagioso"
+    ]
+  },
+  {
+    "name": "Scarafaggio mutato",
+    "category": "Enemy",
+    "image": "base64string",
+    "description": "Uno scarafaggio grande quanto una mano umana, con esoscheletro rinforzato e mandibole acuminate.",
+    "statistics": {
+      "HP": 20,
+      "ATK": 4,
+      "DEF": 3,
+      "SPD": 2
+    },
+    "skills": [
+      "Carica velenosa"
+    ]
+  },
+  {
+    "name": "Blatta mutata",
+    "category": "Enemy",
+    "image": "base64string",
+    "description": "Blatta delle fogne ingrandita dagli effetti della pestilenza. Lascia dietro di sé tracce infette e ronzio irritante.",
+    "statistics": {
+      "HP": 18,
+      "ATK": 3,
+      "DEF": 1,
+      "SPD": 3
+    },
+    "skills": [
+      "esplosione acida"
+    ]
+  },
+  {
+    "name": "Ragno delle catacombe",
+    "category": "Enemy",
+    "image": "base64string",
+    "description": "Ragno con zampe ricoperte di pustole. Il suo morso è mortale.",
+    "statistics": {
+      "HP": 30,
+      "ATK": 6,
+      "DEF": 2,
+      "SPD": 5
+    },
+    "skills": [
+      "Morso Velenoso"
+    ]
+  },
+  {
+    "name": "Pipistrello",
+    "category": "Enemy",
+    "image": "base64string",
+    "description": "Un pipistrello che si nutre della carne dei cadaveri nelle catacombe. I suoi artigli sono scheletrici, ma affilati.",
+    "statistics": {
+      "HP": 25,
+      "ATK": 5,
+      "DEF": 1,
+      "SPD": 6
+    },
+    "skills": [
+      "Sciame aggressivo"
+    ]
+  },
+  {
+    "name": "Medico della pestilenza",
+    "category": "Boss",
+    "image": "base64string",
+    "description": "Medici che si sono spinti troppo oltre per studiare la pestilenza, ora più degli altri loro colleghi sono perseguitati da visioni orribili, e con mutazioni grottesche. Lo strano legame che hanno con i ratti sembra essersi acuito, permettendogli di usarli come armi ancor più letali, vettori della pestilenza.",
+    "statistics": {
+      "HP": 550,
+      "ATK": 50,
+      "DEF": 10,
+      "SPD": 2,
+      "Mana": 80
+    },
+    "skills": [
+      "Sciame letale",
+      "Mutazione incontrollata"
+    ]
+  },
+  {
+    "name": "Monaco Supremo",
+    "category": "Boss",
+    "image": "base64string",
+    "description": "Tra i monaci scesi nelle catacombe, questi sembrano aver subito il destino peggiore, dalle parole disconesse che producono gorgogliando con quello che rimane della loro bocca, sembra che hanno visto qualcosa di terrificante.",
+    "statistics": {
+      "HP": 650,
+      "ATK": 35,
+      "DEF": 90,
+      "SPD": 1,
+      "Mana": 40
+    },
+    "skills": [
+      "Urlo sacrilego",
+      "Visione contorta"
+    ]
+  },
+  {
+    "name": "Hastur – il re giallo",
+    "category": "Boss",
+    "image": "base64string",
+    "description": "La sua natura non è chiara e probabilmente non lo potrà mai essere alle menti umane. Le sue azioni sembrano contraddittorie viste da un'ottica umana. L’unica cosa chiara è che vuole che qualcuno raggiunga il fondo delle catacombe, ma che lo faccia solo chi ritiene meritevole. Le uniche tracce storiche che si hanno della sua esistenza sono qualche menzione sporadica negli scritti di Babele, la più grande fonte di informazione riguardante il mondo antico e della civiltà dei Vissomnius.",
+    "statistics": {
+      "HP": 1200,
+      "ATK": 65,
+      "DEF": 20,
+      "SPD": 3,
+      "Mana": 999
+    },
+    "skills": [
+      "Sussurri della follia",
+      "Richiamo del vuoto"
+    ]
+  },
+  {
+    "name": "Re dei ratti",
+    "category": "Creature",
+    "image": "base64string",
+    "description": "Misteriosa creatura presente nelle catacombe, sembra non venir colpito dagli effetti della pestilenza. Il suo obiettivo sembra essere quello di liberarsi degli altri “finti re dei ratti” e “ratti traditor” presenti nelle catacombe, chiedendo aiuto alla protagonista e compensandola con premi di vario tipo.",
+    "statistics": {
+    },
+    "skills": []
+  }
+]
