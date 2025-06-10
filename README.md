@@ -23,6 +23,6 @@
 ![alt text](image-2.png)
 
 ## Cosegna progetto
-1. Video panoramica del sitito: https://youtu.be/C2zgA6FvGac
+1. Video panoramica del sito: https://youtu.be/C2zgA6FvGac
 2. [Documentazione PDF](The%20Yellow%20Abyss%20-%20PPM%20Documentazione_%20V_1.2.pdf)
 3. Video trailer del gioco: https://youtu.be/ovdiGDEuoYU
