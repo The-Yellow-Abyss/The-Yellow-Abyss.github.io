@@ -7,4 +7,5 @@ export default defineConfig({
     port: 3000, // Imposta la porta su 3000
   },
   plugins: [react()],
+  base:'/',
 });
