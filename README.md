@@ -13,9 +13,11 @@
 3. node server.js o npm start (per avviare il server)
 
 ![alt text](image.png)
+
 5. Apri un nuovo terminale e fai npm start
 
 ![alt text](image-1.png)
+
 6. usa react e segui i comandi di vite da terminale usa r per reload
 
 ![alt text](image-2.png)
