@@ -1,4 +1,4 @@
-# The-Yellow-Abyss.github.io
+# The-Yellow-Abyss.github.io Manuale avvio del sito
 
 ## Comando per avviare React
 1. Prima fai cd The-Yellow-Abyss.github.io
@@ -24,5 +24,5 @@
 
 ## Cosegna progetto
 1. Video panoramica del sitito: https://youtu.be/C2zgA6FvGac
-2. La docimentazione e' "The Yellow Abyss - PPM Documentazione_ V_1.2.pdf": https://github.com/The-Yellow-Abyss/The-Yellow-Abyss.github.io/blob/main/The%20Yellow%20Abyss%20-%20PPM%20Documentazione_%20V_1.2.pdf
+2. [Documentazione PDF](The%20Yellow%20Abyss%20-%20PPM%20Documentazione_%20V_1.2.pdf)
 3. Video trailer del gioco: https://youtu.be/ovdiGDEuoYU
