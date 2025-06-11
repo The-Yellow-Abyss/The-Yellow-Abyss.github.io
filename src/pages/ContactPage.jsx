@@ -14,18 +14,18 @@ const ContactPage = () => {
         <div className="main-content about-vertical-layout about-hide-bottom">
           <div className="breadcrumb">
             <Link to="/" className="breadcrumb-link">Home</Link> &gt;{' '}
-            <Link to="/contact" className="breadcrumb-current">Contact</Link>
+            <Link to="/contact" className="breadcrumb-current">Contatti</Link>
           </div>
-          <div className="content-title">CONTACT</div>
+          <div className="content-title">CONTATTI</div>
           <div className="about-vertical-layout">
             <div style={{color: '#fff', fontSize: '1.2rem', textAlign: 'center', maxWidth: 600, margin: '0 auto'}}>
-              <p>For inquiries, feedback, or to get in touch with the team, please contact one of the creators:</p>
+              <p>Per domande, feedback, o per conoscere i creator, ecco i contatti del team:</p>
               <ul style={{listStyle: 'none', padding: 0, margin: '1.5rem 0', fontSize: '1.1rem'}}>
                 <li><strong>Prudenzano Cristian Pio</strong> <br /><span style={{color: '#ffe066'}}>c.prudenzano@studenti.uniba.it</span></li>
                 <li style={{marginTop: '1.2rem'}}><strong>Mongelli Marco</strong> <br /><span style={{color: '#ffe066'}}>m.mongelli75@studenti.uniba.it</span></li>
                 <li style={{marginTop: '1.2rem'}}><strong>Maggio Gianluca</strong> <br /><span style={{color: '#ffe066'}}>g.maggio21@studenti.uniba.it</span></li>
               </ul>
-              <p>Or use the Help page for bug reports and support.</p>
+              <p>Oppure usa la pagina Help per segnalare un problema.</p>
             </div>
           </div>
         </div>

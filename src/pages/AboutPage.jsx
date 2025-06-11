@@ -77,14 +77,15 @@ const AboutPage = () => {
         <div className="main-content about-vertical-layout about-hide-bottom">
           <div className="breadcrumb">
             <Link to="/" className="breadcrumb-link">Home</Link> &gt;{' '}
-            <Link to="/about" className="breadcrumb-current">About</Link>
+            <Link to="/about" className="breadcrumb-current">Chi Siamo</Link>
           </div>
-          <div className="content-title">ABOUT PAGE</div>
+          <div className="content-title">CHI SIAMO</div>
           <div className="about-vertical-layout">
             <div className="about-video-horizontal-placeholder" style={{ width: '560px', height: '315px', maxWidth: '90vw', maxHeight: '50vh', background: '#111', borderRadius: '18px', boxShadow: '0 4px 24px 0 rgba(0,0,0,0.18)', margin: '0 auto 2.5vh auto', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
               <iframe
                 width="100%"
                 height="100%"
+
                 src="https://www.youtube.com/embed/C2zgA6FvGac"
                 title="YouTube video player"
                 frameBorder="0"
@@ -101,10 +102,10 @@ const AboutPage = () => {
               />
               <div className="site-map-buttons">
                 <Link to="/" className="site-map-btn">Home</Link>
-                <Link to="/creatures" className="site-map-btn">Creatures</Link>
+                <Link to="/creatures" className="site-map-btn">Creature</Link>
                 <Link to="/lore" className="site-map-btn">Lore</Link>
                 <Link to="/codex" className="site-map-btn">Codex</Link>
-                <Link to="/items" className="site-map-btn">Items</Link>
+                <Link to="/items" className="site-map-btn">Oggetti</Link>
                 <Link to="/gamemechanics" className="site-map-btn">Game</Link>
               </div>
             </div>
