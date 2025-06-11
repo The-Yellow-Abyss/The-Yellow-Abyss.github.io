@@ -16,7 +16,9 @@ function FrontBosses({ boss }) {
            <h1>{boss.title}</h1>
          </div>
          <div className="boss-description-content">
-           <p>{boss.description}</p>
+          <div className="boss-description">
+            <p>{boss.description}</p>
+          </div>
          </div>
        </div>
      </div>

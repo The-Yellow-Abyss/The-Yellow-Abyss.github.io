@@ -260,8 +260,8 @@
 }
 
 .inventory-item-image-content {
-  width: 15rem;
-  height: 15rem;
+  width: 20rem;
+  height: 20rem;
   position: relative;
   display: flex;
   align-items: center;
@@ -270,8 +270,8 @@
 }
 
 .inventory-item-image-content img.inventory-item-image {
-  width: 80%;
-  height: 80%;
+  width: 60%;
+  height: 60%;
   object-fit: contain;
   display: block;
 }
@@ -333,12 +333,18 @@
   padding: 4px 0;  /* Aggiunto padding ridotto per dare spazio in alto e basso */
 }
 
+.inventory-item-description-content .inventory-item-description {
+  margin-top: 10px;
+  max-height: 88%;
+  max-width: 90%;
+  overflow-y: auto; /* Barra di scorrimento verticale attiva quando il contenuto è troppo grande */
+}
+
 /* Testo descrizione centrato e più piccolo */
-.inventory-item-description-content p {
-  font-size: 11px;
+ .inventory-item-description-content .inventory-item-description p {
+  font-size: 13.4px;
   padding: 10px 20px;  /* Ridotto il padding generale per un miglior bilanciamento */
   text-align: justify;
-  max-width: 90%;
   margin: 0;
   color: #0f0f0f;
   overflow: hidden;

@@ -452,3 +452,21 @@ body::-webkit-scrollbar-thumb {
 .book h1 {
     color: #0c0c0c;
 }
+
+
+.lore-text-content {
+  font-size: 16px; /* Font più piccolo */
+  line-height: 1.6; /* Spaziatura tra le righe per migliorare la leggibilità */
+  color: #333; /* Colore del testo principale */
+}
+
+.lore-text-content h1 {
+  font-size: 1.5rem; /* Dimensione del titolo più piccola */
+  margin-bottom: 1rem; /* Spaziatura sotto il titolo */
+}
+
+.lore-text-content p {
+  font-size: 1.1rem; /* Riduzione della dimensione del testo nei paragrafi */
+  margin-bottom: 1rem; /* Distanza tra i paragrafi */
+  color: #555; /* Colore del testo per i paragrafi */
+}

@@ -1,33 +1,33 @@
-.weapons-content {
+.npcs-content {
   height: 100vh;
   display: flex;
   flex-direction: column;
   overflow: hidden;
 }
 
-.weapons-title {
+.npcs-title {
   font-size: 2rem;
   position: sticky;
   top: 0;
   z-index: 10;
 }
 
-.weapons-grid-scroll-container {
+.npcs-grid-scroll-container {
   flex-grow: 1;
   overflow-y: auto;
   padding: 16px;
 }
 
-.weapons-grid-container {
+.npcs-grid-container {
   display: grid;
-  grid-template-columns: repeat(3, 5rem);
+  grid-template-columns: repeat(3, 5.5rem);
   gap: 1rem;
   justify-content: center;
 }
 
-.weapons-tile {
-  width: 5rem;
-  height: 5rem;
+.npcs-tile {
+  width: 5.5rem;
+  height: 5.5rem;
   position: relative;
   border-radius: 8px;
   overflow: hidden;
@@ -38,7 +38,7 @@
               box-shadow 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.weapons-tile::before {
+.npcs-tile::before {
   content: '';
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
@@ -51,7 +51,7 @@
   z-index: -1;
 }
 
-.weapons-tile:hover {
+.npcs-tile:hover {
   transform: scale(1.1);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -60,9 +60,9 @@
 
 
 
-.weapons-image {
-  width: 70%;
-  height: 70%;
+.npcs-image {
+  width: 80%;
+  height: 80%;
   object-fit: cover; /* Ingrandisce l'immagine mantenendo l'aspetto */
 }
 
@@ -76,7 +76,7 @@
 
 
 /* Container principale dell'item */
-.weapon-content {
+.npc-content {
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -85,7 +85,7 @@
   align-items: center;
 }
 
-.weapon-image-content {
+.npc-image-content {
   width: 20rem;
   height: 20rem;
   position: relative;
@@ -95,9 +95,9 @@
   overflow: hidden;
 }
 
-.weapon-image-content img.weapon-image {
-  width: 60%;
-  height: 60%;
+.npc-image-content img.npc-image {
+  width: 70%;
+  height: 70%;
   object-fit: contain;
   display: block;
 }
@@ -115,7 +115,7 @@
 
 
 /* Wrapper titolo + descrizione - PIÙ GRANDE */
-.weapon-title-description-wrapper {
+.npc-title-description-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -126,9 +126,9 @@
 }
 
 /* Container del titolo - PIÙ GRANDE E TESTO CENTRATO */
-.weapon-title-content {
-  margin-top: 1rem;
-  padding: 1.3rem;
+.npc-title-content {
+  margin-top: 1.5rem;  /* Aumento del margine superiore per maggiore distanza */
+  padding: 1.5rem;     /* Aumento del padding per più spazio interno */
   background-image: url('../codex/content-title-box-codex.png');
   background-size: contain;
   background-repeat: no-repeat;
@@ -138,24 +138,25 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 2rem;
-  min-width: 13em;
-  overflow: hidden; /* IMPORTANTE per evitare espansione */
+  height: 3rem;        /* Aumento dell'altezza del contenitore */
+  min-width: 15em;     /* Aumento della larghezza minima */
+  overflow: hidden;    /* IMPORTANTE per evitare espansione */
   text-overflow: ellipsis; /* opzionale, se vuoi troncare il testo */
-  white-space: nowrap;      /* impedisce l'andata a capo */
+  white-space: nowrap; /* impedisce l'andata a capo */
 }
 
 /* Titolo - più piccolo del container */
-.weapon-title-content h1 {
+.npc-title-content h1 {
   margin: 0;
-  font-size: 12px;
+  font-size: 16px;     /* Aumento della dimensione del font */
   padding: 5px;
   max-width: 100%;
   color: #0f0f0f;
+  line-height: 1.4;    /* Aumento del line-height per migliorare la leggibilità */
 }
 
 /* Container descrizione - PIÙ GRANDE E CENTRATO */
-.weapon-description-content {
+.npc-description-content {
   margin-top: 1rem;
   margin-bottom: 1rem;
   background-image: url('../codex/content-description-box-codex.png');
@@ -169,10 +170,10 @@
   height: 11rem; /* Altezza del contenitore */
   width: 17em;   /* Larghezza */
   overflow-y: auto; /* Barra di scorrimento verticale attiva quando il contenuto è troppo grande */
-  padding: 4px 0;  /* Aggiunto padding ridotto per dare spazio in alto e basso */
 }
 
-.weapon-description-content .weapon-description {
+
+.npc-description-content .npc-description {
   margin-top: 10px;
   max-height: 88%;
   max-width: 90%;
@@ -180,7 +181,7 @@
 }
 
 /* Testo descrizione centrato e più piccolo */
- .weapon-description-content .weapon-description p {
+ .npc-description-content .npc-description p {
   font-size: 13.4px;
   padding: 10px 20px;  /* Ridotto il padding generale per un miglior bilanciamento */
   text-align: justify;
@@ -192,54 +193,51 @@
 }
 
 
-@media (max-width: 1500px) {
+@media (max-width: 1400px) {
   
-  /* Grid container - riduzione delle dimensioni */
-  .weapons-grid-container {
-    grid-template-columns: repeat(3, 4.5rem); /* ridotto a 4.5rem */
+  .npcs-grid-container {
+    grid-template-columns: repeat(3, 4.5rem);
     gap: 1rem;
   }
+  .npcs-tile {
+    width: 5rem;
+    height: 5rem;
+}
 
-  .weapons-tile {
-    width: 4.5rem;
-    height: 4.5rem;
-  }
 
-  /* Riduzione dimensioni immagine */
-  .weapon-image-content {
+  .npc-image-content {
     width: 14rem;
     height: 11rem;
   }
 
-  /* Modifiche al titolo */
-  .weapon-title-content {
+  .npc-title-content {
     padding: 1rem;
     height: 2.8rem;
   }
 
-  .weapon-title-content h1 {
+  .npc-image-content img.npc-image {
+    width: 75%;
+    height: 75%;
+    object-fit: contain;
+    display: block;
+  }
+
+
+  .npc-title-content h1 {
     font-size: 14px;
     padding: 3px;
   }
 
-  /* Modifiche alla descrizione */
-  .weapon-description-content {
-    height: 10rem; /* Aumento dell'altezza */
-    width: 20rem; /* Larghezza aumentata */
-    
+  .npc-description-content {
+    height: 10rem; 
+    width: 20rem; 
   }
 
-  .weapon-description-content p {
-    font-size: 12px; /* Aumento della dimensione del font della descrizione */
+  .npc-description-content p {
+    font-size: 12px; 
   }
 
-  /* Wrapper titolo + descrizione - piu' grande */
-  .weapon-title-description-wrapper {
-    max-width: 450px; /* Aumento della larghezza massima */
-  }
-
-  /* Modifiche al titolo principale */
-  .weapons-title {
-    font-size: 2.5rem; /* Aumento della dimensione del font */
+  .npc-title-description-wrapper {
+    max-width: 400px;
   }
 }

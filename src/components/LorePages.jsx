@@ -1,16 +1,15 @@
 import React from "react";
 import logoGif from '../assets/LogoBelloCheLampeggia.gif'; // regola il path se necessario
 
-
 export const Page1 = () => (
-  <div>
+  <div className="lore-text-content">
     <h1>Accadimenti recenti</h1>
     <p>Nel 26 anno dell’era della magia nella capitale Tetai si diffuse una pestilenza dalla natura sconosciuta, essa portò gli abitanti a impazzire e sviluppare mutazioni diverse da quelle dei Pamorphi.</p>
   </div>
 );
 
 export const Page2 = () => (
-  <div>
+  <div className="lore-text-content">
     <h1>Pestilenza</h1>
     <p>Secondo le parole della dottressa Maria Dalle Donne</p>
     <p>  ...  </p>
@@ -19,7 +18,7 @@ export const Page2 = () => (
 );
 
 export const Page3 = () => (
-  <div>
+  <div className="lore-text-content">
     <h1></h1>
     <p>Nonostante sia risaputo che l’abito dei medici dell’epoca non li proteggesse veramente dal contagio, sembra che per la pestilenza funzionino molto efficacemente.</p>
     <p>  ...  </p>
@@ -28,7 +27,7 @@ export const Page3 = () => (
 );
 
 export const Page4 = () => (
-  <div>
+  <div className="lore-text-content">
     <h1>Effetti pestilenza</h1>
     <p>Nei primi giorni dopo l’infezione, il soggetto comincia a riscontrare sbalzi di umore, forte prurito in alcune parti del corpo e una forte nausea.</p>
     <p>  ...  </p>
@@ -37,7 +36,7 @@ export const Page4 = () => (
 );
 
 export const Page5 = () => (
-  <div>
+  <div className="lore-text-content">
     <p>Dopo un mese il soggetto attacca a vista chiunque non sia affetto dalla pestilenza. I rigonfiamenti sul corpo si sono ingranditi diventando grossi tumori pulsanti da cui esce del pus infetto.</p>
     <p>  ...  </p>
     <p>Dopo diversi mesi alcuni soggetti raggiungono dimensioni notevoli, la forza fisica aumenta di conseguenza e sviluppano capacità paranormali impossibili da spiegare.</p>
@@ -45,7 +44,7 @@ export const Page5 = () => (
 );
 
 export const Page6 = () => (
-  <div>
+  <div className="lore-text-content">
     <h1>Chiesa e Catacombe</h1>
     <p>La cattedrale della santa chiesa era il fulcro della religione dell’impero, ora divenuta il fulcro della pestilenza.</p>
     <p>  ...  </p>
@@ -54,7 +53,7 @@ export const Page6 = () => (
 );
 
 export const Page7 = () => (
-  <div>
+  <div className="lore-text-content">
     <p>È stato riscontrato un fenomeno inspiegabile, sembra che le catacombe abbiano preso vita, infatti cambiano conformazione periodicamente; il perché accada è sconosciuto.</p>
     <p>  ...  </p>
     <p>In ogni caso chiunque si addentri nelle catacombe ne fa ritorno come cadavere esposto all’esterno della cattedrale.</p>
@@ -62,7 +61,7 @@ export const Page7 = () => (
 );
 
 export const Page8 = () => (
-  <div>
+  <div className="lore-text-content">
     <h1>Pamorphi</h1>
     <p>Essi sono umani mutati dalla magia, queste persone possono nascere con questa condizione o svilupparla durante la vita.</p>
     <p>  ...  </p>
@@ -72,7 +71,7 @@ Queste persone non hanno nulla a che fare con la pestilenza.</p>
 );
 
 export const Page9 = () => (
-  <div>
+  <div className="lore-text-content">
     <h1>Magia</h1>
     <p>La magia arrivò il primo giorno del mese Violadasi caduto nel giorno Vialìd.</p>
     <p>  ...  </p>
@@ -97,77 +96,4 @@ export const Page10 = () => (
       maxHeight: '100%',
     }}
   />
-);
-
-
-
-//Leva dalle pale le pagine da qui in poi
-export const Page11 = () => (
-  <div>
-    <h1>Pagina 11</h1>
-    <p>Testo segnaposto per la pagina 11.</p>
-  </div>
-);
-
-export const Page12 = () => (
-  <div>
-    <h1>Pagina 12</h1>
-    <p>Testo segnaposto per la pagina 12.</p>
-  </div>
-);
-
-export const Page13 = () => (
-  <div>
-    <h1>Pagina 13</h1>
-    <p>Testo segnaposto per la pagina 13.</p>
-  </div>
-);
-
-export const Page14 = () => (
-  <div>
-    <h1>Pagina 14</h1>
-    <p>Testo segnaposto per la pagina 14.</p>
-  </div>
-);
-
-export const Page15 = () => (
-  <div>
-    <h1>Pagina 15</h1>
-    <p>Testo segnaposto per la pagina 15.</p>
-  </div>
-);
-
-export const Page16 = () => (
-  <div>
-    <h1>Pagina 16</h1>
-    <p>Testo segnaposto per la pagina 16.</p>
-  </div>
-);
-
-export const Page17 = () => (
-  <div>
-    <h1>Pagina 17</h1>
-    <p>Testo segnaposto per la pagina 17.</p>
-  </div>
-);
-
-export const Page18 = () => (
-  <div>
-    <h1>Pagina 18</h1>
-    <p>Testo segnaposto per la pagina 18.</p>
-  </div>
-);
-
-export const Page19 = () => (
-  <div>
-    <h1>Pagina 19</h1>
-    <p>Testo segnaposto per la pagina 19.</p>
-  </div>
-);
-
-export const Page20 = () => (
-  <div>
-    <h1>Pagina 20</h1>
-    <p>Testo segnaposto per la pagina 20.</p>
-  </div>
 );

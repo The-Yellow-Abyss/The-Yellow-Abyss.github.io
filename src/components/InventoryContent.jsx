@@ -15,7 +15,9 @@ function FrontInventory({ item }) {
           <h1>{item.title}</h1>
         </div>
         <div className="inventory-item-description-content">
-          <p>{item.description}</p>
+          <div className="inventory-item-description">
+            <p>{item.description}</p>
+          </div>
         </div>
       </div>
     </div>

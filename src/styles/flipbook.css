@@ -118,7 +118,7 @@ img {
 
     #prev-btn img:hover,
     #next-btn img:hover {
-        transform: scale(1.6);
+        transform: scale(1.5);
     }
 }
 
@@ -126,25 +126,25 @@ img {
     #prev-btn img,
     #next-btn img {
         min-width: 3rem;
-        transform: scale(1.6);
+        transform: scale(1.5);
     }
 
     #prev-btn img:hover,
     #next-btn img:hover {
-        transform: scale(1.8);
+        transform: scale(1.2);
     }
 }
 
 @media (min-width: 1900px) {
     #prev-btn img,
     #next-btn img {
-        min-width: 3rem;
-        transform: scale(2);
+        min-width: 2rem;
+        transform: scale(1.5);
     }
 
     #prev-btn img:hover,
     #next-btn img:hover {
-        transform: scale(2.3);
+        transform: scale(2);
     }
 }
 
@@ -153,12 +153,12 @@ img {
     #prev-btn img,
     #next-btn img {
         min-width: 3rem;
-        transform: scale(2.5);
+        transform: scale(2);
     }
 
     #prev-btn img:hover,
     #next-btn img:hover {
-        transform: scale(3);
+        transform: scale(2);
     }
 
     #prev-btn {
@@ -175,12 +175,12 @@ img {
     #prev-btn img,
     #next-btn img {
         min-width: 3rem;
-        transform: scale(4.5);
+        transform: scale(2);
     }
 
     #prev-btn img:hover,
     #next-btn img:hover {
-        transform: scale(6);
+        transform: scale(2);
     }
 }
 
@@ -223,7 +223,7 @@ i {
 
 /* Book */
 .book {
-    width: min(90vw, 400px);
+    width: min(90vw, 500px);
     aspect-ratio: 3 / 4;
     position: relative;
     transition: transform 0.5s;
@@ -657,7 +657,7 @@ body::-webkit-scrollbar-thumb {
 
 
 
-@media (max-width: 1500px) {
+@media (max-width: 1400px) {
     .book {
         width: min(90vw, 400px); /* Aumenta la larghezza massima */
         font-size: 1.1rem; /* Aumenta ulteriormente il font-size base */

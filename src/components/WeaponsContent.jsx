@@ -14,7 +14,9 @@ function FrontWeapons({ weapon }) {
           <h1>{weapon.title}</h1>
         </div>
         <div className="weapon-description-content">
-          <p>{weapon.description}</p>
+          <div className="weapon-description">
+            <p>{weapon.description}</p>
+          </div>
         </div>
       </div>
     </div>

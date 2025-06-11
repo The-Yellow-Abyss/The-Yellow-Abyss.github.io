@@ -5,6 +5,7 @@ import { weapons } from "../data/weapons";
 import { treasures } from "../data/items";
 import { enemies } from "../data/bestiary"; 
 import { bosses } from "../data/bosses"; 
+import { npcs } from "../data/npc"; 
 
 import { FrontInventory, BackInventory } from "./InventoryContent";
 import { FrontItems, BackItems } from "./ItemsContent";
@@ -12,7 +13,7 @@ import { FrontItems, BackItems } from "./ItemsContent";
 import { FrontWeapons, BackWeapons } from "./WeaponsContent";
 import { FrontBestiary, BackBestiary } from "./BestiaryContent";
 import { FrontBosses, BackBosses } from "./BossesContent";
-
+import { FrontNPC, BackNPC } from "./NPCContent";
 
 import backArrow from "../assets/back-arrow.png";
 import nextArrow from "../assets/next-arrow.png";
@@ -27,6 +28,7 @@ const FlipBook = () => {
   const [selectedItem, setSelectedItem] = useState(treasures[0]);
   const [selectedEnemy, setSelectedEnemy] = useState(enemies[0]);
   const [selectedBosses, setSelectedBosses] = useState(bosses[0]);
+  const [selectedNPC, setSelectedNPC] = useState(npcs[0]);
   
   const numOfPapers = 11;
   const maxState = numOfPapers + 1;
@@ -96,30 +98,62 @@ const FlipBook = () => {
   },
   {
     front: <FrontBosses boss={selectedBosses}/>,
-    back: <div><h2>Strategie</h2><p>Come sconfiggerli facilmente.</p></div>,
+    back: <BackNPC npcs={npcs} onSelect={setSelectedNPC}/>,
   },
   {
-    front: <div><h2>Luoghi</h2><p>Le terre esplorate nel tuo cammino.</p></div>,
-    back: <div><h2>Mappe</h2><p>Mappe dettagliate delle zone.</p></div>,
-  },
-  {
-    front: <div><h2>Alleati</h2><p>Chi ti accompagna nell’avventura.</p></div>,
-    back: <div><h2>Finale</h2><p>Come si è conclusa l’avventura.</p></div>,
-  },
-  {
-    front: <div><h2>Crediti</h2><p>Autori e collaboratori.</p></div>,
-    back: (
+    front: <FrontNPC npc={selectedNPC}/>,
+    back: 
       <div>
-        <p>
-          ░██████╗██╗░░░██╗░██████╗<br />
-          ██╔════╝██║░░░██║██╔════╝<br />
-          ╚█████╗░██║░░░██║╚█████╗░<br />
-          ░╚═══██╗██║░░░██║░╚═══██╗<br />
-          ██████╔╝╚██████╔╝██████╔╝<br />
-          ╚═════╝░░╚═════╝░╚═════╝░
-        </p>
-      </div>
-    ),
+        <h1>Comandi</h1>
+        <p>Per muoverti nel gioco, puoi utilizzare le frecce direzionali</p> 
+        <br></br>
+        <p>(<span>&#8594;</span> , <span>&#8592;</span> , <span>&#8593;</span> , <span>&#8595;</span> ) oppure i tasti</p>
+        <br></br>
+        <h2> "W", "A", "S", "D" </h2>
+        <p>come alternativa.</p>
+      </div>,
+  },
+  {
+    front: 
+      <div>
+        <h1>Rotazione e Attacco</h1>
+        <p>Per ruotare la visuale, sposta il mouse.</p> 
+        <p>Per attaccare, clicca con il tasto sinistro del mouse.</p>
+        <br></br>
+        <h2>Nota:</h2>
+        <p>Combina il movimento con l'attacco per combattere i nemici in tempo reale.</p>
+      </div>,
+    back: 
+      <div>
+        <h1>Comandi Speciali</h1>
+        <p>Puoi usare il tasto <strong>"T"</strong> per teletrasportarti da una stanza all'altra nel dungeon.</p>
+        <br></br>
+        <p>Il tasto <strong>"E"</strong> per interagire con oggetti e persone circostanti,</p>
+        <br></br>
+        <p>Il tasto <strong>"Q"</strong> per cambiare velocemente le armi in tuo possesso.</p>
+      </div>,
+  },
+  {
+    front: 
+      <div>
+        <h1>Crediti</h1>
+        <p>Un ringraziamento speciale a tutti gli sviluppatori, designer, artisti, musicisti e collaboratori che hanno contribuito a creare questo gioco.</p>  
+        <br></br>        
+        <p>Di seguito puoi trovare i dettagli di contatto degli sviluppatori.</p>
+
+      </div>,
+    back: 
+      <div>
+        <h1>Autori</h1>
+          <p><strong>Cristian Pio Prudenzano</strong></p> 
+          <p>ඞ Art Director, Scrittore e Art Designer</p>
+          <br></br>
+          <p><strong>Dzmitry Shpakouski</strong></p>
+          <p> ඞ Sviluppatore</p>
+          <br></br>
+          <p><strong>Marco Mongelli</strong></p> 
+          <p>ඞ Sviluppatore, Game Designer e Art Designer</p>
+      </div>,
   },
   {
     front: <div></div>,

@@ -16,7 +16,9 @@ function FrontBestiary({ enemy }) {
            <h1>{enemy.title}</h1>
          </div>
          <div className="enemy-description-content">
+          <div className="enemy-description">
            <p>{enemy.description}</p>
+          </div>
          </div>
        </div>
      </div>
