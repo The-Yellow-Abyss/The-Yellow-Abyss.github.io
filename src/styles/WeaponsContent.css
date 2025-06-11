@@ -96,8 +96,8 @@
 }
 
 .weapon-image-content img.weapon-image {
-  width: 80%;
-  height: 80%;
+  width: 70%;
+  height: 70%;
   object-fit: contain;
   display: block;
 }
@@ -164,73 +164,77 @@
   background-position: center;
   border-radius: 4px;
   display: flex;
-  align-items: flex-start; /* <-- questa è la modifica chiave */
+  align-items: flex-start;
   justify-content: center;
-  height: 11rem;
-  width: 17em;
+  height: 11rem; /* Altezza del contenitore */
+  width: 17em;   /* Larghezza */
+  overflow-y: auto; /* Barra di scorrimento verticale attiva quando il contenuto è troppo grande */
+  padding: 4px 0;  /* Aggiunto padding ridotto per dare spazio in alto e basso */
 }
-
 
 /* Testo descrizione centrato e più piccolo */
 .weapon-description-content p {
   font-size: 11px;
-  padding-top: 20px;
-  padding: 27px 20px;
-  text-align:justify;
+  padding: 10px 20px;  /* Ridotto il padding generale per un miglior bilanciamento */
+  text-align: justify;
   max-width: 90%;
   margin: 0;
   color: #0f0f0f;
   overflow: hidden;
   text-overflow: ellipsis; /* opzionale */
+  line-height: 1.4; /* Line-height ridotto per migliorare l'allineamento */
 }
 
 
-@media (max-width: 1400px) {
+
+@media (max-width: 1500px) {
   
+  /* Grid container - riduzione delle dimensioni */
   .weapons-grid-container {
-    grid-template-columns: repeat(3, 4.5rem);
+    grid-template-columns: repeat(3, 4.5rem); /* ridotto a 4.5rem */
     gap: 1rem;
   }
+
   .weapons-tile {
     width: 4.5rem;
     height: 4.5rem;
-}
+  }
 
-
+  /* Riduzione dimensioni immagine */
   .weapon-image-content {
     width: 14rem;
     height: 11rem;
   }
 
+  /* Modifiche al titolo */
   .weapon-title-content {
     padding: 1rem;
-    height: 1.8rem;
+    height: 2.8rem;
   }
 
-  .weapon-image-content img.weapon-image {
-  width: 80%;
-  height: 80%;
-  object-fit: contain;
-  display: block;
-}
-
-
   .weapon-title-content h1 {
-    font-size: 10px;
+    font-size: 14px;
     padding: 3px;
   }
 
+  /* Modifiche alla descrizione */
   .weapon-description-content {
-    height: 9rem;
-    width: 20rem;
+    height: 10rem; /* Aumento dell'altezza */
+    width: 20rem; /* Larghezza aumentata */
+    
   }
 
   .weapon-description-content p {
-    font-size: 9.5px;
-    padding: 25px 25px;
+    font-size: 12px; /* Aumento della dimensione del font della descrizione */
   }
 
+  /* Wrapper titolo + descrizione - piu' grande */
   .weapon-title-description-wrapper {
-    max-width: 400px;
+    max-width: 450px; /* Aumento della larghezza massima */
+  }
+
+  /* Modifiche al titolo principale */
+  .weapons-title {
+    font-size: 2.5rem; /* Aumento della dimensione del font */
   }
 }

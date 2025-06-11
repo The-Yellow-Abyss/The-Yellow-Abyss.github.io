@@ -127,8 +127,8 @@
 
 /* Container del titolo - PIÙ GRANDE E TESTO CENTRATO */
 .item-title-content {
-  margin-top: 1rem;
-  padding: 1.3rem;
+  margin-top: 1.5rem;  /* Aumento del margine superiore per maggiore distanza */
+  padding: 1.5rem;     /* Aumento del padding per più spazio interno */
   background-image: url('../codex/content-title-box-codex.png');
   background-size: contain;
   background-repeat: no-repeat;
@@ -138,21 +138,23 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 2rem;
-  min-width: 13em;
-  overflow: hidden; /* IMPORTANTE per evitare espansione */
+  height: 3rem;        /* Aumento dell'altezza del contenitore */
+  min-width: 15em;     /* Aumento della larghezza minima */
+  overflow: hidden;    /* IMPORTANTE per evitare espansione */
   text-overflow: ellipsis; /* opzionale, se vuoi troncare il testo */
-  white-space: nowrap;      /* impedisce l'andata a capo */
+  white-space: nowrap; /* impedisce l'andata a capo */
 }
 
-/* Titolo - più piccolo del container */
+/* Titolo - più grande e visibile */
 .item-title-content h1 {
   margin: 0;
-  font-size: 12px;
+  font-size: 16px;     /* Aumento della dimensione del font */
   padding: 5px;
   max-width: 100%;
   color: #0f0f0f;
+  line-height: 1.4;    /* Aumento del line-height per migliorare la leggibilità */
 }
+
 
 /* Container descrizione - PIÙ GRANDE E CENTRATO */
 .item-description-content {
@@ -164,24 +166,25 @@
   background-position: center;
   border-radius: 4px;
   display: flex;
-  align-items: flex-start; /* <-- questa è la modifica chiave */
+  align-items: flex-start;
   justify-content: center;
-  height: 11rem;
-  width: 17em;
+  height: 11rem; /* Altezza del contenitore */
+  width: 17em;   /* Larghezza */
+  overflow-y: auto; /* Barra di scorrimento verticale attiva quando il contenuto è troppo grande */
+  padding: 4px 0;  /* Aggiunto padding ridotto per dare spazio in alto e basso */
 }
-
 
 /* Testo descrizione centrato e più piccolo */
 .item-description-content p {
   font-size: 11px;
-  padding-top: 20px;
-  padding: 27px 20px;
-  text-align:justify;
+  padding: 10px 20px;  /* Ridotto il padding generale per un miglior bilanciamento */
+  text-align: justify;
   max-width: 90%;
   margin: 0;
   color: #0f0f0f;
   overflow: hidden;
   text-overflow: ellipsis; /* opzionale */
+  line-height: 1.4; /* Line-height ridotto per migliorare l'allineamento */
 }
 
 
@@ -195,15 +198,15 @@
 
   .item-title-content {
     padding: 1rem;
-    height: 1.8rem;
+    height: 2.8rem;
   }
 
   .item-image-content img.item-image {
-  width: 90%;
-  height: 90%;
-  object-fit: contain;
-  display: block;
-}
+    width: 90%;
+    height: 90%;
+    object-fit: contain;
+    display: block;
+  }
 
 .treasure-grid-container {
   display: grid;
@@ -212,20 +215,19 @@
   justify-content: center;
 }
 
-
   .item-title-content h1 {
-    font-size: 10px;
+    font-size: 14px;
     padding: 3px;
   }
 
   .item-description-content {
-    height: 9rem;
-    width: 20rem;
+    height: 10rem; /* Aumento dell'altezza */
+    width: 20rem; /* Larghezza aumentata */
+    
   }
 
   .item-description-content p {
-    font-size: 9.5px;
-    padding: 25px 25px;
+    font-size: 12px; /* Aumento della dimensione del font della descrizione */
   }
 
   .item-title-description-wrapper {

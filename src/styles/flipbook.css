@@ -659,40 +659,40 @@ body::-webkit-scrollbar-thumb {
 
 @media (max-width: 1500px) {
     .book {
-        width: min(90vw, 350px); /* Riduce leggermente la larghezza massima */
-        font-size: 0.95rem;
+        width: min(90vw, 400px); /* Aumenta la larghezza massima */
+        font-size: 1.1rem; /* Aumenta ulteriormente il font-size base */
     }
 
     .front-content,
     .back-content {
-        font-size: clamp(0.7rem, 1.8vw, 1rem); /* Riduce il testo */
-        padding: clamp(0.8rem, 4vw, 1.5rem);
+        font-size: clamp(1rem, 2.5vw, 1.4rem); /* Aumenta ulteriormente il testo */
+        padding: clamp(1.2rem, 6vw, 2rem); /* Aumenta il padding per più spazio */
     }
 
     #b1 {
-        font-size: clamp(0.8rem, 1.2vw, 1rem);
+        font-size: clamp(1rem, 1.8vw, 1.3rem); /* Aumenta il font dei contenuti */
     }
 
     #b1 h2 {
-        font-size: clamp(1rem, 3.5vw, 1.5rem);
+        font-size: clamp(1.5rem, 4.5vw, 2rem); /* Aumenta la dimensione dei titoli */
     }
 
     #b1 p {
-        font-size: clamp(0.7rem, 1.8vw, 0.9rem);
+        font-size: clamp(1rem, 2.5vw, 1.1rem); /* Aumenta i paragrafi */
     }
 
     .book-title {
-        font-size: 2.5em;
+        font-size: 3.5em; /* Aumenta la dimensione del titolo */
     }
 
     #prev-btn img,
     #next-btn img {
-        min-width: 3rem;
+        min-width: 3rem; /* Aumenta la dimensione dei pulsanti */
         width: 100%;
         height: auto;
     }
-    
 }
+
 
 
 .back ::-webkit-scrollbar {
