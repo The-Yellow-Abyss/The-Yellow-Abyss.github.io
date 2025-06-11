@@ -38,6 +38,9 @@
   height: -20px;
 }
 
+.description-text b{
+  color: #0c0c0c00;
+}
 
 .video-description-container {
   display: flex;

@@ -51,6 +51,9 @@ const HomePage = () => {
                   I cittadini della citta' Tetai, capitale dell'impero, sono caduti sotto una profonda follia finendo per mutare in forme grottesche. 
                   L'epicentro di questa follia sono le catacombe della santa chiesa. Tutti coloro che hanno provato ad addentrarsi nelle catacombe sono ora esposti al suo ingresso come monito per i futuri avventurieri. 
                 </p>
+                <b>
+                  ඞ
+                </b>
               </div>
             </div>
             <Link to="/codex" className="diary-button">
