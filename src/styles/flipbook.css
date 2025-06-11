@@ -83,6 +83,7 @@ img {
 #prev-btn img:hover,
 #next-btn img:hover {
     transform: scale(1.2);
+    filter: brightness(1.3) drop-shadow(0 0 6px #FFD700);
 }
 
 /* Schermo medio: aumenta scala */
@@ -259,6 +260,7 @@ i {
 
 #backtracking-button:hover {
     transform: scale(1.2);
+    filter: brightness(1.3) drop-shadow(0 0 6px #FFD700);
 }
 
 .front {

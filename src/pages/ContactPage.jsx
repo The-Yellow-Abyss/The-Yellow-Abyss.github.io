@@ -17,6 +17,7 @@ const ContactPage = () => {
             <Link to="/contact" className="breadcrumb-current">Contatti</Link>
           </div>
           <div className="content-title">CONTATTI</div>
+          <div className="content-title"></div>
           <div className="about-vertical-layout">
             <div style={{color: '#fff', fontSize: '1.2rem', textAlign: 'center', maxWidth: 600, margin: '0 auto'}}>
               <p>Per domande, feedback, o per conoscere i creator, ecco i contatti del team:</p>
@@ -25,9 +26,10 @@ const ContactPage = () => {
                 <li style={{marginTop: '1.2rem'}}><strong>Mongelli Marco</strong> <br /><span style={{color: '#ffe066'}}>m.mongelli75@studenti.uniba.it</span></li>
                 <li style={{marginTop: '1.2rem'}}><strong>Maggio Gianluca</strong> <br /><span style={{color: '#ffe066'}}>g.maggio21@studenti.uniba.it</span></li>
               </ul>
-              <p>Oppure usa la pagina Help per segnalare un problema.</p>
+              
             </div>
           </div>
+          <div className="content-bottom"><p>Oppure usa la pagina Help per segnalare un problema.</p></div>
         </div>
         <Footer />
         <div className="right-sidebar" />
