@@ -45,12 +45,18 @@ const HomePage = () => {
             </div>
             <div className="description-box">
               <div className="description-text">
+                <b>
+                  ඞ
+                </b>
                 <p>
                   Un cavaliere di nome Rosalind si addentra nelle catacombe della cattedrale della santa chiesa dell’impero, in cerca della sua amata Valerika scomparsa. 
                   Dovrà affrontare creature grottesche per raggiungere le profondità delle catacombe, ricevendo l'aiuto da un particolare vecchio signore vestito di giallo. 
                   I cittadini della citta' Tetai, capitale dell'impero, sono caduti sotto una profonda follia finendo per mutare in forme grottesche. 
                   L'epicentro di questa follia sono le catacombe della santa chiesa. Tutti coloro che hanno provato ad addentrarsi nelle catacombe sono ora esposti al suo ingresso come monito per i futuri avventurieri. 
                 </p>
+                <b>
+                  ඞ
+                </b>
               </div>
             </div>
             <Link to="/codex" className="diary-button">
