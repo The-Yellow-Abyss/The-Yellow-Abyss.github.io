@@ -156,11 +156,14 @@ nav .logo-container img, nav .help-container img {
 
 
 /* Icona hamburger (visibile solo su dispositivi mobili) */
+/* Icona hamburger - visibile solo su dispositivi mobili */
 .hamburger-icon {
     display: none;
     flex-direction: column;
     cursor: pointer;
-    margin-left: auto;
+    margin-right: auto;
+    margin-left: 1rem;
+    transition: transform 0.3s ease;
 }
 
 .hamburger-icon .line {
@@ -168,18 +171,69 @@ nav .logo-container img, nav .help-container img {
     height: 4px;
     background-color: white;
     margin: 4px 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
+
+/* Quando l'icona hamburger è aperta, ruota le linee per formare una "X" */
+.hamburger-icon.open .line:nth-child(1) {
+    transform: rotate(45deg);
+    margin-top: 9px;
+}
+
+.hamburger-icon.open .line:nth-child(2) {
+    opacity: 0;  /* Nasconde la linea centrale */
+}
+
+.hamburger-icon.open .line:nth-child(3) {
+    transform: rotate(-45deg);
+    margin-top: -9px;
+}
+
+/* Schermi piccoli */
+@media (max-width: 1260px) {
+    .links-container {
+        display: none;  /* Nasconde i link di navigazione */
+    }
+
+    .hamburger-icon {
+        display: flex;
+    }
+
+    .links-container.open {
+        display: block;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #3d1d19ee;
+        padding: 10px 0;
+        text-align: center;
+        transition: all 0.3s ease;
+        opacity: 1;
+    }
+
+    /* Link verticali quando il menu è aperto */
+    .links-group ul {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .links-group a {
+        font-size: 24px;
+    }
+
+    .left-group, .right-group {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
 
 /* Stili per dispositivi con schermi piccoli */
 @media (max-width: 1260px) {
     /* Nascondi i link di navigazione per dispositivi mobili */
     .links-container {
         display: none; /* Nasconde i link di navigazione */
-    }
-
-    /* Mostra l'icona hamburger */
-    .hamburger-icon {
-        display: flex; 
     }
 
     /* Quando l'icona hamburger è cliccata, mostra i link di navigazione */

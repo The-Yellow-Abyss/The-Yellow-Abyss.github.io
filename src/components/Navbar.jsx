@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import '../styles/style.css';
@@ -9,6 +9,14 @@ import logoImage from '../assets/The_Yellow_Abyss_game_Title_3.png';
 import helpIcon from '../assets/help-button-2.png';
 
 const Navbar = () => {
+  // Stato per gestire l'apertura del menu
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  // Funzione per togglare il menu
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
     <header>
       <nav>
@@ -24,9 +32,9 @@ const Navbar = () => {
               <img src={helpIcon} alt="Help" className="help-icon" />
             </Link>
           </div>
-          <div className="links-container">
-
-            
+          
+          {/* Menu a discesa */}
+          <div className={`links-container ${menuOpen ? 'open' : ''}`}>
             <div className="links-group left-group">
               <ul>
                 <li><Link to="/">HOME</Link></li>
@@ -44,9 +52,8 @@ const Navbar = () => {
             </div>
           </div>
 
-          
-
-          <div className="hamburger-icon" id="hamburger-icon">
+          {/* Icona dell'Hamburger */}
+          <div className={`hamburger-icon ${menuOpen ? 'open' : ''}`} onClick={toggleMenu}>
             <div className="line"></div>
             <div className="line"></div>
             <div className="line"></div>
