@@ -45,6 +45,9 @@ const HomePage = () => {
             </div>
             <div className="description-box">
               <div className="description-text">
+                <b>
+                  ඞ
+                </b>
                 <p>
                   Un cavaliere di nome Rosalind si addentra nelle catacombe della cattedrale della santa chiesa dell’impero, in cerca della sua amata Valerika scomparsa. 
                   Dovrà affrontare creature grottesche per raggiungere le profondità delle catacombe, ricevendo l'aiuto da un particolare vecchio signore vestito di giallo. 
