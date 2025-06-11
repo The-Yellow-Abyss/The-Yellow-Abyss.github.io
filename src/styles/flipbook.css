@@ -649,16 +649,6 @@ body::-webkit-scrollbar-thumb {
 }
 
 
-#p2 .back::before:hover ,
-#p3 .back::before:hover ,
-#p4 .back::before:hover ,
-#p5 .back::before:hover ,
-#p6 .back::before:hover {
-    transform: scale(1.1); 
-}
-
-
-
 @media (max-width: 1400px) {
     .book {
         width: min(90vw, 400px); /* Aumenta la larghezza massima */
