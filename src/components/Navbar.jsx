@@ -19,8 +19,14 @@ const Navbar = () => {
               <img src={logoImage} alt="Logo" className="logo" />
             </Link>
           </div>
-
+          <div className="help-container">
+            <Link to="/help">
+              <img src={helpIcon} alt="Help" className="help-icon" />
+            </Link>
+          </div>
           <div className="links-container">
+
+            
             <div className="links-group left-group">
               <ul>
                 <li><Link to="/">HOME</Link></li>
@@ -38,11 +44,7 @@ const Navbar = () => {
             </div>
           </div>
 
-          <div className="help-container">
-            <Link to="/help">
-              <img src={helpIcon} alt="Help" className="help-icon" />
-            </Link>
-          </div>
+          
 
           <div className="hamburger-icon" id="hamburger-icon">
             <div className="line"></div>
